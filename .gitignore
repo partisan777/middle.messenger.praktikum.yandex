@@ -1,0 +1,10 @@
+.git
+
+# dependencies
+/node_modules
+
+# production
+/build
+
+
+

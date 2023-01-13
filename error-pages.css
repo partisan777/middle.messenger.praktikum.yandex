@@ -1,0 +1,50 @@
+/* страница с ошибками */
+.error-page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+h1 {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    left: 47%;
+    top: 280px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #1E1E1E;
+}
+    
+h2 {
+    position: absolute;
+    width: 280px;
+    height: 20px;
+    left: 40%;
+    top: 340px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #1E1E1E;
+}    
+    
+a {    
+    position: absolute;
+    width: 200px;
+    height: 11px;
+    left: 42%;
+    top: 429px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 11px;
+    text-align: center;
+    color: #3369F3;
+}

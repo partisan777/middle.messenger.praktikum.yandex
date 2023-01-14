@@ -1,3 +1,5 @@
+import { createNodeObjects } from "../../utils/createNodeObject";
+
 export const chatMenu = [
 	{
 		title: "Добавить пользователя",
@@ -15,10 +17,8 @@ export const chatMenu = [
 
 
 export function getChatMenu() {
-
-    let div = document.createElement('div');
-    div.classList.add("chat-menu-list");
-    div.setAttribute("id", "chat-menu-list");
+    
+    let div = createNodeObjects("div", ["chat-menu-list"], {id: "chat-menu-list"});    
     div.innerHTML = 
         `<nav>
             <ul>
@@ -33,6 +33,5 @@ export function getChatMenu() {
                 }
             </ul>
         </nav>`;
-        // console.log(div);
     return div;
 }

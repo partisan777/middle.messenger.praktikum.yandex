@@ -8,7 +8,7 @@ import { getModalWindow } from './components/modalWindow/modalWindow.js';
 import { changePasswordForm } from './components/changePassswordForm/changePasswordForm.js';
 import { getAddFilesMenu } from './components/addMenu/addMenuAddFiles.js';
 import { getChatMenu } from './components/addMenu/addChatMenu.js';
-import { getAddChatUserForm, getDeleteChatUserForm } from './components/chatUserManage/chatUserManage.js';
+import { manageChatUserForm } from './components/chatUserManage/chatUserManage.js';
 import { getAddAvatarForm } from './components/profile/getAddAvatarForm.js';
 
 
@@ -66,6 +66,7 @@ const addLoginForm = () => {
     root.appendChild(loginForm());
     document.getElementById("login-button").addEventListener("click", signIn);
     document.getElementById("registration-button").addEventListener("click", switchRegLogin);
+    document.getElementById("form-login-main").addEventListener("submit", handleSubmit);
 };
 
 const addRegForm = () => {
@@ -137,7 +138,7 @@ function addFormChatUser() {
     const modal = document.getElementById("myModal");
     openModalWindow();
     const modalContent = document.getElementById("modal-content")
-    modalContent.appendChild(getAddChatUserForm());
+    modalContent.appendChild(manageChatUserForm('add'));
     document.getElementById("close-manage-chat-user").addEventListener("click", closeModalWindow);
 }
 
@@ -145,9 +146,11 @@ function deleteFormChatUser() {
     const modal = document.getElementById("myModal");
     openModalWindow();
     const modalContent = document.getElementById("modal-content")
-    modalContent.appendChild(getDeleteChatUserForm());
+    modalContent.appendChild(manageChatUserForm('del'));
     document.getElementById("close-manage-chat-user").addEventListener("click", closeModalWindow);
 }
+
+
 
 
 const closeChatMenu = () => {
@@ -188,8 +191,17 @@ const checkAuth = () => {
     };
 };
 
-checkAuth();
 
+function handleSubmit(e) {
+    e.preventDefault();
+    console.log(e)
+};
+
+
+
+
+
+checkAuth();
 
 
 

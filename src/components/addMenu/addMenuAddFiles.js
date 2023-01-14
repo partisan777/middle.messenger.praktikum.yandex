@@ -1,4 +1,6 @@
-export const menuAddFiles = [
+import { createNodeObjects } from "../../utils/createNodeObject";
+
+const menuAddFiles = [
 	{
 		title: "Фото или видео",
 	    class: "add-files",
@@ -20,11 +22,10 @@ export const menuAddFiles = [
 ];
 
 
+ 
 export function getAddFilesMenu() {
 
-    let div = document.createElement('div');
-    div.classList.add("menu-add-files");
-    div.setAttribute("id", "menu-add-files");
+    let div = createNodeObjects("div", ["menu-add-files"], {id: "menu-add-files"})
     div.innerHTML = 
         `<nav>
             <ul>

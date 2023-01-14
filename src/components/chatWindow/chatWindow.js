@@ -1,10 +1,9 @@
-
+import { createNodeObjects } from "../../utils/createNodeObject";
 
 export function getChatWindow() {
     
-    let div = document.createElement('div')
-    div.classList.add('chat-window')
-    div.setAttribute("id", "chat-window");
+
+    let div = createNodeObjects("div", ["chat-window"], {id: "chat-window"})
     div.innerHTML = `
         <div class="chat-sidebar" id="chat-sidebar">
             <div class="chat-sidebar-header" id="chat-sidebar-header">
@@ -33,6 +32,10 @@ export function getChatWindow() {
             </div>
             <div class="dialog" id="dialog">
                 Диалог
+                <ul> 
+                    <li><a href="./error.html">Ссылка на страницу с ошибками</a></li>
+                    <li><a href="./notfound.html">Ссылка на несуществующую страницу</a></li>
+                </ul>
             </div>
             <div class="dialog-footer" id="dialog-footer">
                 <div class="chat-input-area" id="chat-input-area">
@@ -50,3 +53,6 @@ export function getChatWindow() {
 
     return div;
 };
+
+
+

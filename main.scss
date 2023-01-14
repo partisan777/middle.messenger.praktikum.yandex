@@ -1,3 +1,12 @@
+$blue: #3369F3;
+$white: #FFFFFF;
+$box-sh-color :  rgba(0, 0, 0, 0.14);
+$dark-grey: #999999;
+$red: #FF2F2F;
+$box-sh-color-dark: rgba(0,0,0,0.8); 
+$light-gray: #888;
+
+
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -7,7 +16,7 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    -webkit-box-pack: justify;
+    -webkit-box-pasck: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -15,7 +24,7 @@
 
 /* главный блок */
 #root {
-    background-color: #FFFFFF;
+    background-color: $white;
     width: 100%;
     height: 100%;
     display: flex;
@@ -25,73 +34,37 @@
 .registration_form {
     width: 340px;
     height: 615px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-    text-align: center;
+    background: $white;
+    box-shadow: 0px 0px 6px $box-sh-color;
     display: flex;
     border-radius: 15px;
     flex-direction: column;
-    margin: 0 auto;
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: groove;
-    > p {
-        font-style: #3369F3;
-        font-size: 25px;
-        font-weight: bold;
-    }
-        
+    margin: 50px auto;
+    
 };   
 
-/* //форма регистрации */
-.reg-form-label {
-    color: #999999;
-    margin-top: 5px;
-    font-size: 15px;
-    line-height: 9px;
-}
-
-
-/* //общие */
-.reg-form-input{
-    > input {
-        background-color: transparent;
-        border-top-style: hidden;
-        border-right-style: hidden;
-        border-left-style: hidden;
-        border-bottom-style: groove;
-        padding: 5px;
-    }
-}
-
-.button-reg-form {
-    margin-top: 5px;
-    padding-top: 5px;
-
-}
-
+// Общие
 .button-button {
-    background-color: #3369F3;
+    background-color: $blue;
     border-radius: 5px;
     border-style: none;
     width: 180px;
-    height: 30px;
-    color: #FFFFFF;
+    height: 35px;
+    color: $white;
 }
 
 .link-button {
-    background-color: #FFFFFF;
+    background-color: $white;
     border-radius: 5px;
     border-style: none;
     width: 180px;
     height: 30px;
-    font-style: #FFFFFF;
-    color: #3369F3;
+    font-style: $white;
+    color: $blue;
 }
 
 .reg-error {
-    color: #FF2F2F;;
+    color: $red;
     font-weight: bold;
 }
 
@@ -103,14 +76,14 @@
     font-size: large;
     font-style: bold;
     border-radius: 50%;
-    background-color: #3369F3;
+    background-color: $blue;
     justify-content: center;
     align-items: center;
 }
 
 .triangle {
     border: 9px solid transparent;
-    border-left: 20px solid #3369F3;
+    border-left: 20px solid $blue;
 }
 
 
@@ -119,7 +92,7 @@
     height: 10px;
     margin: 3px;
     border-radius: 50%;
-    background-color: #3369F3;
+    background-color: $blue;
     justify-content: center;
     align-items: center;
 }
@@ -127,6 +100,36 @@
 
 li {
     list-style-type: none;
+}
+
+
+// формы ввода
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    > input {
+        background-color: transparent;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    > label {
+        color: black;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 9px;
+        margin-left: 0;
+    }
+    > button {
+        align-items: center;
+        margin-top: 10px;
+        padding-top: 3px;
+    }
 }
 
 
@@ -188,7 +191,7 @@ li {
     padding: 5px;
     margin: 10px;
     min-height: 75px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 6px$box-sh-color;
     .chat-avatar {
         width: 48px;
         height: 48px;
@@ -233,7 +236,7 @@ li {
 }
 
 .dialog-window {
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 6px$box-sh-color;
     display: inline-block;
     border: 1px;
     border-radius: 10px;
@@ -290,7 +293,7 @@ li {
         border-style: none;
         border-radius: 10px;
         input:focus {
-            border-color: #3369F3;
+            border-color: $blue;
             height: 45px;
             width: 650px;
         }
@@ -307,6 +310,7 @@ li {
     display: flex;
     align-items: center;
     padding: 0 1rem;
+    flex-direction: columns;
 }
     
 .profile-sidebar {
@@ -315,13 +319,13 @@ li {
     width: 75px;
     min-height: 900px;
     border-radius: 15px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-    background-color: #3369F3;
+    box-shadow: 0px 0px 6px$box-sh-color;
+    background-color: $blue;
     justify-content: center;
     align-items: center;
     .profile-exit {
-        color:#FFFFFF;
-        background-color: #3369F3;    
+        color:$white;
+        background-color: $blue;    
         border-style: none;
         
     }
@@ -336,9 +340,10 @@ li {
     width: 540px;
     height: 750px;
     margin-left: 30%;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    background: $white;
+    box-shadow: 0px 0px 6px $box-sh-color;
 }
+
 
 .profile-avatar {
     display: flex;
@@ -349,29 +354,6 @@ li {
         width:  200px;
         border-radius: 50%;
     }
-}
-
-.profile-input{
-    > input {
-        background-color: transparent;
-        border-top-style: hidden;
-        border-right-style: hidden;
-        border-left-style: hidden;
-        border-bottom-style: groove;
-        padding: 5px;
-    }
-    > label {
-        color: #999999;
-        margin-top: 5px;
-        font-size: 15px;
-        line-height: 9px;
-    }
-}
-
-.profile-buttons {
-    align-items: center;
-    margin-top: 5px;
-    padding-top: 5px;
 }
 
 
@@ -385,41 +367,33 @@ li {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.8); 
+    background-color: $box-sh-color-dark;; 
     
   }
   
-  /* Модальное содержание/коробка */
-  .modal-content {
+/* Модальное содержание/коробка */
+.modal-content {
     display: flex;
     background-color: #fefefe;
     margin: 15% auto; 
     padding: 40px;
-    border: 1px solid #888;
+    border: 1px solid $light-gray;;
     width: 40%; 
     height: 30%;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    
-  }
+}
   
   
-  .change-password-form {
-    padding: 10px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-    > p {
-        font-style: bold;
-    }
-  }
 
 //гамбургер меню добавления файлов
 .menu-add-files {
     position: absolute;
     bottom: 5%;
     left: 365px;
-    background-color: #fff;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    background-color: $white;
+    box-shadow: 0px 0px 6px $box-sh-color;
     border-radius: 10px;
     display: flex;
     animation: opacity 0.4s;
@@ -450,7 +424,7 @@ li {
     min-width: 15px;
     min-height: 50px;
     background-color: #fff;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 6px $box-sh-color;
     border-radius: 10px;
     display: flex;
     animation: opacity 0.4s;

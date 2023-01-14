@@ -12,6 +12,7 @@ import { manageChatUserForm } from './components/chatUserManage/chatUserManage.j
 import { getAddAvatarForm } from './components/profile/getAddAvatarForm.js';
 
 
+
 const signIn = () => {
     const reg = document.getElementById("reg-form");
     if (reg) {  reg.parentNode.removeChild(reg);

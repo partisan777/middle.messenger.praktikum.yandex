@@ -8,11 +8,7 @@ import { getModalWindow } from './components/modalWindow/modalWindow.js';
 import { changePasswordForm } from './components/changePassswordForm/changePasswordForm.js';
 import { getAddFilesMenu } from './components/addMenu/addMenuAddFiles.js';
 import { getChatMenu } from './components/addMenu/addChatMenu.js';
-<<<<<<< HEAD
 import { manageChatUserForm } from './components/chatUserManage/chatUserManage.js';
-=======
-import { getAddChatUserForm, getDeleteChatUserForm } from './components/chatUserManage/chatUserManage.js';
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 import { getAddAvatarForm } from './components/profile/getAddAvatarForm.js';
 
 
@@ -70,10 +66,7 @@ const addLoginForm = () => {
     root.appendChild(loginForm());
     document.getElementById("login-button").addEventListener("click", signIn);
     document.getElementById("registration-button").addEventListener("click", switchRegLogin);
-<<<<<<< HEAD
     document.getElementById("form-login-main").addEventListener("submit", handleSubmit);
-=======
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 };
 
 const addRegForm = () => {
@@ -145,11 +138,7 @@ function addFormChatUser() {
     const modal = document.getElementById("myModal");
     openModalWindow();
     const modalContent = document.getElementById("modal-content")
-<<<<<<< HEAD
     modalContent.appendChild(manageChatUserForm('add'));
-=======
-    modalContent.appendChild(getAddChatUserForm());
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     document.getElementById("close-manage-chat-user").addEventListener("click", closeModalWindow);
 }
 
@@ -157,20 +146,13 @@ function deleteFormChatUser() {
     const modal = document.getElementById("myModal");
     openModalWindow();
     const modalContent = document.getElementById("modal-content")
-<<<<<<< HEAD
     modalContent.appendChild(manageChatUserForm('del'));
-=======
-    modalContent.appendChild(getDeleteChatUserForm());
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     document.getElementById("close-manage-chat-user").addEventListener("click", closeModalWindow);
 }
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 const closeChatMenu = () => {
     removeElement("chat-menu-list")
 }
@@ -209,7 +191,6 @@ const checkAuth = () => {
     };
 };
 
-<<<<<<< HEAD
 
 function handleSubmit(e) {
     e.preventDefault();
@@ -220,13 +201,7 @@ function handleSubmit(e) {
 
 
 
-=======
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 checkAuth();
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3

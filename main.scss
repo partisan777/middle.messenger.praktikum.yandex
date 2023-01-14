@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $blue: #3369F3;
 $white: #FFFFFF;
 $box-sh-color :  rgba(0, 0, 0, 0.14);
@@ -8,8 +7,6 @@ $box-sh-color-dark: rgba(0,0,0,0.8);
 $light-gray: #888;
 
 
-=======
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -19,11 +16,7 @@ $light-gray: #888;
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-<<<<<<< HEAD
     -webkit-box-pasck: justify;
-=======
-    -webkit-box-pack: justify;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -31,11 +24,7 @@ $light-gray: #888;
 
 /* главный блок */
 #root {
-<<<<<<< HEAD
     background-color: $white;
-=======
-    background-color: #FFFFFF;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     width: 100%;
     height: 100%;
     display: flex;
@@ -45,7 +34,6 @@ $light-gray: #888;
 .registration_form {
     width: 340px;
     height: 615px;
-<<<<<<< HEAD
     background: $white;
     box-shadow: 0px 0px 6px $box-sh-color;
     display: flex;
@@ -67,84 +55,16 @@ $light-gray: #888;
 
 .link-button {
     background-color: $white;
-=======
-    background: #FFFFFF;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-    text-align: center;
-    display: flex;
-    border-radius: 15px;
-    flex-direction: column;
-    margin: 0 auto;
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: groove;
-    > p {
-        font-style: #3369F3;
-        font-size: 25px;
-        font-weight: bold;
-    }
-        
-};   
-
-/* //форма регистрации */
-.reg-form-label {
-    color: #999999;
-    margin-top: 5px;
-    font-size: 15px;
-    line-height: 9px;
-}
-
-
-/* //общие */
-.reg-form-input{
-    > input {
-        background-color: transparent;
-        border-top-style: hidden;
-        border-right-style: hidden;
-        border-left-style: hidden;
-        border-bottom-style: groove;
-        padding: 5px;
-    }
-}
-
-.button-reg-form {
-    margin-top: 5px;
-    padding-top: 5px;
-
-}
-
-.button-button {
-    background-color: #3369F3;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     border-radius: 5px;
     border-style: none;
     width: 180px;
     height: 30px;
-<<<<<<< HEAD
     font-style: $white;
     color: $blue;
 }
 
 .reg-error {
     color: $red;
-=======
-    color: #FFFFFF;
-}
-
-.link-button {
-    background-color: #FFFFFF;
-    border-radius: 5px;
-    border-style: none;
-    width: 180px;
-    height: 30px;
-    font-style: #FFFFFF;
-    color: #3369F3;
-}
-
-.reg-error {
-    color: #FF2F2F;;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     font-weight: bold;
 }
 
@@ -156,22 +76,14 @@ $light-gray: #888;
     font-size: large;
     font-style: bold;
     border-radius: 50%;
-<<<<<<< HEAD
     background-color: $blue;
-=======
-    background-color: #3369F3;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     justify-content: center;
     align-items: center;
 }
 
 .triangle {
     border: 9px solid transparent;
-<<<<<<< HEAD
     border-left: 20px solid $blue;
-=======
-    border-left: 20px solid #3369F3;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 }
 
 
@@ -180,11 +92,7 @@ $light-gray: #888;
     height: 10px;
     margin: 3px;
     border-radius: 50%;
-<<<<<<< HEAD
     background-color: $blue;
-=======
-    background-color: #3369F3;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     justify-content: center;
     align-items: center;
 }
@@ -195,7 +103,6 @@ li {
 }
 
 
-<<<<<<< HEAD
 // формы ввода
 .form-input {
     display: flex;
@@ -226,8 +133,6 @@ li {
 }
 
 
-=======
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 /* //главное окно */
 .chat-window {
     display: flex;
@@ -286,11 +191,7 @@ li {
     padding: 5px;
     margin: 10px;
     min-height: 75px;
-<<<<<<< HEAD
     box-shadow: 0px 0px 6px$box-sh-color;
-=======
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     .chat-avatar {
         width: 48px;
         height: 48px;
@@ -335,11 +236,7 @@ li {
 }
 
 .dialog-window {
-<<<<<<< HEAD
     box-shadow: 0px 0px 6px$box-sh-color;
-=======
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     display: inline-block;
     border: 1px;
     border-radius: 10px;
@@ -396,11 +293,7 @@ li {
         border-style: none;
         border-radius: 10px;
         input:focus {
-<<<<<<< HEAD
             border-color: $blue;
-=======
-            border-color: #3369F3;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
             height: 45px;
             width: 650px;
         }
@@ -417,10 +310,7 @@ li {
     display: flex;
     align-items: center;
     padding: 0 1rem;
-<<<<<<< HEAD
     flex-direction: columns;
-=======
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 }
     
 .profile-sidebar {
@@ -429,7 +319,6 @@ li {
     width: 75px;
     min-height: 900px;
     border-radius: 15px;
-<<<<<<< HEAD
     box-shadow: 0px 0px 6px$box-sh-color;
     background-color: $blue;
     justify-content: center;
@@ -437,15 +326,6 @@ li {
     .profile-exit {
         color:$white;
         background-color: $blue;    
-=======
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-    background-color: #3369F3;
-    justify-content: center;
-    align-items: center;
-    .profile-exit {
-        color:#FFFFFF;
-        background-color: #3369F3;    
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
         border-style: none;
         
     }
@@ -460,18 +340,11 @@ li {
     width: 540px;
     height: 750px;
     margin-left: 30%;
-<<<<<<< HEAD
     background: $white;
     box-shadow: 0px 0px 6px $box-sh-color;
 }
 
 
-=======
-    background: #FFFFFF;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-}
-
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 .profile-avatar {
     display: flex;
     justify-content: center;
@@ -483,32 +356,6 @@ li {
     }
 }
 
-<<<<<<< HEAD
-=======
-.profile-input{
-    > input {
-        background-color: transparent;
-        border-top-style: hidden;
-        border-right-style: hidden;
-        border-left-style: hidden;
-        border-bottom-style: groove;
-        padding: 5px;
-    }
-    > label {
-        color: #999999;
-        margin-top: 5px;
-        font-size: 15px;
-        line-height: 9px;
-    }
-}
-
-.profile-buttons {
-    align-items: center;
-    margin-top: 5px;
-    padding-top: 5px;
-}
-
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 
 /* //Модальное окно */
 .modal {
@@ -520,65 +367,33 @@ li {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-<<<<<<< HEAD
     background-color: $box-sh-color-dark;; 
     
   }
   
 /* Модальное содержание/коробка */
 .modal-content {
-=======
-    background-color: rgba(0,0,0,0.8); 
-    
-  }
-  
-  /* Модальное содержание/коробка */
-  .modal-content {
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     display: flex;
     background-color: #fefefe;
     margin: 15% auto; 
     padding: 40px;
-<<<<<<< HEAD
     border: 1px solid $light-gray;;
-=======
-    border: 1px solid #888;
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     width: 40%; 
     height: 30%;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-<<<<<<< HEAD
 }
   
   
-=======
-    
-  }
-  
-  
-  .change-password-form {
-    padding: 10px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
-    > p {
-        font-style: bold;
-    }
-  }
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 
 //гамбургер меню добавления файлов
 .menu-add-files {
     position: absolute;
     bottom: 5%;
     left: 365px;
-<<<<<<< HEAD
     background-color: $white;
     box-shadow: 0px 0px 6px $box-sh-color;
-=======
-    background-color: #fff;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     border-radius: 10px;
     display: flex;
     animation: opacity 0.4s;
@@ -609,11 +424,7 @@ li {
     min-width: 15px;
     min-height: 50px;
     background-color: #fff;
-<<<<<<< HEAD
     box-shadow: 0px 0px 6px $box-sh-color;
-=======
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
->>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     border-radius: 10px;
     display: flex;
     animation: opacity 0.4s;

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { createNodeObjects } from "../../utils/createNodeObject";
 
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 export const chatMenu = [
 	{
 		title: "Добавить пользователя",
@@ -17,8 +20,15 @@ export const chatMenu = [
 
 
 export function getChatMenu() {
+<<<<<<< HEAD
     
     let div = createNodeObjects("div", ["chat-menu-list"], {id: "chat-menu-list"});    
+=======
+
+    let div = document.createElement('div');
+    div.classList.add("chat-menu-list");
+    div.setAttribute("id", "chat-menu-list");
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     div.innerHTML = 
         `<nav>
             <ul>
@@ -33,5 +43,11 @@ export function getChatMenu() {
                 }
             </ul>
         </nav>`;
+<<<<<<< HEAD
     return div;
 }
+=======
+        // console.log(div);
+    return div;
+}
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3

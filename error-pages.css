@@ -4,6 +4,7 @@
     width: 100%;
     position: relative;
 }
+<<<<<<< HEAD
 
 h1, h2, a {
     font-family: 'Inter';
@@ -27,10 +28,30 @@ h1 {
 }
     
 h2 {
+=======
+h1 {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    left: 47%;
+    top: 280px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #1E1E1E;
+}
+    
+h2 {
+    position: absolute;
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     width: 280px;
     height: 20px;
     left: 40%;
     top: 340px;
+<<<<<<< HEAD
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
@@ -39,11 +60,33 @@ h2 {
     
 a {    
     
+=======
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #1E1E1E;
+}    
+    
+a {    
+    position: absolute;
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     width: 200px;
     height: 11px;
     left: 42%;
     top: 429px;
+<<<<<<< HEAD
     font-size: 21px;
     line-height: 11px;
+=======
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 11px;
+    text-align: center;
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
     color: #3369F3;
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 4907
+=======
+4900
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 40D:\_yandex\chat\src\components\chatItems133173981502808449 1
 38D:\_yandex\chat\node_modules\@mischnic133167378541135443 1
 55D:\_yandex\chat\node_modules\caniuse-lite\data\features133167378618094172 1
@@ -8,6 +12,7 @@
 41D:\_yandex\chat\node_modules\terser\tools133167378586964176 1
 40D:\_yandex\chat\node_modules\safe-buffer133167378560494221 1
 50D:\_yandex\chat\node_modules\dotenv-expand\LICENSE133167378558974215 0
+<<<<<<< HEAD
 31D:\_yandex\chat\error-pages.css133181242015586862 0
 51D:\_yandex\chat\node_modules\qs\.github\FUNDING.yml133179425775509703 0
 89D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\aliased133167378590024248 1
@@ -15,6 +20,9 @@
 60D:\_yandex\chat\node_modules\css-select\lib\pseudo-selectors133167378575604217 1
 41D:\_yandex\chat\src\utils\createButton.js133181860923047029 0
 52D:\_yandex\chat\node_modules\normalize-path\index.js133169133756242921 0
+=======
+31D:\_yandex\chat\error-pages.css133180355230272435 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 47D:\_yandex\chat\node_modules\utility-types\dist133167378569774207 1
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\IT.js133167378605394231 0
 42D:\_yandex\chat\node_modules\array-flatten133179425774149736 1
@@ -24,6 +32,7 @@
 75D:\_yandex\chat\node_modules\@swc\helpers\lib\_class_private_method_init.js133167378573584259 0
 47D:\_yandex\chat\node_modules\@parcel\diagnostic133167378577124185 1
 42D:\_yandex\chat\node_modules\get-intrinsic133179425775019729 1
+<<<<<<< HEAD
 26D:\_yandex\chat\.gitignore133181166242922191 0
 46D:\_yandex\chat\node_modules\svgo\lib\style.js133167378586864164 0
 54D:\_yandex\chat\node_modules\terser\lib\utils\index.js133167378577504201 0
@@ -31,6 +40,19 @@
 69D:\_yandex\chat\node_modules\source-map-js\lib\source-map-consumer.js133169133756922928 0
 81D:\_yandex\chat\node_modules\caniuse-lite\data\features\viewport-unit-variants.js133167378616604327 0
 45D:\_yandex\chat\src\components\login\login.js133181936675594591 0
+=======
+26D:\_yandex\chat\.gitignore133181149456980811 0
+46D:\_yandex\chat\node_modules\svgo\lib\style.js133167378586864164 0
+54D:\_yandex\chat\node_modules\terser\lib\utils\index.js133167378577504201 0
+20D:\_yandex\chat\dist133181150619939347 1
+37D:\_yandex\chat\node_modules\boolbase133167378556644207 1
+60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\TR.js133167378615354159 0
+56D:\_yandex\chat\node_modules\css-tree\lib\common\List.js133167378587944176 0
+81D:\_yandex\chat\node_modules\react-refresh\cjs\react-refresh-babel.development.js133167378558614188 0
+69D:\_yandex\chat\node_modules\source-map-js\lib\source-map-consumer.js133169133756922928 0
+81D:\_yandex\chat\node_modules\caniuse-lite\data\features\viewport-unit-variants.js133167378616604327 0
+45D:\_yandex\chat\src\components\login\login.js133181125158684357 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 59D:\_yandex\chat\node_modules\merge-descriptors\package.json133179425773249768 0
 46D:\_yandex\chat\node_modules\term-size\license133167378558034204 0
 74D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-crisp-edges.js133167378594024177 0
@@ -44,12 +66,24 @@
 88D:\_yandex\chat\node_modules\caniuse-lite\data\features\mdn-text-decoration-shorthand.js133167378607614167 0
 42D:\_yandex\chat\node_modules\fresh\LICENSE133179425773849751 0
 56D:\_yandex\chat\node_modules\iconv-lite\encodings\tables133179425775549691 1
+<<<<<<< HEAD
 43D:\_yandex\chat\src\components\registration133181862578626431 1
 66D:\_yandex\chat\node_modules\caniuse-lite\data\features\colr-v1.js133167378591144220 0
 82D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-overscroll-behavior.js133167378597224125 0
 26D:\_yandex\chat\error.html133181200842613320 0
 65D:\_yandex\chat\node_modules\caniuse-lite\data\features\webgpu.js133167378617244192 0
 49D:\_yandex\chat\src\components\profile\profile.js133181920717325131 0
+=======
+43D:\_yandex\chat\src\components\registration133169084667649930 1
+66D:\_yandex\chat\node_modules\caniuse-lite\data\features\colr-v1.js133167378591144220 0
+82D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-overscroll-behavior.js133167378597224125 0
+26D:\_yandex\chat\error.html133180355547838523 0
+65D:\_yandex\chat\node_modules\caniuse-lite\data\features\webgpu.js133167378617244192 0
+49D:\_yandex\chat\src\components\profile\profile.js133181129497072368 0
+38D:\_yandex\chat\src\utils\quicksort.js133175128561178654 0
+37D:\_yandex\chat\node_modules\readdirp133169133756632940 1
+61D:\_yandex\chat\node_modules\@parcel\packager-js\package.json133167378579904272 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 51D:\_yandex\chat\node_modules\entities\lib\generated133167378571614184 1
 19D:\_yandex\chat\img133180134637747690 1
 57D:\_yandex\chat\node_modules\color-convert\conversions.js133167378557514175 0
@@ -59,11 +93,16 @@
 49D:\_yandex\chat\node_modules\msgpackr-extract\bin133167378559494243 1
 42D:\_yandex\chat\node_modules\node-releases133167378562414267 1
 33D:\_yandex\chat\node_modules\svgo133167378588504165 1
+<<<<<<< HEAD
 33D:\_yandex\chat\node_modules\.bin133181938851733178 1
+=======
+33D:\_yandex\chat\node_modules\.bin133179425775939740 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 46D:\_yandex\chat\node_modules\commander\LICENSE133167378553604186 0
 65D:\_yandex\chat\node_modules\@parcel\core\test\fixtures\bundle.js133167378587634189 0
 35D:\_yandex\chat\node_modules\qs\lib133179425775279733 1
 51D:\_yandex\chat\node_modules\domelementtype\LICENSE133167378553514215 0
+<<<<<<< HEAD
 26D:\_yandex\chat\index.html133181200753506819 0
 25D:\_yandex\chat\main.scss133181727323667271 0
 40D:\_yandex\chat\node_modules\.bin\parcel133167378632664298 0
@@ -74,6 +113,18 @@
 85D:\_yandex\chat\node_modules\dom-serializer\node_modules\entities\lib\encode.d.ts.map133167378567074201 0
 28D:\_yandex\chat\node_modules133181938852653108 1
 28D:\_yandex\chat\package.json133181938853873151 0
+=======
+26D:\_yandex\chat\index.html133179437013865551 0
+25D:\_yandex\chat\main.scss133181148482755758 0
+40D:\_yandex\chat\node_modules\.bin\parcel133167378632664298 0
+49D:\_yandex\chat\node_modules\yaml\browser\pair.js133167378568404218 0
+49D:\_yandex\chat\node_modules\terser\lib\output.js133167378581564159 0
+47D:\_yandex\chat\node_modules\.package-lock.json133179425778059686 0
+46D:\_yandex\chat\node_modules\csso\package.json133167378581914190 0
+85D:\_yandex\chat\node_modules\dom-serializer\node_modules\entities\lib\encode.d.ts.map133167378567074201 0
+28D:\_yandex\chat\node_modules133179425776009669 1
+28D:\_yandex\chat\package.json133180131068161859 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 72D:\_yandex\chat\node_modules\@parcel\reporter-cli\lib\CLIReporter.js.map133167378586724194 0
 56D:\_yandex\chat\node_modules\caniuse-lite\data\agents.js133167378566894227 0
 55D:\_yandex\chat\node_modules\svgo\plugins\cleanupIDs.js133167378566444230 0
@@ -82,7 +133,11 @@
 47D:\_yandex\chat\node_modules\timsort\LICENSE.md133167378560474276 0
 46D:\_yandex\chat\node_modules\commander\typings133167378565014225 1
 112D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias-glob\src\test.js133167378589104159 0
+<<<<<<< HEAD
 29D:\_yandex\chat\notfound.html133181200791880563 0
+=======
+29D:\_yandex\chat\notfound.html133180356073612904 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 59D:\_yandex\chat\node_modules\htmlparser2\lib\FeedHandler.js133167378556214223 0
 41D:\_yandex\chat\node_modules\content-type133179425774299712 1
 53D:\_yandex\chat\node_modules\@trysound\sax\lib\sax.js133167378556684252 0
@@ -91,13 +146,21 @@
 50D:\_yandex\chat\node_modules\safer-buffer\tests.js133179425774859724 0
 53D:\_yandex\chat\node_modules\@swc\helpers\lib\_jsx.js133167378583424251 0
 80D:\_yandex\chat\node_modules\@parcel\optimizer-htmlnano\lib\HTMLNanoOptimizer.js133167378569724195 0
+<<<<<<< HEAD
 33D:\_yandex\chat\package-lock.json133181938853853113 0
+=======
+33D:\_yandex\chat\package-lock.json133179425777179733 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 46D:\_yandex\chat\node_modules\send\node_modules133179425769249684 1
 62D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Ratio.js133167378590914190 0
 36D:\_yandex\chat\node_modules\@parcel133169134789386970 1
 67D:\_yandex\chat\node_modules\node-releases\data\processed\envs.json133167378557194147 0
 56D:\_yandex\chat\node_modules\function-bind\.editorconfig133179425774969716 0
+<<<<<<< HEAD
 57D:\_yandex\chat\src\components\addMenu\addMenuAddFiles.js133181891319609443 0
+=======
+57D:\_yandex\chat\src\components\addMenu\addMenuAddFiles.js133180365799827283 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 77D:\_yandex\chat\node_modules\@parcel\runtime-js\lib\helpers\get-worker-url.js133167378574824210 0
 80D:\_yandex\chat\node_modules\@jridgewell\resolve-uri\dist\types\resolve-uri.d.ts133167378564614239 0
 50D:\_yandex\chat\node_modules\source-map-js\LICENSE133169133756112865 0
@@ -106,7 +169,11 @@
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\AS.js133167378575324217 0
 43D:\_yandex\chat\node_modules\domhandler\lib133167378564874234 1
 67D:\_yandex\chat\node_modules\@parcel\diagnostic\lib\diagnostic.d.ts133167378577494220 0
+<<<<<<< HEAD
 36D:\_yandex\chat\src\components\login133181855062661052 1
+=======
+36D:\_yandex\chat\src\components\login133171468639130593 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 63D:\_yandex\chat\node_modules\caniuse-lite\data\features\json.js133167378605744172 0
 82D:\_yandex\chat\node_modules\caniuse-lite\data\features\upgradeinsecurerequests.js133167378615824212 0
 70D:\_yandex\chat\node_modules\@parcel\optimizer-image\lib\loadNative.js133167378577874200 0
@@ -117,12 +184,17 @@
 61D:\_yandex\chat\node_modules\node-gyp-build-optional-packages133167378562634204 1
 75D:\_yandex\chat\node_modules\svgo\plugins\removeNonInheritableGroupAttrs.js133167378582634181 0
 58D:\_yandex\chat\node_modules\css-select\lib\types.d.ts.map133167378572204200 0
+<<<<<<< HEAD
 25D:\_yandex\chat\README.md133181160697512685 0
+=======
+25D:\_yandex\chat\README.md133181135840213901 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 53D:\_yandex\chat\node_modules\abortcontroller-polyfill133167378568144195 1
 67D:\_yandex\chat\node_modules\caniuse-lite\data\features\bloburls.js133167378586784187 0
 57D:\_yandex\chat\node_modules\nth-check\lib\compile.js.map133167378566284280 0
 68D:\_yandex\chat\node_modules\terser\lib\compress\compressor-flags.js133167378573094244 0
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\LI.js133167378606614240 0
+<<<<<<< HEAD
 46D:\_yandex\chat\node_modules\is-json\README.md133167378557124203 0
 49D:\_yandex\chat\node_modules\timsort\package.json133167378553544238 0
 61D:\_yandex\chat\src\components\profile\metaAttrsAvatarForm.js133181925733148073 0
@@ -135,6 +207,17 @@
 52D:\_yandex\chat\node_modules\node-releases\README.md133167378562644206 0
 43D:\_yandex\chat\node_modules\svgo\README.md133167378588554186 0
 46D:\_yandex\chat\node_modules\yaml\parse-cst.js133167378571684289 0
+=======
+25D:\_yandex\chat\server.js133181119969853698 0
+57D:\_yandex\chat\node_modules\electron-to-chromium\LICENSE133167378553554247 0
+55D:\_yandex\chat\node_modules\.bin\browserslist-lint.cmd133167378632674256 0
+19D:\_yandex\chat\src133180373666711838 1
+52D:\_yandex\chat\node_modules\node-releases\README.md133167378562644206 0
+43D:\_yandex\chat\node_modules\svgo\README.md133167378588554186 0
+46D:\_yandex\chat\node_modules\yaml\parse-cst.js133167378571684289 0
+38D:\_yandex\chat\src\components\addMenu133180134637747690 1
+46D:\_yandex\chat\node_modules\vary\package.json133179425773219808 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 85D:\_yandex\chat\node_modules\dom-serializer\node_modules\entities\lib\decode.d.ts.map133167378566654233 0
 64D:\_yandex\chat\node_modules\@parcel\watcher\prebuilds\linux-x64133167378585354196 1
 53D:\_yandex\chat\node_modules\setprototypeof\README.md133179425774359733 0
@@ -145,7 +228,11 @@
 33D:\_yandex\chat\node_modules\@swc133167378541145447 1
 65D:\_yandex\chat\node_modules\@parcel\codeframe\test\fixtures\a.js133167378558144228 0
 66D:\_yandex\chat\node_modules\lightningcss-win32-x64-msvc\README.md133167378555884229 0
+<<<<<<< HEAD
 28D:\_yandex\chat\src\index.js133181937023809845 0
+=======
+28D:\_yandex\chat\src\index.js133180381809745587 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 71D:\_yandex\chat\node_modules\caniuse-lite\data\features\style-scoped.js133167378613914185 0
 40D:\_yandex\chat\node_modules\mime\cli.js133179425774559724 0
 79D:\_yandex\chat\node_modules\caniuse-lite\data\features\internationalization.js133167378605094179 0
@@ -158,11 +245,16 @@
 55D:\_yandex\chat\node_modules\nth-check\lib\esm\parse.js133167378562334242 0
 75D:\_yandex\chat\node_modules\@parcel\transformer-postcss\src\loadPlugins.js133167378566374237 0
 52D:\_yandex\chat\node_modules\is-binary-path\index.js133169133756392922 0
+<<<<<<< HEAD
 34D:\_yandex\chat\src\utils\const.js133181753254715569 0
+=======
+34D:\_yandex\chat\src\utils\const.js133176436922680810 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 59D:\_yandex\chat\node_modules\css-what\lib\es\stringify.d.ts133167378571884198 0
 50D:\_yandex\chat\node_modules\picomatch\lib\scan.js133169133756782942 0
 49D:\_yandex\chat\node_modules\msgpackr\unpack.d.ts133167378583334204 0
 86D:\_yandex\chat\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest2.c133167378586814138 0
+<<<<<<< HEAD
 25D:\_yandex\chat\src\utils133181878420182226 1
 64D:\_yandex\chat\node_modules\svgo\plugins\removeEditorsNSData.js133167378580544190 0
 61D:\_yandex\chat\node_modules\cosmiconfig\dist\getDirectory.js133167378562134240 0
@@ -178,6 +270,12 @@
 74D:\_yandex\chat\node_modules\@parcel\packager-js\src\GlobalOutputFormat.js133167378575554206 0
 65D:\_yandex\chat\node_modules\svgo\plugins\cleanupNumericValues.js133167378567484241 0
 63D:\_yandex\chat\node_modules\caniuse-lite\data\features\colr.js133167378591244218 0
+=======
+25D:\_yandex\chat\src\utils133175107550179615 1
+64D:\_yandex\chat\node_modules\svgo\plugins\removeEditorsNSData.js133167378580544190 0
+61D:\_yandex\chat\node_modules\cosmiconfig\dist\getDirectory.js133167378562134240 0
+60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\YE.js133167378618124212 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 73D:\_yandex\chat\node_modules\entities\lib\generated\decode-data-html.d.ts133167378571404237 0
 84D:\_yandex\chat\node_modules\@babel\highlight\node_modules\color-name\.eslintrc.json133167378562964245 0
 51D:\_yandex\chat\node_modules\entities\lib\decode.js133167378563074254 0
@@ -189,14 +287,18 @@
 32D:\_yandex\chat\src\modules\auth133168077757442098 1
 46D:\_yandex\chat\node_modules\source-map-js\lib133169133757082953 1
 62D:\_yandex\chat\node_modules\caniuse-lite\data\features\eot.js133167378600644162 0
+<<<<<<< HEAD
 68D:\_yandex\chat\node_modules\@parcel\transformer-babel\lib\babel7.js133167378573914193 0
 62D:\_yandex\chat\src\components\profile\metaAttrsProfileForm.js133181925184371628 0
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 55D:\_yandex\chat\node_modules\side-channel\test\index.js133179425774679781 0
 68D:\_yandex\chat\node_modules\@parcel\transformer-babel\src\config.js133167378576114224 0
 46D:\_yandex\chat\node_modules\send\package.json133179425773879732 0
 76D:\_yandex\chat\node_modules\caniuse-lite\data\features\keyboardevent-key.js133167378605994201 0
 43D:\_yandex\chat\node_modules\unpipe\LICENSE133179425773809681 0
 64D:\_yandex\chat\node_modules\@jridgewell\trace-mapping\README.md133167378564204265 0
+<<<<<<< HEAD
 40D:\_yandex\chat\src\modules\auth\auth.js133181203276756890 0
 49D:\_yandex\chat\node_modules\json5\lib\unicode.js133167378566604175 0
 53D:\_yandex\chat\node_modules\@parcel\fs\src\NodeFS.js133167378584724182 0
@@ -205,6 +307,16 @@
 67D:\_yandex\chat\node_modules\iconv-lite\encodings\tables\eucjp.json133179425775469688 0
 57D:\_yandex\chat\node_modules\type-fest\source\opaque.d.ts133167378571574178 0
 50D:\_yandex\chat\src\components\changePassswordForm133181876162144284 1
+=======
+40D:\_yandex\chat\src\modules\auth\auth.js133174779784766147 0
+49D:\_yandex\chat\node_modules\json5\lib\unicode.js133167378566604175 0
+53D:\_yandex\chat\node_modules\@parcel\fs\src\NodeFS.js133167378584724182 0
+48D:\_yandex\chat\node_modules\terser\lib\compress133167378584304184 1
+41D:\_yandex\chat\src\components\chatWindow133172596697226463 1
+67D:\_yandex\chat\node_modules\iconv-lite\encodings\tables\eucjp.json133179425775469688 0
+57D:\_yandex\chat\node_modules\type-fest\source\opaque.d.ts133167378571574178 0
+50D:\_yandex\chat\src\components\changePassswordForm133176832608683653 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 57D:\_yandex\chat\node_modules\@parcel\transformer-html\src133167378571624180 1
 59D:\_yandex\chat\node_modules\detect-libc\bin\detect-libc.js133167378578574199 0
 79D:\_yandex\chat\node_modules\posthtml\node_modules\posthtml-parser\package.json133167378577574236 0
@@ -237,12 +349,17 @@
 69D:\_yandex\chat\node_modules\caniuse-lite\data\features\nav-timing.js133167378608944274 0
 48D:\_yandex\chat\node_modules\immutable\README.md133169133757212933 0
 46D:\_yandex\chat\node_modules\get-port\index.js133167378571674137 0
+<<<<<<< HEAD
 38D:\_yandex\chat\src\components\profile133181909472443523 1
 54D:\_yandex\chat\node_modules\@parcel\core\src\index.js133167378591574180 0
 46D:\_yandex\chat\node_modules\mime\src\build.js133179425774929761 0
 56D:\_yandex\chat\src\components\registration\metaAttrs.js133181872277095058 0
 44D:\_yandex\chat\node_modules\vary\HISTORY.md133179425774359733 0
 59D:\_yandex\chat\src\components\registration\registration.js133181936132804753 0
+=======
+38D:\_yandex\chat\src\components\profile133180374222413657 1
+59D:\_yandex\chat\src\components\registration\registration.js133181149995033428 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 55D:\_yandex\chat\node_modules\term-size\vendor\.DS_Store133167378554244228 0
 62D:\_yandex\chat\node_modules\domelementtype\lib\esm\index.d.ts133167378565214220 0
 85D:\_yandex\chat\node_modules\caniuse-lite\data\features\same-site-cookie-attribute.js133167378612574176 0
@@ -254,7 +371,11 @@
 50D:\_yandex\chat\node_modules\domutils\lib\feeds.js133167378556184199 0
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\LU.js133167378607064191 0
 61D:\_yandex\chat\node_modules\@parcel\core\test\Parcel.test.js133167378593744163 0
+<<<<<<< HEAD
 58D:\_yandex\chat\src\components\profile\getAddAvatarForm.js133181906135296223 0
+=======
+58D:\_yandex\chat\src\components\profile\getAddAvatarForm.js133181132962266719 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 54D:\_yandex\chat\node_modules\yaml\browser\parse-cst.js133167378570624182 0
 62D:\_yandex\chat\node_modules\source-map\dist\source-map.min.js133167378572194304 0
 48D:\_yandex\chat\node_modules\terser\bin\uglifyjs133167378560294272 0
@@ -265,7 +386,11 @@
 67D:\_yandex\chat\node_modules\@parcel\transformer-babel\package.json133167378581124185 0
 48D:\_yandex\chat\node_modules\type-fest\base.d.ts133167378562594263 0
 58D:\_yandex\chat\node_modules\mdn-data\css\definitions.json133167378566034221 0
+<<<<<<< HEAD
 55D:\_yandex\chat\src\components\chatWindow\chatWindow.js133181929650163018 0
+=======
+55D:\_yandex\chat\src\components\chatWindow\chatWindow.js133178633227895627 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 81D:\_yandex\chat\node_modules\@jridgewell\sourcemap-codec\dist\sourcemap-codec.mjs133167378563524200 0
 58D:\_yandex\chat\node_modules\ordered-binary\dist\index.cjs133167378556224196 0
 60D:\_yandex\chat\node_modules\type-fest\ts41\pascal-case.d.ts133167378572914232 0
@@ -273,6 +398,7 @@
 84D:\_yandex\chat\node_modules\react-refresh\cjs\react-refresh-babel.production.min.js133167378560564226 0
 50D:\_yandex\chat\node_modules\yaml\browser\types.js133167378578984245 0
 59D:\_yandex\chat\node_modules\@parcel\watcher\src\Backend.cc133167378557284161 0
+<<<<<<< HEAD
 57D:\_yandex\chat\src\components\modalWindow\modalWindow.js133181926600191245 0
 57D:\_yandex\chat\node_modules\@parcel\transformer-html\lib133167378571144212 1
 63D:\_yandex\chat\node_modules\lmdb\dependencies\lz4\lib\xxhash.h133167378592274175 0
@@ -285,6 +411,11 @@
 66D:\_yandex\chat\node_modules\lmdb\dependencies\lz4\lib\dll\example133167378594844217 1
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\QA.js133167378611564175 0
 63D:\_yandex\chat\src\components\chatUserManage\chatUserManage.js133181888868333249 0
+=======
+57D:\_yandex\chat\src\components\modalWindow\modalWindow.js133176842692934435 0
+60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\QA.js133167378611564175 0
+63D:\_yandex\chat\src\components\chatUserManage\chatUserManage.js133181121559861598 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 61D:\_yandex\chat\node_modules\regenerator-runtime\package.json133167378559914198 0
 62D:\_yandex\chat\node_modules\css-tree\lib\syntax\pseudo\common133167378591474169 1
 51D:\_yandex\chat\node_modules\csso\lib\clean\Rule.js133167378578334251 0
@@ -293,7 +424,13 @@
 56D:\_yandex\chat\node_modules\node-addon-api\node_api.gyp133167378555354206 0
 46D:\_yandex\chat\node_modules\yaml\types\set.js133167378577204225 0
 84D:\_yandex\chat\node_modules\@swc\helpers\lib\_class_apply_descriptor_destructure.js133167378567214246 0
+<<<<<<< HEAD
 53D:\_yandex\chat\src\components\chatItems\chatItems.js133181926354297399 0
+=======
+53D:\_yandex\chat\src\components\chatItems\chatItems.js133176676771302516 0
+58D:\_yandex\chat\node_modules\@babel\highlight\lib\index.js133167378557504204 0
+40D:\_yandex\chat\node_modules\body-parser133179425775219704 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 49D:\_yandex\chat\node_modules\weak-lru-cache\tests133167378562144255 1
 63D:\_yandex\chat\node_modules\@parcel\watcher\src\unix\legacy.cc133167378566444230 0
 43D:\_yandex\chat\node_modules\parcel\LICENSE133167378573844177 0
@@ -306,10 +443,14 @@
 51D:\_yandex\chat\node_modules\ordered-binary\LICENSE133167378553734209 0
 70D:\_yandex\chat\node_modules\@swc\helpers\src\_array_like_to_array.mjs133167378589564177 0
 86D:\_yandex\chat\node_modules\@parcel\core\test\fixtures\duplicate-targets\package.json133167378598114163 0
+<<<<<<< HEAD
 72D:\_yandex\chat\src\components\changePassswordForm\changePasswordForm.js133181891463435332 0
 80D:\_yandex\chat\node_modules\dom-serializer\node_modules\entities\lib\index.d.ts133167378569264177 0
 52D:\_yandex\chat\node_modules\parent-module\readme.md133167378558934250 0
 63D:\_yandex\chat\src\components\changePassswordForm\metaAttrs.js133181884718140406 0
+=======
+72D:\_yandex\chat\src\components\changePassswordForm\changePasswordForm.js133181130455148134 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 48D:\_yandex\chat\node_modules\terser\lib\scope.js133167378583614161 0
 80D:\_yandex\chat\node_modules\caniuse-lite\data\features\native-filesystem-api.js133167378608914218 0
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\MK.js133167378608024257 0
@@ -318,15 +459,30 @@
 36D:\_yandex\chat\node_modules\accepts133179425774319723 1
 76D:\_yandex\chat\node_modules\caniuse-lite\data\features\namevalue-storage.js133167378608874200 0
 59D:\_yandex\chat\node_modules\svgo\plugins\collapseGroups.js133167378568374148 0
+<<<<<<< HEAD
 53D:\_yandex\chat\src\components\addMenu\addChatMenu.js133181890297948957 0
+=======
+53D:\_yandex\chat\src\components\addMenu\addChatMenu.js133180365658572719 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 50D:\_yandex\chat\node_modules\ansi-styles\readme.md133167378558954240 0
 80D:\_yandex\chat\node_modules\@jridgewell\gen-mapping\dist\gen-mapping.umd.js.map133167378561824208 0
 47D:\_yandex\chat\node_modules\debug\CHANGELOG.md133179425775209715 0
 57D:\_yandex\chat\node_modules\@parcel\transformer-json\lib133167378567014224 1
 35D:\_yandex\chat\node_modules\@babel133167378541185405 1
 35D:\_yandex\chat\node_modules\@lezer133167378541175465 1
+<<<<<<< HEAD
 53D:\_yandex\chat\node_modules\terser\tools\domprops.js133167378574324153 0
 34D:\_yandex\chat\node_modules\@lmdb133181938851763073 1
+=======
+103D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias-exclude133167378590144207 1
+48D:\_yandex\chat\node_modules\on-finished\LICENSE133179425773239758 0
+75D:\_yandex\chat\node_modules\@swc\helpers\src\_async_generator_delegate.mjs133167378590094225 0
+68D:\_yandex\chat\node_modules\json-parse-even-better-errors\README.md133167378560474276 0
+54D:\_yandex\chat\node_modules\acorn\dist\acorn.mjs.d.ts133167378568554218 0
+37D:\_yandex\chat\node_modules\anymatch133169133756632940 1
+53D:\_yandex\chat\node_modules\terser\tools\domprops.js133167378574324153 0
+34D:\_yandex\chat\node_modules\@lmdb133179425776019738 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 65D:\_yandex\chat\node_modules\caniuse-lite\data\features\jpegxl.js133167378605634180 0
 85D:\_yandex\chat\node_modules\@parcel\watcher\prebuilds\linux-x64\node.napi.glibc.node133167378582484244 0
 43D:\_yandex\chat\node_modules\.bin\acorn.ps1133167378632634246 0
@@ -334,11 +490,16 @@
 55D:\_yandex\chat\node_modules\@parcel\types\package.json133167378564844213 0
 50D:\_yandex\chat\node_modules\@lezer\common\LICENSE133167378555984343 0
 73D:\_yandex\chat\node_modules\@swc\helpers\lib\_interop_require_default.js133167378581474157 0
+<<<<<<< HEAD
 46D:\_yandex\chat\node_modules\@msgpackr-extract133181938851743108 1
+=======
+46D:\_yandex\chat\node_modules\@msgpackr-extract133179425776009669 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 98D:\_yandex\chat\node_modules\@parcel\package-manager\test\fixtures\has-foo\subpackage\package.json133167378589524182 0
 52D:\_yandex\chat\node_modules\browserslist\error.d.ts133167378565414194 0
 44D:\_yandex\chat\node_modules\ms\package.json133179425773199709 0
 40D:\_yandex\chat\node_modules\ansi-styles133167378560184198 1
+<<<<<<< HEAD
 103D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-alias-exclude133167378590144207 1
 48D:\_yandex\chat\node_modules\on-finished\LICENSE133179425773239758 0
 75D:\_yandex\chat\node_modules\@swc\helpers\src\_async_generator_delegate.mjs133167378590094225 0
@@ -346,6 +507,8 @@
 54D:\_yandex\chat\node_modules\acorn\dist\acorn.mjs.d.ts133167378568554218 0
 37D:\_yandex\chat\node_modules\anymatch133169133756632940 1
 35D:\_yandex\chat\node_modules\base-x133167378561704340 1
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 70D:\_yandex\chat\node_modules\type-fest\source\require-exactly-one.d.ts133167378574344199 0
 62D:\_yandex\chat\node_modules\caniuse-lite\data\features\ime.js133167378604164233 0
 50D:\_yandex\chat\node_modules\.bin\browserslist.ps1133167378632654273 0
@@ -355,12 +518,16 @@
 69D:\_yandex\chat\node_modules\lmdb\dependencies\v8\v8-fast-api-calls.h133167378592134199 0
 46D:\_yandex\chat\node_modules\binary-extensions133169133756743093 1
 52D:\_yandex\chat\node_modules\@parcel\watcher\LICENSE133167378555514241 0
+<<<<<<< HEAD
 58D:\_yandex\chat\node_modules\@babel\highlight\lib\index.js133167378557504204 0
 40D:\_yandex\chat\node_modules\body-parser133179425775219704 1
 37D:\_yandex\chat\node_modules\boolbase133167378556644207 1
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\TR.js133167378615354159 0
 56D:\_yandex\chat\node_modules\css-tree\lib\common\List.js133167378587944176 0
 81D:\_yandex\chat\node_modules\react-refresh\cjs\react-refresh-babel.development.js133167378558614188 0
+=======
+35D:\_yandex\chat\node_modules\base-x133167378561704340 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\SN.js133167378613414189 0
 35D:\_yandex\chat\node_modules\braces133169133756712946 1
 41D:\_yandex\chat\node_modules\browserslist133167378565684226 1
@@ -387,11 +554,19 @@
 59D:\_yandex\chat\node_modules\source-map\lib\mapping-list.js133167378564994228 0
 118D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\side-effects-false-glob\sub\index.js133167378583404148 0
 44D:\_yandex\chat\node_modules\posthtml-parser133167378563364280 1
+<<<<<<< HEAD
 37D:\_yandex\chat\node_modules\chokidar133169133756892940 1
 68D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Parentheses.js133167378590194161 0
 54D:\_yandex\chat\node_modules\csso\lib\replace\color.js133167378568264183 0
 41D:\_yandex\chat\node_modules\svgo\plugins133167378586104201 1
 47D:\_yandex\chat\node_modules\chrome-trace-event133167378563034237 1
+=======
+68D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Parentheses.js133167378590194161 0
+37D:\_yandex\chat\node_modules\chokidar133169133756892940 1
+47D:\_yandex\chat\node_modules\chrome-trace-event133167378563034237 1
+54D:\_yandex\chat\node_modules\csso\lib\replace\color.js133167378568264183 0
+41D:\_yandex\chat\node_modules\svgo\plugins133167378586104201 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 34D:\_yandex\chat\node_modules\clone133167378561854237 1
 57D:\_yandex\chat\node_modules\htmlparser2\lib\Tokenizer.js133167378561904173 0
 59D:\_yandex\chat\node_modules\object-inspect\test-core-js.js133179425775559701 0
@@ -420,10 +595,17 @@
 35D:\_yandex\chat\node_modules\cookie133179425774669797 1
 37D:\_yandex\chat\node_modules\svgo\bin133167378555804209 1
 50D:\_yandex\chat\node_modules\yaml\browser\index.js133167378564624206 0
+<<<<<<< HEAD
 60D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Nth.js133167378589514228 0
 47D:\_yandex\chat\node_modules\methods\HISTORY.md133179425774379709 0
 57D:\_yandex\chat\node_modules\yaml\dist\Schema-88e323a7.js133167378574884178 0
 31D:\_yandex\chat\dist\index.html133181940533871144 0
+=======
+47D:\_yandex\chat\node_modules\methods\HISTORY.md133179425774379709 0
+60D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Nth.js133167378589514228 0
+57D:\_yandex\chat\node_modules\yaml\dist\Schema-88e323a7.js133167378574884178 0
+31D:\_yandex\chat\dist\index.html133181150619749286 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 54D:\_yandex\chat\node_modules\@lezer\lr\dist\stack.d.ts133167378566924208 0
 45D:\_yandex\chat\node_modules\cookie-signature133179425774299712 1
 76D:\_yandex\chat\node_modules\@parcel\reporter-dev-server\src\serverErrors.js133167378581804155 0
@@ -585,8 +767,13 @@
 43D:\_yandex\chat\node_modules\send\README.md133179425774639727 0
 42D:\_yandex\chat\node_modules\tslib\modules133167378562374241 1
 40D:\_yandex\chat\node_modules\htmlparser2133167378566984208 1
+<<<<<<< HEAD
 52D:\_yandex\chat\node_modules\to-regex-range\index.js133169133756232937 0
 57D:\_yandex\chat\node_modules\svgo\plugins\cleanupAttrs.js133167378565434138 0
+=======
+57D:\_yandex\chat\node_modules\svgo\plugins\cleanupAttrs.js133167378565434138 0
+52D:\_yandex\chat\node_modules\to-regex-range\index.js133169133756232937 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 78D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-filter-function.js133167378594934188 0
 57D:\_yandex\chat\node_modules\setprototypeof\test\index.js133179425774689773 0
 50D:\_yandex\chat\node_modules\parent-module\license133167378557074208 0
@@ -716,8 +903,13 @@
 62D:\_yandex\chat\node_modules\iconv-lite\encodings\dbcs-data.js133179425774729718 0
 89D:\_yandex\chat\node_modules\@swc\helpers\src\_class_static_private_field_destructure.mjs133167378592124229 0
 43D:\_yandex\chat\node_modules\node-gyp-build133167378563644262 1
+<<<<<<< HEAD
 43D:\_yandex\chat\node_modules\normalize-path133169133756462895 1
 67D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Percentage.js133167378590494189 0
+=======
+67D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Percentage.js133167378590494189 0
+43D:\_yandex\chat\node_modules\normalize-path133169133756462895 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 48D:\_yandex\chat\node_modules\body-parser\LICENSE133179425773279771 0
 38D:\_yandex\chat\node_modules\nth-check133167378570094226 1
 56D:\_yandex\chat\node_modules\ordered-binary\package.json133167378563924219 0
@@ -784,10 +976,25 @@
 69D:\_yandex\chat\node_modules\caniuse-lite\data\features\pdf-viewer.js133167378610304185 0
 60D:\_yandex\chat\node_modules\weak-lru-cache\rollup.config.js133167378561274248 0
 39D:\_yandex\chat\node_modules\proxy-addr133179425774289702 1
+<<<<<<< HEAD
 51D:\_yandex\chat\node_modules\forwarded\package.json133179425773789717 0
 54D:\_yandex\chat\node_modules\terser\dist\bundle.min.js133167378571684289 0
 31D:\_yandex\chat\node_modules\qs133179425775489659 1
 67D:\_yandex\chat\node_modules\svgo\plugins\addClassesToSVGElement.js133167378565024186 0
+=======
+67D:\_yandex\chat\node_modules\svgo\plugins\addClassesToSVGElement.js133167378565024186 0
+31D:\_yandex\chat\node_modules\qs133179425775489659 1
+51D:\_yandex\chat\node_modules\forwarded\package.json133179425773789717 0
+54D:\_yandex\chat\node_modules\terser\dist\bundle.min.js133167378571684289 0
+57D:\_yandex\chat\node_modules\@parcel\transformer-html\lib133167378571144212 1
+63D:\_yandex\chat\node_modules\lmdb\dependencies\lz4\lib\xxhash.h133167378592274175 0
+59D:\_yandex\chat\node_modules\sass\types\value\function.d.ts133169133758012855 0
+67D:\_yandex\chat\node_modules\yaml\browser\dist\warnings-df54cb69.js133167378582004212 0
+42D:\_yandex\chat\node_modules\vary\index.js133179425774109703 0
+48D:\_yandex\chat\node_modules\weak-lru-cache\dist133167378553734209 1
+41D:\_yandex\chat\node_modules\range-parser133179425774289702 1
+66D:\_yandex\chat\node_modules\lmdb\dependencies\lz4\lib\dll\example133167378594844217 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 48D:\_yandex\chat\node_modules\react-error-overlay133167378564784225 1
 44D:\_yandex\chat\node_modules\send\HISTORY.md133179425774269719 0
 77D:\_yandex\chat\node_modules\@babel\highlight\node_modules\chalk\templates.js133167378562344185 0
@@ -797,8 +1004,11 @@
 52D:\_yandex\chat\node_modules\@trysound\sax\README.md133167378560474276 0
 58D:\_yandex\chat\node_modules\csso\lib\restructure\utils.js133167378581164150 0
 42D:\_yandex\chat\node_modules\react-refresh133167378565504237 1
+<<<<<<< HEAD
 37D:\_yandex\chat\node_modules\readdirp133169133756632940 1
 61D:\_yandex\chat\node_modules\@parcel\packager-js\package.json133167378579904272 0
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 43D:\_yandex\chat\node_modules\tslib\tslib.js133167378561564226 0
 48D:\_yandex\chat\node_modules\regenerator-runtime133167378560894354 1
 58D:\_yandex\chat\node_modules\weak-lru-cache\dist\index.cjs133167378554244228 0
@@ -1128,6 +1338,12 @@
 55D:\_yandex\chat\node_modules\nth-check\lib\esm\index.js133167378559784286 0
 58D:\_yandex\chat\node_modules\weak-lru-cache\LRFUExpirer.js133167378559914198 0
 73D:\_yandex\chat\node_modules\@parcel\watcher\src\macos\FSEventsBackend.cc133167378564844213 0
+<<<<<<< HEAD
+=======
+44D:\_yandex\chat\node_modules\vary\HISTORY.md133179425774359733 0
+54D:\_yandex\chat\node_modules\@parcel\core\src\index.js133167378591574180 0
+46D:\_yandex\chat\node_modules\mime\src\build.js133179425774929761 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 41D:\_yandex\chat\node_modules\vary\LICENSE133179425773819721 0
 74D:\_yandex\chat\node_modules\@parcel\runtime-js\lib\helpers\cacheLoader.js133167378572134261 0
 43D:\_yandex\chat\node_modules\vary\README.md133179425773489738 0
@@ -1156,8 +1372,13 @@
 69D:\_yandex\chat\node_modules\dom-serializer\node_modules\entities\lib133167378569164194 1
 50D:\_yandex\chat\node_modules\utility-types\LICENSE133167378554264215 0
 56D:\_yandex\chat\node_modules\htmlparser2\lib\Parser.d.ts133167378568274192 0
+<<<<<<< HEAD
 52D:\_yandex\chat\node_modules\node-gyp-build\index.js133167378560594226 0
 52D:\_yandex\chat\node_modules\utility-types\README.md133167378567284307 0
+=======
+52D:\_yandex\chat\node_modules\utility-types\README.md133167378567284307 0
+52D:\_yandex\chat\node_modules\node-gyp-build\index.js133167378560594226 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 49D:\_yandex\chat\node_modules\is-glob\package.json133169133756392922 0
 48D:\_yandex\chat\node_modules\is-extglob\index.js133169133756492875 0
 54D:\_yandex\chat\node_modules\utility-types\SECURITY.md133167378567734203 0
@@ -1254,6 +1475,13 @@
 73D:\_yandex\chat\node_modules\terser\lib\compress\drop-side-effect-free.js133167378574584168 0
 56D:\_yandex\chat\node_modules\type-fest\source\entry.d.ts133167378567424231 0
 65D:\_yandex\chat\node_modules\css-tree\lib\syntax\config\walker.js133167378593094190 0
+<<<<<<< HEAD
+=======
+51D:\_yandex\chat\node_modules\qs\.github\FUNDING.yml133179425775509703 0
+89D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\aliased133167378590024248 1
+57D:\_yandex\chat\node_modules\type-fest\source\except.d.ts133167378567814219 0
+60D:\_yandex\chat\node_modules\css-select\lib\pseudo-selectors133167378575604217 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 44D:\_yandex\chat\node_modules\detect-libc\bin133167378578524193 1
 61D:\_yandex\chat\node_modules\type-fest\source\promisable.d.ts133167378573204199 0
 63D:\_yandex\chat\node_modules\@parcel\utils\test\input\sourcemap133167378594504212 1
@@ -1332,6 +1560,11 @@
 76D:\_yandex\chat\node_modules\@parcel\watcher\src\shared\BruteForceBackend.hh133167378569724195 0
 44D:\_yandex\chat\node_modules\css-what\lib\es133167378572744307 1
 45D:\_yandex\chat\node_modules\timsort\index.js133167378558954240 0
+<<<<<<< HEAD
+=======
+46D:\_yandex\chat\node_modules\is-json\README.md133167378557124203 0
+49D:\_yandex\chat\node_modules\timsort\package.json133167378553544238 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 130D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\.pnpm\source-pnpm@1.0.0\node_modules\source-pnpm133167378589724163 1
 49D:\_yandex\chat\node_modules\term-size\index.d.ts133167378565344180 0
 57D:\_yandex\chat\node_modules\terser\lib\compress\index.js133167378577174172 0
@@ -1352,8 +1585,13 @@
 43D:\_yandex\chat\node_modules\terser\main.js133167378579054201 0
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\WS.js133167378617914192 0
 75D:\_yandex\chat\node_modules\@parcel\transformer-js\src\esmodule-helpers.js133167378569344182 0
+<<<<<<< HEAD
 65D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Operator.js133167378590054166 0
 48D:\_yandex\chat\node_modules\terser\node_modules133167378541205482 1
+=======
+48D:\_yandex\chat\node_modules\terser\node_modules133167378541205482 1
+65D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Operator.js133167378590054166 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 48D:\_yandex\chat\node_modules\posthtml\lib\api.js133167378556874255 0
 52D:\_yandex\chat\node_modules\terser\tools\props.html133167378562824218 0
 63D:\_yandex\chat\node_modules\htmlparser2\lib\Tokenizer.d.ts.map133167378566144209 0
@@ -1429,6 +1667,16 @@
 70D:\_yandex\chat\node_modules\svgo\plugins\addAttributesToSVGElement.js133167378564554214 0
 64D:\_yandex\chat\node_modules\postcss-value-parser\lib\index.d.ts133167378565014225 0
 68D:\_yandex\chat\node_modules\svgo\plugins\cleanupEnableBackground.js133167378565834190 0
+<<<<<<< HEAD
+=======
+86D:\_yandex\chat\node_modules\htmlnano\docs\versioned_docs\version-1.1.1\050-modules.md133167378586224212 0
+46D:\_yandex\chat\node_modules\@parcel\types\lib133167378566364208 1
+62D:\_yandex\chat\node_modules\@parcel\core\lib\applyRuntimes.js133167378583044198 0
+59D:\_yandex\chat\node_modules\sass\types\legacy\options.d.ts133169133758252885 0
+74D:\_yandex\chat\node_modules\@parcel\packager-js\src\GlobalOutputFormat.js133167378575554206 0
+65D:\_yandex\chat\node_modules\svgo\plugins\cleanupNumericValues.js133167378567484241 0
+63D:\_yandex\chat\node_modules\caniuse-lite\data\features\colr.js133167378591244218 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 46D:\_yandex\chat\node_modules\sass\package.json133169133757792885 0
 44D:\_yandex\chat\node_modules\depd\History.md133179425773529720 0
 67D:\_yandex\chat\node_modules\svgo\plugins\convertEllipseToCircle.js133167378569534235 0
@@ -1614,8 +1862,13 @@
 64D:\_yandex\chat\node_modules\sass\types\value\argument_list.d.ts133169133757852875 0
 57D:\_yandex\chat\node_modules\@parcel\transformer-sass\src133169134799212009 1
 60D:\_yandex\chat\node_modules\source-map-js\lib\quick-sort.js133169133756812955 0
+<<<<<<< HEAD
 57D:\_yandex\chat\node_modules\node-gyp-build\build-test.js133167378558114198 0
 52D:\_yandex\chat\node_modules\range-parser\HISTORY.md133179425773509708 0
+=======
+52D:\_yandex\chat\node_modules\range-parser\HISTORY.md133179425773509708 0
+57D:\_yandex\chat\node_modules\node-gyp-build\build-test.js133167378558114198 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 62D:\_yandex\chat\node_modules\htmlnano\lib\modules\minifySvg.js133167378570474179 0
 70D:\_yandex\chat\node_modules\source-map-js\lib\source-map-generator.js133169133756982897 0
 54D:\_yandex\chat\node_modules\source-map-js\lib\util.js133169133757112959 0
@@ -1698,6 +1951,11 @@
 50D:\_yandex\chat\node_modules\side-channel\index.js133179425774339698 0
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\HK.js133167378603514162 0
 74D:\_yandex\chat\node_modules\caniuse-lite\data\features\permissions-api.js133167378610364178 0
+<<<<<<< HEAD
+=======
+56D:\_yandex\chat\node_modules\node-gyp-build\package.json133167378562834277 0
+60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\VG.js133167378616444220 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 49D:\_yandex\chat\node_modules\side-channel\LICENSE133179425774069780 0
 54D:\_yandex\chat\node_modules\side-channel\package.json133179425774799712 0
 51D:\_yandex\chat\node_modules\side-channel\README.md133179425775039775 0
@@ -1772,8 +2030,13 @@
 80D:\_yandex\chat\node_modules\@parcel\runtime-js\lib\helpers\browser\js-loader.js133167378577294218 0
 56D:\_yandex\chat\node_modules\sass\types\value\color.d.ts133169133757882898 0
 73D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-appearance.js133167378592604161 0
+<<<<<<< HEAD
 56D:\_yandex\chat\node_modules\node-addon-api\CHANGELOG.md133167378569694225 0
 56D:\_yandex\chat\node_modules\sass\types\value\index.d.ts133169133758152889 0
+=======
+56D:\_yandex\chat\node_modules\sass\types\value\index.d.ts133169133758152889 0
+56D:\_yandex\chat\node_modules\node-addon-api\CHANGELOG.md133167378569694225 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 55D:\_yandex\chat\node_modules\sass\types\value\list.d.ts133169133758172906 0
 54D:\_yandex\chat\node_modules\sass\types\value\map.d.ts133169133758192896 0
 57D:\_yandex\chat\node_modules\sass\types\logger\index.d.ts133169133758112883 0
@@ -1802,11 +2065,19 @@
 50D:\_yandex\chat\node_modules\safer-buffer\safer.js133179425774699730 0
 88D:\_yandex\chat\node_modules\@parcel\watcher\prebuilds\darwin-arm64\node.napi.glibc.node133167378576934221 0
 53D:\_yandex\chat\node_modules\safe-buffer\package.json133167378557094184 0
+<<<<<<< HEAD
 59D:\_yandex\chat\node_modules\object-inspect\util.inspect.js133179425775629669 0
 38D:\_yandex\chat\node_modules\lmdb\dist133167378593454208 1
 66D:\_yandex\chat\node_modules\@parcel\source-map\dist\types.js.flow133167378560984225 0
 50D:\_yandex\chat\node_modules\safe-buffer\README.md133167378559404266 0
 71D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\MediaQueryList.js133167378588684199 0
+=======
+66D:\_yandex\chat\node_modules\@parcel\source-map\dist\types.js.flow133167378560984225 0
+71D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\MediaQueryList.js133167378588684199 0
+50D:\_yandex\chat\node_modules\safe-buffer\README.md133167378559404266 0
+59D:\_yandex\chat\node_modules\object-inspect\util.inspect.js133179425775629669 0
+38D:\_yandex\chat\node_modules\lmdb\dist133167378593454208 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 56D:\_yandex\chat\node_modules\@lezer\common\dist\index.js133167378562474252 0
 50D:\_yandex\chat\node_modules\resolve-from\index.js133167378555774232 0
 56D:\_yandex\chat\node_modules\regenerator-runtime\LICENSE133167378554284177 0
@@ -1884,8 +2155,13 @@
 57D:\_yandex\chat\node_modules\posthtml-render\changelog.md133167378560284234 0
 66D:\_yandex\chat\node_modules\caniuse-lite\data\features\dataset.js133167378599214194 0
 47D:\_yandex\chat\node_modules\nullthrows\LICENSE133167378555824251 0
+<<<<<<< HEAD
 78D:\_yandex\chat\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\crypto.c133167378574134226 0
 63D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Number.js133167378589864177 0
+=======
+63D:\_yandex\chat\node_modules\css-tree\lib\syntax\node\Number.js133167378589864177 0
+78D:\_yandex\chat\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\crypto.c133167378574134226 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 85D:\_yandex\chat\node_modules\@swc\helpers\lib\_class_static_private_field_spec_set.js133167378574554227 0
 84D:\_yandex\chat\node_modules\@swc\helpers\src\_class_check_private_static_access.mjs133167378591054235 0
 57D:\_yandex\chat\node_modules\posthtml-render\package.json133167378558074208 0
@@ -1905,7 +2181,10 @@
 69D:\_yandex\chat\node_modules\posthtml-parser\dist\location-tracker.js133167378559944224 0
 63D:\_yandex\chat\node_modules\@parcel\utils\src\openInBrowser.js133167378590314197 0
 56D:\_yandex\chat\node_modules\express\lib\router\layer.js133179425774959708 0
+<<<<<<< HEAD
 42D:\_yandex\chat\dist\index.5acd5955.js.map133181940534011200 0
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 41D:\_yandex\chat\node_modules\posthtml\lib133167378558094229 1
 39D:\_yandex\chat\node_modules\json5\dist133167378568894213 1
 71D:\_yandex\chat\node_modules\caniuse-lite\data\features\border-image.js133167378587294192 0
@@ -1925,6 +2204,11 @@
 53D:\_yandex\chat\node_modules\is-binary-path\readme.md133169133756632940 0
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\HT.js133167378603624240 0
 50D:\_yandex\chat\node_modules\posthtml\lib\index.js133167378558634303 0
+<<<<<<< HEAD
+=======
+62D:\_yandex\chat\node_modules\postcss-value-parser\lib\parse.js133167378557524268 0
+58D:\_yandex\chat\node_modules\call-bind\.github\FUNDING.yml133179425775209715 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 67D:\_yandex\chat\node_modules\@swc\helpers\src\_set_prototype_of.mjs133167378594924197 0
 66D:\_yandex\chat\node_modules\postcss-value-parser\lib\stringify.js133167378559414174 0
 56D:\_yandex\chat\node_modules\css-tree\lib\lexer\error.js133167378580364239 0
@@ -1948,6 +2232,11 @@
 55D:\_yandex\chat\node_modules\picomatch\lib\picomatch.js133169133756692961 0
 73D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-cross-fade.js133167378594144173 0
 47D:\_yandex\chat\node_modules\picocolors\LICENSE133167378553484224 0
+<<<<<<< HEAD
+=======
+53D:\_yandex\chat\node_modules\node-gyp-build\README.md133167378564254207 0
+60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\PF.js133167378610434203 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 52D:\_yandex\chat\node_modules\picocolors\package.json133167378558904263 0
 49D:\_yandex\chat\node_modules\picocolors\README.md133167378560454232 0
 47D:\_yandex\chat\node_modules\node-releases\data133167378560544261 1
@@ -1985,6 +2274,11 @@
 53D:\_yandex\chat\node_modules\@parcel\packager-css\src133167378569434191 1
 58D:\_yandex\chat\node_modules\iconv-lite\encodings\index.js133179425774849685 0
 55D:\_yandex\chat\node_modules\parent-module\package.json133167378553534193 0
+<<<<<<< HEAD
+=======
+80D:\_yandex\chat\node_modules\dom-serializer\node_modules\entities\lib\index.d.ts133167378569264177 0
+52D:\_yandex\chat\node_modules\parent-module\readme.md133167378558934250 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 46D:\_yandex\chat\node_modules\mime\CHANGELOG.md133179425774789713 0
 65D:\_yandex\chat\node_modules\object-inspect\test\indent-option.js133179425775359745 0
 39D:\_yandex\chat\node_modules\parcel\src133167378575134214 1
@@ -2088,6 +2382,10 @@
 59D:\_yandex\chat\node_modules\nth-check\lib\esm\index.js.map133167378567994196 0
 61D:\_yandex\chat\node_modules\nth-check\lib\esm\parse.d.ts.map133167378568644173 0
 71D:\_yandex\chat\node_modules\@parcel\transformer-babel\src\constants.js133167378576824248 0
+<<<<<<< HEAD
+=======
+52D:\_yandex\chat\node_modules\normalize-path\index.js133169133756242921 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 27D:\_yandex\chat\img\add.svg133180162224705732 0
 51D:\_yandex\chat\node_modules\normalize-path\LICENSE133169133756392922 0
 44D:\_yandex\chat\node_modules\mime-db\LICENSE133179425773189682 0
@@ -2109,10 +2407,13 @@
 47D:\_yandex\chat\node_modules\clone\package.json133167378553604186 0
 76D:\_yandex\chat\node_modules\@parcel\core\lib\requests\BundleGraphRequest.js133167378588634170 0
 51D:\_yandex\chat\node_modules\node-gyp-build\LICENSE133167378555034197 0
+<<<<<<< HEAD
 56D:\_yandex\chat\node_modules\node-gyp-build\package.json133167378562834277 0
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\VG.js133167378616444220 0
 53D:\_yandex\chat\node_modules\node-gyp-build\README.md133167378564254207 0
 60D:\_yandex\chat\node_modules\caniuse-lite\data\regions\PF.js133167378610434203 0
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 55D:\_yandex\chat\node_modules\node-addon-api\common.gypi133167378556744256 0
 55D:\_yandex\chat\node_modules\node-addon-api\except.gypi133167378558494210 0
 52D:\_yandex\chat\node_modules\node-addon-api\index.js133167378568104172 0
@@ -3215,8 +3516,13 @@
 58D:\_yandex\chat\node_modules\cosmiconfig\dist\types.js.map133167378573924211 0
 56D:\_yandex\chat\node_modules\cookie-signature\History.md133179425774139707 0
 58D:\_yandex\chat\node_modules\cookie-signature\package.json133179425773259786 0
+<<<<<<< HEAD
 63D:\_yandex\chat\node_modules\@parcel\node-resolver-core\LICENSE133167378561984222 0
 46D:\_yandex\chat\node_modules\cookie\HISTORY.md133179425774149736 0
+=======
+46D:\_yandex\chat\node_modules\cookie\HISTORY.md133179425774149736 0
+63D:\_yandex\chat\node_modules\@parcel\node-resolver-core\LICENSE133167378561984222 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 69D:\_yandex\chat\node_modules\@parcel\events\test\ValueEmitter.test.js133167378584474190 0
 61D:\_yandex\chat\node_modules\@parcel\graph\test\Graph.test.js133167378568664162 0
 41D:\_yandex\chat\node_modules\chalk\source133167378558984219 1
@@ -3520,7 +3826,10 @@
 68D:\_yandex\chat\node_modules\caniuse-lite\data\features\clipboard.js133167378590784409 0
 82D:\_yandex\chat\node_modules\caniuse-lite\data\features\comparedocumentposition.js133167378591334197 0
 64D:\_yandex\chat\node_modules\caniuse-lite\data\features\const.js133167378591544167 0
+<<<<<<< HEAD
 39D:\_yandex\chat\dist\index.64875148.css133181940533871144 0
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 80D:\_yandex\chat\node_modules\caniuse-lite\data\features\constraint-validation.js133167378591614266 0
 74D:\_yandex\chat\node_modules\caniuse-lite\data\features\contenteditable.js133167378591684171 0
 80D:\_yandex\chat\node_modules\caniuse-lite\data\features\contentsecuritypolicy.js133167378591824203 0
@@ -3551,8 +3860,13 @@
 73D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-first-line.js133167378595084224 0
 76D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-focus-visible.js133167378595164237 0
 81D:\_yandex\chat\node_modules\caniuse-lite\data\features\getelementsbyclassname.js133167378602804181 0
+<<<<<<< HEAD
 70D:\_yandex\chat\node_modules\@parcel\optimizer-css\lib\CSSOptimizer.js133167378571844189 0
 86D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-font-rendering-controls.js133167378595334205 0
+=======
+86D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-font-rendering-controls.js133167378595334205 0
+70D:\_yandex\chat\node_modules\@parcel\optimizer-css\lib\CSSOptimizer.js133167378571844189 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 75D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-font-stretch.js133167378595384165 0
 73D:\_yandex\chat\node_modules\caniuse-lite\data\features\css-gencontent.js133167378595424273 0
 66D:\_yandex\chat\node_modules\caniuse-lite\data\features\netinfo.js133167378609014158 0
@@ -3745,6 +4059,10 @@
 65D:\_yandex\chat\node_modules\caniuse-lite\data\features\mathml.js133167378607324215 0
 74D:\_yandex\chat\node_modules\@parcel\runtime-js\src\helpers\cacheLoader.js133167378572614238 0
 67D:\_yandex\chat\node_modules\caniuse-lite\data\features\progress.js133167378611134156 0
+<<<<<<< HEAD
+=======
+58D:\_yandex\chat\node_modules\@parcel\optimizer-css\LICENSE133167378571464196 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 68D:\_yandex\chat\node_modules\caniuse-lite\data\features\maxlength.js133167378607374160 0
 96D:\_yandex\chat\node_modules\caniuse-lite\data\features\mdn-css-unicode-bidi-isolate-override.js133167378607464157 0
 56D:\_yandex\chat\node_modules\@swc\helpers\lib\_update.js133167378588564232 0
@@ -3825,8 +4143,13 @@
 79D:\_yandex\chat\node_modules\caniuse-lite\data\features\subresource-bundling.js133167378613944200 0
 66D:\_yandex\chat\node_modules\caniuse-lite\data\features\svg-css.js133167378614104184 0
 70D:\_yandex\chat\node_modules\@parcel\utils\test\input\config\config.js133167378583344212 0
+<<<<<<< HEAD
 63D:\_yandex\chat\node_modules\@parcel\optimizer-css\package.json133167378572824239 0
 68D:\_yandex\chat\node_modules\caniuse-lite\data\features\svg-fonts.js133167378614174169 0
+=======
+68D:\_yandex\chat\node_modules\caniuse-lite\data\features\svg-fonts.js133167378614174169 0
+63D:\_yandex\chat\node_modules\@parcel\optimizer-css\package.json133167378572824239 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 67D:\_yandex\chat\node_modules\caniuse-lite\data\features\svg-html.js133167378614224174 0
 66D:\_yandex\chat\node_modules\caniuse-lite\data\features\svg-img.js133167378614284216 0
 62D:\_yandex\chat\node_modules\caniuse-lite\data\features\svg.js133167378614334197 0
@@ -3854,7 +4177,10 @@
 75D:\_yandex\chat\node_modules\caniuse-lite\data\features\user-select-none.js133167378616094210 0
 54D:\_yandex\chat\node_modules\@swc\helpers\package.json133167378554314193 0
 73D:\_yandex\chat\node_modules\caniuse-lite\data\features\variable-fonts.js133167378616304163 0
+<<<<<<< HEAD
 38D:\_yandex\chat\dist\index.1edac0ac.js133181940533881152 0
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 68D:\_yandex\chat\node_modules\caniuse-lite\data\features\vibration.js133167378616504188 0
 70D:\_yandex\chat\node_modules\caniuse-lite\data\features\videotracks.js133167378616574166 0
 73D:\_yandex\chat\node_modules\caniuse-lite\data\features\viewport-units.js133167378616634186 0
@@ -3868,10 +4194,17 @@
 103D:\_yandex\chat\node_modules\@parcel\core\test\fixtures\config-extends-not-found\.parcelrc-node-modules133167378582114221 0
 75D:\_yandex\chat\node_modules\caniuse-lite\data\features\webkit-user-drag.js133167378617334229 0
 63D:\_yandex\chat\node_modules\caniuse-lite\data\features\webm.js133167378617374166 0
+<<<<<<< HEAD
 56D:\_yandex\chat\node_modules\@types\parse-json\README.md133167378555794288 0
 54D:\_yandex\chat\node_modules\@parcel\packager-html\lib133167378575734185 1
 54D:\_yandex\chat\node_modules\@parcel\optimizer-css\src133167378572374269 1
 65D:\_yandex\chat\node_modules\caniuse-lite\data\features\webnfc.js133167378617404174 0
+=======
+65D:\_yandex\chat\node_modules\caniuse-lite\data\features\webnfc.js133167378617404174 0
+54D:\_yandex\chat\node_modules\@parcel\optimizer-css\src133167378572374269 1
+56D:\_yandex\chat\node_modules\@types\parse-json\README.md133167378555794288 0
+54D:\_yandex\chat\node_modules\@parcel\packager-html\lib133167378575734185 1
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 63D:\_yandex\chat\node_modules\caniuse-lite\data\features\webp.js133167378617444276 0
 77D:\_yandex\chat\node_modules\@swc\helpers\lib\_check_private_redeclaration.js133167378566754258 0
 66D:\_yandex\chat\node_modules\@parcel\core\test\BundleGraph.test.js133167378588484275 0
@@ -3914,6 +4247,10 @@
 141D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\side-effects-package-redirect-down\foo\bar\baz\package.json133167378591624199 0
 49D:\_yandex\chat\node_modules\browserslist\node.js133167378562614244 0
 54D:\_yandex\chat\node_modules\browserslist\package.json133167378564544225 0
+<<<<<<< HEAD
+=======
+38D:\_yandex\chat\dist\index.92301366.js133181150619759326 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 48D:\_yandex\chat\node_modules\braces\CHANGELOG.md133169133756252905 0
 44D:\_yandex\chat\node_modules\braces\index.js133169133756402954 0
 39D:\_yandex\chat\node_modules\braces\lib133169133756982897 1
@@ -3967,7 +4304,10 @@
 58D:\_yandex\chat\node_modules\abortcontroller-polyfill\dist133167378567034247 1
 85D:\_yandex\chat\node_modules\abortcontroller-polyfill\src\abortcontroller-polyfill.js133167378562454228 0
 76D:\_yandex\chat\node_modules\abortcontroller-polyfill\src\abortcontroller.js133167378564594192 0
+<<<<<<< HEAD
 38D:\_yandex\chat\dist\index.5acd5955.js133181940533881152 0
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 60D:\_yandex\chat\node_modules\@parcel\utils\src\objectHash.js133167378590154167 0
 83D:\_yandex\chat\node_modules\@parcel\package-manager\src\validateModuleSpecifier.js133167378588314166 0
 66D:\_yandex\chat\node_modules\abortcontroller-polyfill\src\utils.js133167378567714187 0
@@ -4157,6 +4497,10 @@
 76D:\_yandex\chat\node_modules\@parcel\watcher\src\watchman\WatchmanBackend.hh133167378573974168 0
 73D:\_yandex\chat\node_modules\@parcel\watcher\src\macos\FSEventsBackend.hh133167378571704156 0
 75D:\_yandex\chat\node_modules\@parcel\transformer-postcss\lib\loadPlugins.js133167378565754200 0
+<<<<<<< HEAD
+=======
+43D:\_yandex\chat\dist\index.969824ae.css.map133181150619919323 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 72D:\_yandex\chat\node_modules\@parcel\watcher\src\linux\InotifyBackend.hh133167378572144197 0
 65D:\_yandex\chat\node_modules\@parcel\watcher\prebuilds\darwin-x64133167378577454204 1
 94D:\_yandex\chat\node_modules\@parcel\transformer-react-refresh-wrap\src\helpers\.eslintrc.json133167378569144247 0
@@ -4257,6 +4601,10 @@
 87D:\_yandex\chat\node_modules\@parcel\package-manager\test\fixtures\has-foo\node_modules133167378583934222 1
 65D:\_yandex\chat\node_modules\@parcel\transformer-babel\src\jsx.js133167378578214204 0
 79D:\_yandex\chat\node_modules\@parcel\transformer-babel\src\remapAstLocations.js133167378578804211 0
+<<<<<<< HEAD
+=======
+68D:\_yandex\chat\node_modules\@parcel\transformer-babel\lib\babel7.js133167378573914193 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 78D:\_yandex\chat\node_modules\@parcel\transformer-babel\lib\BabelTransformer.js133167378574924201 0
 65D:\_yandex\chat\node_modules\@parcel\transformer-babel\lib\jsx.js133167378577744252 0
 58D:\_yandex\chat\node_modules\@parcel\source-map\index.d.ts133167378590234231 0
@@ -4395,7 +4743,10 @@
 59D:\_yandex\chat\node_modules\@parcel\optimizer-htmlnano\lib133167378570584196 1
 59D:\_yandex\chat\node_modules\@parcel\optimizer-htmlnano\src133167378571054227 1
 74D:\_yandex\chat\node_modules\@parcel\optimizer-htmlnano\src\svgMappings.js133167378571154169 0
+<<<<<<< HEAD
 58D:\_yandex\chat\node_modules\@parcel\optimizer-css\LICENSE133167378571464196 0
+=======
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 93D:\_yandex\chat\node_modules\@parcel\core\test\fixtures\custom-format-infer-type\package.json133167378597964207 0
 70D:\_yandex\chat\node_modules\@parcel\optimizer-css\src\CSSOptimizer.js133167378572524244 0
 81D:\_yandex\chat\node_modules\@parcel\node-resolver-core\test\fixture\package.json133167378592664199 0
@@ -4903,6 +5254,13 @@
 36D:\_yandex\chat\dist\error-pages.css133180355230272435 0
 31D:\_yandex\chat\dist\error.html133180355547838523 0
 24D:\_yandex\chat\dist\img133180134688044634 1
+<<<<<<< HEAD
 42D:\_yandex\chat\dist\index.1edac0ac.js.map133181940534011200 0
 43D:\_yandex\chat\dist\index.64875148.css.map133181940534011200 0
+=======
+38D:\_yandex\chat\dist\index.77ab8e7f.js133181150619759326 0
+42D:\_yandex\chat\dist\index.77ab8e7f.js.map133181150619929308 0
+42D:\_yandex\chat\dist\index.92301366.js.map133181150619919323 0
+39D:\_yandex\chat\dist\index.969824ae.css133181150619739328 0
+>>>>>>> 937e20b4e149e3021e97e3bc064aef2dea681fa3
 37D:\_yandex\chat\dist\img\location.svg133180154511309815 0

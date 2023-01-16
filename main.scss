@@ -1,0 +1,431 @@
+$blue: #3369F3;
+$white: #FFFFFF;
+$box-sh-color :  rgba(0, 0, 0, 0.14);
+$dark-grey: #999999;
+$red: #FF2F2F;
+$box-sh-color-dark: rgba(0,0,0,0.8); 
+$light-gray: #888;
+
+
+.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pasck: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+/* главный блок */
+#root {
+    background-color: $white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* //форма регистрации */
+.registration_form {
+    width: 340px;
+    height: 615px;
+    background: $white;
+    box-shadow: 0px 0px 6px $box-sh-color;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    margin: 50px auto;
+    
+};   
+
+// Общие
+.button-button {
+    background-color: $blue;
+    border-radius: 5px;
+    border-style: none;
+    width: 180px;
+    height: 35px;
+    color: $white;
+}
+
+.link-button {
+    background-color: $white;
+    border-radius: 5px;
+    border-style: none;
+    width: 180px;
+    height: 30px;
+    font-style: $white;
+    color: $blue;
+}
+
+.reg-error {
+    color: $red;
+    font-weight: bold;
+}
+
+.circle {
+    display: flex;
+    color:#C6D8E0;
+    width: 25px;
+    height: 25px;
+    font-size: large;
+    font-style: bold;
+    border-radius: 50%;
+    background-color: $blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle {
+    border: 9px solid transparent;
+    border-left: 20px solid $blue;
+}
+
+
+.mini-circle {
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    border-radius: 50%;
+    background-color: $blue;
+    justify-content: center;
+    align-items: center;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+
+// формы ввода
+.form-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    > input {
+        background-color: transparent;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    > label {
+        color: black;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 9px;
+        margin-left: 0;
+    }
+    > button {
+        align-items: center;
+        margin-top: 10px;
+        padding-top: 3px;
+    }
+}
+
+
+/* //главное окно */
+.chat-window {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.chat-sidebar {
+    max-width: 450px;
+    width: 350px;
+    height: auto;
+    float: left;
+    min-height: 550px;
+   
+}
+
+.chat-sidebar-header{
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    > button {
+        height: 20px;
+        width: 80px;
+    }
+    #button-profile {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.search {
+    width: 350px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    > button {
+        height: 20px;
+        width: 60px;
+    }
+}
+
+.chat-sidebar-items {
+    height: 100%;
+    padding: 0.5rem 0.125rem 0.5rem 0.4375rem;
+    overflow-y: auto;
+}
+
+.chat-item {
+    position: relative;
+    border: 1px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    min-height: 75px;
+    box-shadow: 0px 0px 6px$box-sh-color;
+    .chat-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-top: 3;
+        margin-left: 3;
+        background: #EFEFEF;
+        > img {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+        }
+    }
+    .chat-name {
+        position: absolute;
+        width: 100px;
+        height: 13px;
+        top: 10px;
+        left: 65px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .chat-unread-message-count {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    .chat-last-message-time {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .chat-last-message {
+        position: absolute;
+        bottom: 10px;
+        right: 40px;
+        text-overflow: ellipsis;
+    }
+    
+}
+
+.dialog-window {
+    box-shadow: 0px 0px 6px$box-sh-color;
+    display: inline-block;
+    border: 1px;
+    border-radius: 10px;
+    margin: 5px;
+    min-width: 950px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.dialog {
+    display: flex;
+    background-color: #E3EDFD;
+    padding: 5px;
+    margin: 5px;
+    height: 88%; 
+    border-radius: 10px; 
+}
+
+.dialog-header {
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    height: 5%;
+    border-radius: 10px;
+    background-color: #EFEFEF;
+}
+
+.dialog-footer {
+    display: relative;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #EFEFEF;;
+    height: 3%;
+    .button-button {
+        height: 22px;
+        width: 85px;
+        margin-left: 10px;
+    }
+    .circle {
+        border: 0ch;
+        margin-right: 10px;
+    }
+}
+
+.chat-input-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    > input {
+        width: 85%;
+        height: 35px;
+        border-style: none;
+        border-radius: 10px;
+        input:focus {
+            border-color: $blue;
+            height: 45px;
+            width: 650px;
+        }
+    }
+}
+
+/* //страница профиля */
+.profile-main {
+    width: 100%;
+    height: 100%;
+}   
+
+.profile-form {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    flex-direction: columns;
+}
+    
+.profile-sidebar {
+    display: flex;
+    margin-right: 1rem;
+    width: 75px;
+    min-height: 900px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px$box-sh-color;
+    background-color: $blue;
+    justify-content: center;
+    align-items: center;
+    .profile-exit {
+        color:$white;
+        background-color: $blue;    
+        border-style: none;
+        
+    }
+
+} 
+
+.profile-subform {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 540px;
+    height: 750px;
+    margin-left: 30%;
+    background: $white;
+    box-shadow: 0px 0px 6px $box-sh-color;
+}
+
+
+.profile-avatar {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    > img {
+        height: 200px;
+        width:  200px;
+        border-radius: 50%;
+    }
+}
+
+
+/* //Модальное окно */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: $box-sh-color-dark;; 
+    
+  }
+  
+/* Модальное содержание/коробка */
+.modal-content {
+    display: flex;
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 40px;
+    border: 1px solid $light-gray;;
+    width: 40%; 
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+  
+  
+
+//гамбургер меню добавления файлов
+.menu-add-files {
+    position: absolute;
+    bottom: 5%;
+    left: 365px;
+    background-color: $white;
+    box-shadow: 0px 0px 6px $box-sh-color;
+    border-radius: 10px;
+    display: flex;
+    animation: opacity 0.4s;
+    > img {
+        width: 15px;
+        height: 15px;
+    }   
+}
+
+//добавление и удаление пользователей
+.chat-menu {
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    min-width: 15px;
+    min-height: 50px;
+    list-style-type: none;
+    > img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.chat-menu-list {
+    position: absolute;
+    top: 6%;
+    right: 2%;
+    min-width: 15px;
+    min-height: 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px $box-sh-color;
+    border-radius: 10px;
+    display: flex;
+    animation: opacity 0.4s;
+}

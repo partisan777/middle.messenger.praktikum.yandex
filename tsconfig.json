@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "ES2015",
+        "declaration": false,
+        "noImplicitAny": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": true,
+        "module": "commonjs",
+        "strictNullChecks": false,
+        "sourceMap": true
+    },
+    "include": [
+        "./src",
+        "declaration.d.ts"
+    ],
+    "lib": [
+        "dom",
+        "ES2018"
+    ],
+    "exclude": [
+        "./node_modules",
+        "./.parcel-cache",
+        "./dist"
+    ]
+}

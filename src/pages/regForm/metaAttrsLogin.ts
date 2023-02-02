@@ -15,7 +15,7 @@ export const metaAttrInputsLog = (): Input[] => {
           'checktype="login"'
         ],
         divErrorclassName: "reg-error",
-        divErrorId: "reg-error-login",
+        divErrorId: "log-error-login",
         divErrorAttrs: ['checktype="login"']
       });
       const password = new Input ({ 
@@ -30,7 +30,7 @@ export const metaAttrInputsLog = (): Input[] => {
             'checktype="password"'
         ],
         divErrorclassName: "reg-error",
-        divErrorId: "reg-error-password",
+        divErrorId: "log-error-password",
         divErrorAttrs: ['checktype="password"']
       });
 

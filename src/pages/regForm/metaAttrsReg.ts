@@ -12,7 +12,8 @@ export const metaAttrInputsReg = (): Input[] => {
             'name="email"',
             'id="email"',
             'placeholder="Введите адрес электронной почты"',
-            'autocomplete="on"'
+            'autocomplete="on"',
+            'checktype="email"'
         ],
         divErrorclassName: "reg-error",
         divErrorId: "reg-error-email",
@@ -28,7 +29,8 @@ export const metaAttrInputsReg = (): Input[] => {
           'name="login"',
           'id="reg_login"',
           'placeholder="Введите логин"',
-          'autocomplete="on"'
+          'autocomplete="on"',
+          'checktype="login"'
         ],
         divErrorclassName: "reg-error",
         divErrorId: "reg-error-login",
@@ -43,7 +45,8 @@ export const metaAttrInputsReg = (): Input[] => {
             'name="first_name"',
             'id="first_name"',
             'placeholder="Введите имя"',
-            'autocomplete="on"'
+            'autocomplete="on"',
+            'checktype="first_name"'
         ],
         divErrorclassName: "reg-error",
         divErrorId: "reg-error-name",
@@ -59,7 +62,8 @@ export const metaAttrInputsReg = (): Input[] => {
             'name="second_name"',
             'id="second_name"',
             'placeholder="Введите фамилию"',
-            'autocomplete="on"'
+            'autocomplete="on"',
+            'checktype="second_name"'
         ],
         divErrorclassName: "reg-error",
         divErrorId: "reg-error-lastname",
@@ -74,7 +78,8 @@ export const metaAttrInputsReg = (): Input[] => {
             'name="display_name"',
             'id="display_name"',
             'placeholder="Отображаемое имя"',
-            'autocomplete="on"'
+            'autocomplete="on"',
+            'checktype="display_name"'
         ], 
         divErrorclassName: "reg-error",
         divErrorId: "reg-error-displayname",
@@ -89,7 +94,8 @@ export const metaAttrInputsReg = (): Input[] => {
             'name="phone"',
             'id="phone"',
             'placeholder="Введите номер телефона"',
-            'autocomplete="on"'
+            'autocomplete="on"',
+            'checktype="phone"'
         ],
         divErrorclassName: "reg-error",
         divErrorId: "reg-error-phone",
@@ -104,7 +110,8 @@ export const metaAttrInputsReg = (): Input[] => {
             'name="password"',
             'id="password"',
             'placeholder="Введите пароль"',
-            'autocomplete="on"'
+            'autocomplete="on"',
+            'checktype="password"'
         ],
         divErrorclassName: "reg-error",
         divErrorId: "reg-error-password",
@@ -121,6 +128,7 @@ export const metaAttrInputsReg = (): Input[] => {
             'id="password-confirm"',
             'placeholder="Введите повтор пароля"',
             'autocomplete="on"',
+            'checktype="password_confirm"'
         ],
         divErrorclassName: "reg-error",
         divErrorId: "reg-error-password-confirm",

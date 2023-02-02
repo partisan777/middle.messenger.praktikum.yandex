@@ -1,9 +1,17 @@
 import { Component } from "../components/components";
 import { getChatItem } from "../../utils/chatItems";
 
+
 type chatItem = {
-    chatItem: Object
-}    
+    elem: {
+        id: string,
+        title: string,
+        last_message: Date,
+        content: string,
+        uread_count: number
+    }
+}
+
 
 function genChatItem (chatItem: chatItem): HTMLElement { 
 	const result: HTMLElement = getChatItem(chatItem)

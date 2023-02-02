@@ -3,9 +3,9 @@ import { createNodeObjects } from "./createNodeObject";
 export function createForm(parentDivClasses: string[], parentDivId: string, formAction: string, formClasses: string[], formId: string, childDivId: string, childDivClasses: string[], formLabel: string): HTMLElement {
     
     // let result = createNodeObjects(type='div', classNames=parentDivClasses, attr={id: parentDivId}, textContent= '')
-    let result = createNodeObjects('div', parentDivClasses, parentDivId, '')
-    if (parentDivClasses === '') {
-        result =  `<form action="${formAction}" class="${formClasses.join(' ')}" Id="${formId}"></form>`;
+    let result: HTMLElement = createNodeObjects('div', parentDivClasses, {id: parentDivId}, '')
+    if (parentDivClasses.length === 0) {
+        result.innerHTML = `<form action="${formAction}" class="${formClasses.join(' ')}" Id="${formId}"></form>`;
     } else {
         result.innerHTML =       
             `<form action="${formAction}" class="${formClasses.join(' ')}" Id="${formId}">

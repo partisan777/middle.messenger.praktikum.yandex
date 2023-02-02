@@ -3,10 +3,9 @@ export function createNodeObjects (type: string = 'div', classNames: string[] = 
     if (classNames.length > 0) {
        obj.classList.add(classNames.join(''));
     };
-    console.log(Object.entries(attr), attr)
+    // console.log(Object.entries(attr), attr)
     for (let key: string in attr) {
         if (attr[key] !== '' && attr[key] !== undefined) {
-            
             obj.setAttribute(key, attr[key]);
         }
             

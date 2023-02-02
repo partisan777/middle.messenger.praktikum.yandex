@@ -20,11 +20,16 @@ export class Input extends Component {
 	constructor(inputData: inputData) {
 		const elem: HTMLElement = input(inputData);
 		super(elem);
-		this.regActionsForEventBus([
-			Component.EVENTS.focusInput, Component.EVENTS.onBlurInput
-		]);
 		
-	}
+		this.regActionsForEventBus([
+			Component.EVENTS.focusInput
+		]);
+		this.regActionsForEventBusInput([
+			 Component.EVENTS.blurInput
+		]);
+		}
 }
+
+
 
 

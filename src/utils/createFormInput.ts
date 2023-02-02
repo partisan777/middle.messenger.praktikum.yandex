@@ -9,7 +9,7 @@ export function createFormInput(label: string, labelVisible: string, inputAttrs:
     } else {
         result.innerHTML =       
             `<label for="${label !== undefined ? label : ""}">${labelVisible !== undefined ? labelVisible : ""}</label>
-            <input ${inputAttrs.join(' ')}>
+                <input ${inputAttrs.join(' ')}>
             <div class="${divErrorclassName}" id="${divErrorId}" ${divErrorAttrs.join(' ')}></div>`;
     } 
     return result;

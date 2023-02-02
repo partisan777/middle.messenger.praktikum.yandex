@@ -47,19 +47,18 @@ export const removeAllChildElements = (elementId: string): void => {
     elem.replaceChildren();
 };
 
+export const openModalWindow = (): void => {
+    const modal = document.getElementById("myModal");
+    showElement("myModal");
+    removeAllChildElements("modal-content");
+};
 
+export const closeModalWindow = (): void => {
+    const modal = document.getElementById("myModal");
+    hideElement("myModal");
+    removeAllChildElements("modal-content");
+};
 
-// function openModalWindow() {
-//     const modal = document.getElementById("myModal");
-//     showElement("myModal");
-//     removeAllChildElements("modal-content");
-// }
-
-// function closeModalWindow() {
-//     const modal = document.getElementById("myModal");
-//     hideElement("myModal");
-//     removeAllChildElements("modal-content");
-// }
 
 
 
@@ -71,8 +70,6 @@ export const removeAllChildElements = (elementId: string): void => {
 //     modalContent.appendChild(manageChatUserForm('del'));
 //     document.getElementById("close-manage-chat-user").addEventListener("click", closeModalWindow);
 // }
-
-
 
 
 // const closeChatMenu = () => {
@@ -88,36 +85,6 @@ export const removeAllChildElements = (elementId: string): void => {
 //     root.removeEventListener("click", closeChatMenu);
 // }
 
-// function getMainWindow() {
-//     const root = document.getElementById("root");
-//     root.appendChild(getChatWindow());
-//     let divchatitem = document.getElementById("chat-sidebar");
-//     divchatitem.appendChild(getChatItems());   
-//     document.getElementById("button-profile").addEventListener("click", openProfile);
-//     document.getElementById("add-button").addEventListener("click", addMenuAddFiles);
-//     document.getElementById("chat-menu").addEventListener("click", addChatMenu);
-//     root.appendChild(getModalWindow());
-// };
-
-
-// function closeProfile() {
-//     removeElement("profile-main");
-//     showElement("chat-window");
-// };
-
-// const checkAuth = () => {
-//     if (isAuth() === false) {
-//         addLoginForm();
-//     } else {
-//         getMainWindow();
-//     };
-// };
-
-
-// function handleSubmit(e) {
-//     e.preventDefault();
-//     console.log(e)
-// };
 
 
 

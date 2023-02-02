@@ -1,6 +1,17 @@
 import { createNodeObjects } from "./createNodeObject";
 
-export function getChatItem(elem: Object): HTMLElement {
+type chatItem = {
+    elem: {
+        id: string,
+        title: string,
+        last_message: Date,
+        content: string,
+        uread_count: number
+    }
+}
+
+
+export function getChatItem(elem: chatItem): HTMLElement {
     let parentdiv = createNodeObjects("div", ["chat-item"], {id: `"chat-item-${elem.id}"`})
     parentdiv.innerHTML = 
         `

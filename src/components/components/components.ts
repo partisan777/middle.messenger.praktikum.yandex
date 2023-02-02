@@ -9,7 +9,8 @@ enum EVENTS {
     blurInput = "blur",
     focusInput = "focus",
     submitForm = "submit",
-	onBlurInput = "onblur"
+	onBlurInput = "onblur",
+	mouseleave = "mouseleave"
 };
 
 enum STATES {
@@ -22,19 +23,21 @@ export class Component {
 
 	public static readonly EVENTS = EVENTS;
     public static readonly STATE = STATES;
-	protected readonly _elem: HTMLElement;
+	readonly _elem: HTMLElement;
+	protected readonly _subElements: HTMLElement;
 	public readonly eventBus: EventBus;
 	protected readonly id: string;
 	private _targetElement: HTMLElement;
-
+	
 	constructor(document: HTMLElement, targetElementSelector: string = '') {
 		this._elem = document;
+		this._subElements;
         this.eventBus = new EventBus();
 		this._targetElement = (targetElementSelector.length > 0)
 			? this.subElement(targetElementSelector)
 			: this.document();
 	}
-
+	
 	protected regActionsForEventBus = (actions: string[]): void => {
 		actions.forEach(action => {
             this.target().addEventListener(action, (e) => {
@@ -43,7 +46,17 @@ export class Component {
 			})
 		});
 	}
-
+	protected regActionsForEventBusInput = (actions: string[]): void => {
+		actions.forEach(action => {
+			if (this._targetElement.className === 'div_input') { 
+				this._targetElement.getElementsByTagName('input')[0]?.addEventListener(action, (e) => {
+				e.preventDefault();
+				this.eventBus.emit(action);
+				})
+			}	
+	   })
+	}
+	   
 	document = (): HTMLElement => {
 		return this._elem;
 	}
@@ -62,5 +75,8 @@ export class Component {
 			throw new Error(`Элемент ${selector} не найден`);
 		}
 		return elements[0];
+	}
+	allSubElements = (selector: string): HTMLElement[] => {
+		return Array.from(this._elem.querySelectorAll(selector));
 	}
 }

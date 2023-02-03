@@ -13,12 +13,14 @@ function button (data: buttonData): HTMLElement {
 };
 
 export class Button extends Component {
+	
 	constructor(buttonData: buttonData) {
 		const elem: HTMLElement = button(buttonData);
 		super(elem);
 		this.regActionsForEventBus([
 			Component.EVENTS.buttonClick
 		]);
+		
 	}
 };
 

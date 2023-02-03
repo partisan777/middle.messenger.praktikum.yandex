@@ -2,7 +2,7 @@ import { createNodeObjects } from "./createNodeObject";
 
 export function createFormInput(label: string, labelVisible: string, inputAttrs: string[], divErrorclassName: string, divErrorId: string, divErrorAttrs: string[]): HTMLElement
  {
-    let result: HTMLElement = createNodeObjects(type='div', classNames=["div_input"], attr={id: ''}, textContent= '')
+    let result: HTMLElement = createNodeObjects(type='div', classNames=["div_input"], {id: ''}, textContent= '')
     
     if (label === "") {
         result.innerHTML = `<input ${inputAttrs.join(' ')}>`

@@ -7,7 +7,12 @@ export const removeElement = (elementId: string): void => {
 
 export const removeAllChildElements = (elementId: string): void => {
     const elem = document.getElementById(elementId);
-    elem.replaceChildren();
+    // const elem = document.querySelector(elementId);
+    console.log(elem.firstChild);
+    while (elem.firstChild) {
+        console.log(elem.firstChild)
+        elem.removeChild(elem.firstChild);
+    }
 };
 
 export function hideElement(elementId: string): void {
@@ -20,14 +25,17 @@ export function showElement(elementId: string): void {
 };
 
 export function openModalWindow(): void {
-    const modal = document.getElementById("myModal");
     showElement("myModal");
     removeAllChildElements("modal-content");
 }
 
 export function closeModalWindow(): void {
-    const modal = document.getElementById("myModal");
     hideElement("myModal");
     removeAllChildElements("modal-content");
 }
 
+
+export const genDomElement = (html_code: string): HTMLElement => {
+	const elem = document.createRange().createContextualFragment(html_code);
+	return elem.firstChild as HTMLElement;
+};

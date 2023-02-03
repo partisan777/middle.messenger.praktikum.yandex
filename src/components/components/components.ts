@@ -2,6 +2,7 @@ import {EventBus} from "./eventBus";
 
 enum EVENTS {
 	windowOpen = "window:open",
+	FLOW_CDU = "flow:component-did-update",
     windowClose = "window:close",
 	buttonClick = "click",
 	click = "click",
@@ -65,10 +66,6 @@ export class Component {
 		return this._targetElement;
 	}
 
-	subElements = (selector: string): HTMLElement[] => {
-		return Array.from(this._elem.querySelectorAll(selector));
-	}
-
 	subElement = (selector: string): HTMLElement => {
 		const elements = this.subElements(selector);
 		if (elements.length === 0) {
@@ -79,4 +76,44 @@ export class Component {
 	allSubElements = (selector: string): HTMLElement[] => {
 		return Array.from(this._elem.querySelectorAll(selector));
 	}
+
+	componentDidUpdate(oldProps, newProps): boolean {
+		return true;
+	  }
+	  
+	  setProps = nextProps => {
+		if (!nextProps) {
+		  return;
+		}
+	  
+		Object.assign(this.props, nextProps);
+	  };
+	  
+	show(): void {
+		this.getContent().style.display = "block";
+	};
+	  
+	hide(): void {
+		this.getContent().style.display = "none";
+	};
+	
+	_makePropsProxy(props) {
+		return new Proxy(props, {
+		get(target, prop) {
+			const value = target[prop];
+			return typeof value === "function" ? value.bind(target) : value;
+		},
+		set(target, prop, value) {
+			target[prop] = value;
+			this.eventBus().emit(Component.EVENTS.FLOW_CDU, {...target}, target);
+			return true;
+		},
+		deleteProperty() {
+			throw new Error("Нет доступа");
+		}
+		});
+	};
+
+	
+  
 }

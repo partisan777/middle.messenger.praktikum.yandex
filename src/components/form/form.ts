@@ -4,15 +4,15 @@ import { createForm } from "../../utils/createForm"
 
 
 type formData = {
-	parentDivClasses?: [string],
-	parentDivId?: Object,
+	parentDivClasses?: string[],
+	parentDivId?: string,
 	formAction?: string,
-	formClasses?: [string],
+	formClasses?: string[],
 	formId?: string,
 	childDivId?: string,
-	childDivClasses?: [string],
+	childDivClasses?: string[],
 	formLabel?: string,
-	subElems?: [Object]
+	subElems?: Object[]
 }    
 
 const form = (data: formData): HTMLElement => {
@@ -22,7 +22,7 @@ const form = (data: formData): HTMLElement => {
 
 export class Form extends Component {
 	
-	public subElements: [Object];
+	public subElements: Object[];
 	
 	constructor(formData: formData) {
 		const elem: HTMLElement = form(formData);

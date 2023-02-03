@@ -3,7 +3,7 @@ import { Form } from "../../components/form/form";
 
 export let regForm: Object = new Form ({
         parentDivClasses: ["registration_form"],
-        parentDivId: {id: "reg-form"},
+        parentDivId: "reg-form",
         formAction: '',
         formClasses: ["reg-form"],
         formId: "reg-form",
@@ -15,7 +15,7 @@ export let regForm: Object = new Form ({
 
 export let loginForm: Object = new Form ({
         parentDivClasses: ["registration_form"],
-        parentDivId: {id: "login-form"},
+        parentDivId: "login-form",
         formAction: '',
         formClasses: ["reg-form"],
         formId: "form-login",

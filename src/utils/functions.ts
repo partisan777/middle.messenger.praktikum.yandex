@@ -16,7 +16,7 @@ import { addRegForm } from "../pages/regForm/regForm";
 import {logIn, logOff}  from "./auth"
 
 export const signOut = (): void => {
-    removeAllChildElements("root")
+    removeElement("")
     logOff();
     addRegForm()
 };
@@ -28,12 +28,13 @@ export const signIn = (): void => {
 }
 
 export function hideElement(elementId: string): void {
-        document.getElementById(elementId).style.display = "none";
-    };
+    // console.log(document.getElementById(elementId))    
+    document.getElementById(elementId).style.display = "none";
+};
     
 export function showElement(elementId: string): void {
         document.getElementById(elementId).style.display = "flex";
-    };
+};
 
 export const removeElement = (elementId: string): void => {
     const elem = document.getElementById(elementId)
@@ -44,24 +45,8 @@ export const removeElement = (elementId: string): void => {
 
 export const removeAllChildElements = (elementId: string): void => {
     const elem = document.getElementById(elementId)
-    elem.replaceChildren();
+    elem.replaceChildren(elementId);
 };
-
-export const openModalWindow = (): void => {
-    const modal = document.getElementById("myModal");
-    showElement("myModal");
-    removeAllChildElements("modal-content");
-};
-
-export const closeModalWindow = (): void => {
-    const modal = document.getElementById("myModal");
-    hideElement("myModal");
-    removeAllChildElements("modal-content");
-};
-
-
-
-
 
 // function deleteFormChatUser() {
 //     const modal = document.getElementById("myModal");

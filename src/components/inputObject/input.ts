@@ -25,9 +25,9 @@ export class Input extends Component {
 			Component.EVENTS.focusInput
 		]);
 		this.regActionsForEventBusInput([
-			 Component.EVENTS.blurInput
+			Component.EVENTS.blurInput
 		]);
-		}
+	}
 }
 
 

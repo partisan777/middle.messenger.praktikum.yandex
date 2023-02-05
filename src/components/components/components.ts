@@ -25,17 +25,20 @@ export class Component {
 	public static readonly EVENTS = EVENTS;
     public static readonly STATE = STATES;
 	readonly _elem: HTMLElement;
-	protected readonly _subElements: HTMLElement;
+	readonly _elemStart: HTMLElement;
+	protected readonly _subElements: HTMLElement[];
 	public readonly eventBus: EventBus;
 	protected readonly id: string;
 	private _targetElement: HTMLElement;
 	
-	constructor(document: HTMLElement, targetElementSelector: string = '') {
+	
+	constructor(document: HTMLElement, targetElemSelector: string = '') {
 		this._elem = document;
+		this._elemStart = document;
 		this._subElements;
         this.eventBus = new EventBus();
-		this._targetElement = (targetElementSelector.length > 0)
-			? this.subElement(targetElementSelector)
+		this._targetElement = (targetElemSelector.length > 0)
+			? this.subElement(targetElemSelector)
 			: this.document();
 	}
 	
@@ -57,6 +60,7 @@ export class Component {
 			}	
 	   })
 	}
+
 	   
 	document = (): HTMLElement => {
 		return this._elem;
@@ -67,7 +71,7 @@ export class Component {
 	}
 
 	subElement = (selector: string): HTMLElement => {
-		const elements = this.subElements(selector);
+		const elements = this._subElements(selector);
 		if (elements.length === 0) {
 			throw new Error(`Элемент ${selector} не найден`);
 		}
@@ -86,18 +90,18 @@ export class Component {
 		  return;
 		}
 	  
-		Object.assign(this.props, nextProps);
+		Object.assign(this.Props, nextProps);
 	  };
 	  
 	show(): void {
-		this.getContent().style.display = "block";
+		this._elem.style.display = "flex";
 	};
 	  
 	hide(): void {
-		this.getContent().style.display = "none";
+		this._elem.style.display = "none";
 	};
 	
-	_makePropsProxy(props) {
+	_makePropsProxy(props: Any) {
 		return new Proxy(props, {
 		get(target, prop) {
 			const value = target[prop];
@@ -114,6 +118,23 @@ export class Component {
 		});
 	};
 
+	getDeepestLastElement = ( el: HTMLElement = this._elem, selector: string = 'div' ): HTMLElement => {
+		return Array.from(el.querySelectorAll(selector)).pop() || el;
+	};
 	
+	addSubelements = (subElem: Component[]): void => {
+		this._subElements = [...subElem]
+		const elemForAppend: HTMLElement = this.getDeepestLastElement(this._elem);
+		this._subElements.forEach(item => {
+			elemForAppend.appendChild(item._elem);
+			
+		})
+	};
   
 }
+
+
+
+
+
+

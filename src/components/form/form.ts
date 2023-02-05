@@ -1,6 +1,6 @@
 import { Component } from "../components/components";
-
 import { createForm } from "../../utils/createForm"
+
 
 
 type formData = {
@@ -20,9 +20,9 @@ const form = (data: formData): HTMLElement => {
 	return createForm(parentDivClasses, parentDivId, formAction, formClasses, formId, childDivId, childDivClasses, formLabel)
 };
 
+
 export class Form extends Component {
 	
-	public subElements: Object[];
 	
 	constructor(formData: formData) {
 		const elem: HTMLElement = form(formData);
@@ -30,14 +30,9 @@ export class Form extends Component {
 		this.regActionsForEventBus([
 			Component.EVENTS.submit
 		])
-		this.subElements = [Object];
+		
 	}
-	protected addSubelements = (subElems: [Object]): void => {
-		for (let i: number = 0; i < subElems.length; i++) {
-			this.subElements.push(subElems[i])
-		}
 
-	}
 }
 
 

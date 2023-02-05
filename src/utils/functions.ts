@@ -12,14 +12,7 @@
 // import { getAddAvatarForm } from './components/profile/getAddAvatarForm.js';
 
 import { addMainWindow } from "../pages/mainWindow/mainWindow";
-import { addRegForm } from "../pages/regForm/regForm";
 import {logIn, logOff}  from "./auth"
-
-export const signOut = (): void => {
-    removeElement("")
-    logOff();
-    addRegForm()
-};
 
 export const signIn = (): void => {
     removeAllChildElements("root");

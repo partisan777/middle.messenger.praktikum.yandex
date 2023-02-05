@@ -4,9 +4,9 @@ $box-sh-color :  rgba(0, 0, 0, 0.14);
 $dark-grey: #999999;
 $red: #FF2F2F;
 $box-sh-color-dark: rgba(0,0,0,0.8); 
-$light-gray: #888;
-
-
+// $light-gray: #888;
+$light-purple: #E3EDFD;
+$light-gray: #C4C3C3;
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -33,14 +33,14 @@ $light-gray: #888;
 /* //форма регистрации */
 .registration_form {
     width: 340px;
-    height: 615px;
+    min-height: 300px;
     background: $white;
     box-shadow: 0px 0px 6px $box-sh-color;
     display: flex;
     border-radius: 15px;
     flex-direction: column;
     margin: 50px auto;
-    
+    height: fit-content; 
 };   
 
 // Общие
@@ -115,6 +115,7 @@ li {
         align-items: center;
         justify-content: center;
         margin-bottom: 5px;
+        
         > input {
             background-color: transparent;
             border-top-style: hidden;
@@ -136,9 +137,13 @@ li {
             margin-top: 10px;
             padding-top: 3px;
         }
+        .reg-error {
+            height: max-content;
+            height: min-content;
+            height: fit-content;
+            height: stretch;
+        }
     }
-
-    
 }
 
 /* //главное окно */
@@ -256,13 +261,49 @@ li {
 }
 
 .dialog {
-    display: flex;
-    background-color: #E3EDFD;
+    // display: flex;
+    flex-direction: column; 
+    background-color: whitesmoke;
     padding: 5px;
     margin: 5px;
     height: 88%; 
-    border-radius: 10px; 
+    border-radius: 10px;
+    overflow-y: scroll;
+
 }
+.message-wrap {
+    width: 100%;
+}
+    
+.message-item {
+    min-height: 70px;
+    min-width: 250px;
+    padding: 10px;
+    margin-top : 20px;
+    max-width: 500px;
+    height: max-content;
+    height: fit-content;
+    width: max-content;
+    width: fit-content;
+    overflow-wrap: auto;
+}
+.message-me {    
+    background-color: $light-purple;
+    border-radius: 25px 25px 0 25px;    
+}
+
+.message-from {
+    flex-direction: flex-end;
+    // float: right;
+    background-color: $light-gray;
+    border-radius: 0 25px 25px 25px;    
+}
+
+.message-text-content {
+    font-size: large;
+    word-wrap: break-word;
+}
+
 
 .dialog-header {
     position: relative;
@@ -328,7 +369,8 @@ li {
     width: 75px;
     min-height: 900px;
     border-radius: 15px;
-    box-shadow: 0px 0px 6px$box-sh-color;
+    box-shadow: 0px 0px 6px
+    $box-sh-color;
     background-color: $blue;
     justify-content: center;
     align-items: center;

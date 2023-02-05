@@ -1,10 +1,12 @@
 import { Button } from "../../components/button/button";
 import { Input } from "../../components/inputObject/input";
+import { Component } from "../../components/components/components";
+import { switchRegLogForm } from "../../utils/actions";
 
 
 
 export const metaAttrInputsReg = (): Input[] => {
-    const email = new Input ({
+    const email: Input = new Input ({
       label: "email",
       labelVisible: "Почта",
         inputAttrs: [
@@ -21,7 +23,7 @@ export const metaAttrInputsReg = (): Input[] => {
          
       });
 
-      const login = new Input ({ 
+      const login: Input = new Input ({ 
         label: "login",
         labelVisible: "Логин",
         inputAttrs: [
@@ -37,7 +39,7 @@ export const metaAttrInputsReg = (): Input[] => {
         divErrorAttrs: ['checktype="login"']
       });
       
-      const first_name = new Input ({ 
+      const first_name: Input = new Input ({ 
         label: "first_name",
         labelVisible: "Имя",
         inputAttrs: [
@@ -52,9 +54,8 @@ export const metaAttrInputsReg = (): Input[] => {
         divErrorId: "reg-error-name",
         divErrorAttrs: ['checktype="first_name"']
       });
-
       
-      const second_name = new Input ({ 
+      const second_name: Input = new Input ({ 
         label: "second_name",
         labelVisible: "Фамилия",
         inputAttrs: [
@@ -69,8 +70,8 @@ export const metaAttrInputsReg = (): Input[] => {
         divErrorId: "reg-error-lastname",
         divErrorAttrs: ['checktype="second_name"']
       })
-        
-      const display_name = new Input ({
+      
+      const display_name: Input = new Input ({
         label: "display_name",
         labelVisible: "Отображаемое имя",
         inputAttrs: [
@@ -85,8 +86,8 @@ export const metaAttrInputsReg = (): Input[] => {
         divErrorId: "reg-error-displayname",
         divErrorAttrs: ['checktype="display_name"']
       });
-      
-      const phone = new Input ({ 
+     
+      const phone: Input = new Input ({ 
         label: "phone",
         labelVisible: "Телефон",
         inputAttrs: [
@@ -101,8 +102,8 @@ export const metaAttrInputsReg = (): Input[] => {
         divErrorId: "reg-error-phone",
         divErrorAttrs: ['checktype="phone"']
       });
-     
-      const password = new Input ({ 
+      
+      const password: Input = new Input ({ 
         label: "password",
         labelVisible: "Пароль",
         inputAttrs: [
@@ -117,9 +118,9 @@ export const metaAttrInputsReg = (): Input[] => {
         divErrorId: "reg-error-password",
         divErrorAttrs: ['checktype="password"']
       });
-     
       
-      const password_confirm = new Input ({ 
+      
+      const password_confirm: Input = new Input ({ 
         label: "password_confirm",
         labelVisible: "Повторите пароль",
         inputAttrs: [
@@ -134,7 +135,9 @@ export const metaAttrInputsReg = (): Input[] => {
         divErrorId: "reg-error-password-confirm",
         divErrorAttrs: ['checktype="password_confirm"']
       }); 
-  return [ email, login, first_name, second_name, display_name,  phone, password, password_confirm ]
+
+      
+  return [ email ,login, first_name, second_name, display_name, phone, password, password_confirm ]
 };
 
 
@@ -158,6 +161,7 @@ export const metaAttrButtonsReg = (): Button[] => {
             'id="reg-has-acc-button"'
         ]
       })
+      reghasaccbutton.eventBus.on(Component.EVENTS.buttonClick,  switchRegLogForm) 
     return [registrationbutton, reghasaccbutton]
   };
 

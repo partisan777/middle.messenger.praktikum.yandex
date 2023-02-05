@@ -10,7 +10,7 @@ const checkPatternData: Object = {
 };
 
 
-export const checkRegInput = (input: object): void => {
+const checkValueInput = (input: object): void => {
     const value: string = input.value;
     const checktype: string = input.getAttribute("checktype");
     const error_message: string = checkPatternData[checktype].error_message;
@@ -32,12 +32,14 @@ export const checkRegInput = (input: object): void => {
 export const submitRegForm = (): void => {
     const list_objects: object[] = event.target.form.querySelectorAll("input")
     for (let i: number = 0; i < list_objects.length; i++) {
-        checkRegInput(list_objects[i])
+        checkValueInput(list_objects[i])
     }
 };
 
 
 export const checkInput = (): void => {
-    checkRegInput(event.srcElement);
+    console.log(event.srcElement);
+    checkValueInput(event.srcElement);
+    
 };
 

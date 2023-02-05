@@ -1,7 +1,8 @@
+import { Component } from "../../components/components/components";
 import { Form } from "../../components/form/form";
 
 
-export let regForm: Object = new Form ({
+export let regForm: Form = new Form ({
         parentDivClasses: ["registration_form"],
         parentDivId: "reg-form",
         formAction: '',
@@ -13,7 +14,7 @@ export let regForm: Object = new Form ({
     });
 
 
-export let loginForm: Object = new Form ({
+export let loginForm: Form = new Form ({
         parentDivClasses: ["registration_form"],
         parentDivId: "login-form",
         formAction: '',

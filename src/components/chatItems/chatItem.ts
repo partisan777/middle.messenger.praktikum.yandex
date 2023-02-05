@@ -1,6 +1,6 @@
 import { Component } from "../components/components";
 import { getChatItem } from "../../utils/chatItems";
-
+import { message, Message } from "../message/message";
 
 type chatItem = {
     elem: {
@@ -18,34 +18,45 @@ function genChatItem (chatItem: chatItem): HTMLElement {
 	return result
 };
 
-
+  
 
 export class ChatItem extends Component {
-	// public id: number;
-    // public title: string;
-    // public avatar: string;
-    // public unread_count: number;
-    // public last_message: object;
-    // public messages: [string];
+    private messageId: string;
+    private chatId: string;
+    private senderId: string;
+    private senderName: string;
+    private sendMessageDate: Date;
+    private textContent: string;
+    private directToMe: boolean;
+    private mediaContent: string;
+    private messages_list: Message[];
 
-
-    constructor(chatItem: Object) {
+    constructor(chatItem: ChatItem) {
 		
         const elem: HTMLElement = genChatItem(chatItem);
 		super(elem);
-        // this.id = chatItem.id;
-        // this.title = chatItem.title;
-        // this.avatar = chatItem.avatar;
-        // this.unread_count = chatItem.unread_count;
-        // this.last_message = chatItem.last_message;
-        // this.messages;
+            this.messageId = chatItem.messageId;
+            this.chatId = chatItem.chatId;
+            this.senderId = chatItem.senderId;
+            this.senderName = chatItem.senderName;
+            this.sendMessageDate = chatItem.sendMessageDate;
+            this.textContent = chatItem.textContent;
+            this.directToMe = chatItem.directToMe;
+            this.mediaContent = chatItem.mediaContent;
+            this.addMessages = this.addMessages.bind(this);
+            this.messages_list = [];
+       
 		this.regActionsForEventBus([
 			Component.EVENTS.click
-		]);
-        // protected override this.orderChatList()
-        //     return chats.sort((prev, next) => { return -1 * (new Date(prev.last_message.time) - new Date(next.last_message.time))});
-        // protected override this.updateChatItem(chatItem): void {
-		//    return;
+		]) 
+        // addMessages(message: Message[]): void {
+        //     this.messages_list = [...this.messages, ...message];
+        // }
+
+        // renderMessages(message: Message , onlyNew: Boolean = true): void {
+           
+        // }
+
 	}
 
 }

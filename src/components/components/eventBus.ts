@@ -11,7 +11,9 @@ export class EventBus {
 		if (this._listeners[event]===undefined) {
 			this._listeners[event] = [];
 		}
-		this._listeners[event].push(callback);
+		if (callback !== undefined) {
+			this._listeners[event].push(callback);
+		}	
 	}
 
 	off(event: string, callback: Fn<unknown>) {
@@ -28,10 +30,12 @@ export class EventBus {
 			this.error(event);
 		} else {
 			this._listeners[event].forEach(
+				
 				listener => listener(...args)
 			);
 		}
 	}
+
 
 	error(event: string) {
 		console.error(` нет события  : ${event}`);

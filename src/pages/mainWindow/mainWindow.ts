@@ -1,6 +1,6 @@
 import { Component } from "../../components/components/components";
 import { appendChildElements } from "../../utils/appendChild";
-import { divMainWindow } from "./tmpls";
+import { divMainWindow } from "../../utils/mainWindow_tmpls";
 import { metaAttrButtonsMainWindow, metaAttrInputsMainWindow } from "./mainWindowMetaAttrs";
 import { chats } from "../../utils/const";
 import { generateChatItemList } from "../../utils/generateChatList";
@@ -12,68 +12,80 @@ import { getModalWindow } from "../../components/modalWindow/modalWindow";
 import { AddMenu } from "../../components/addMenu/addMenu";
 import { getAddMenuButtons, getAddFilesMenu } from "../addMenu/addMenuAddFiles";
 import { getChatMenuButtons, getChatMenu } from "../addMenu/addChatMenu";
+// import {  }
+
 // import { hideElement, showElement } from "../../utils/functions";
 
 
-   
 
-export function addMainWindow (idRootElement: string = "root"): void {
-    let mainWindowHTML: HTMLlement = divMainWindow;
-    appendChildElements(idRootElement, [mainWindowHTML]);
-    const mainWinButtons: Button[] = [...metaAttrButtonsMainWindow()];
-    const mainWininputs: Input[] = [...metaAttrInputsMainWindow()];
-    let chatItems: ChatItem[] = [...generateChatItemList(chats)];
-    const chatMenuButtons: Button[] = getChatMenuButtons();
-    const chatAddMenuButtons: Button[] = getAddMenuButtons();
-    const addMenuChatMenu: AddMenu = new AddMenu(getChatMenu());
-    const addMenuAddchat: AddMenu = new AddMenu(getAddFilesMenu());
 
+export default class MainWindowView {
+    private container: HTMLElement;
+    private mainWinButtons: Button[];
+    private mainWininputs: Input[];
+    private chatItems: ChatItem[];
+    private chatMenuButtons: Button[];
+    private chatAddMenuButtons: Button[];
+    private addMenuChatMenu: AddMenu;
+    private addMenuAddchat: AddMenu;
     
-    //Добавляем кнопку профиль
-    appendChildElements("chat-sidebar-header", [mainWinButtons[0].document()]);
-    //добаляем инпут и кнопку поиска
-    appendChildElements("search", [mainWininputs[0].document(), mainWinButtons[1].document()]);
-    //Добаляем кнопки и инпут отправки сообщений
-    appendChildElements("chat-input-form", [mainWinButtons[3].document(), mainWininputs[1].document(), mainWinButtons[4].document()]);
-    //добавляем Кнопку меню чата
-    appendChildElements("chat-header-descr", [mainWinButtons[2].document()]);
-    //Добавляем список чатов
-    appendChildElements("chat-sidebar-items", generateChatItemList(chats).map(item => item.document()));
-    appendChildElements("root", [getModalWindow()]);
+    constructor (idRootElement: string = "root") {
+        this.container = document.getElementById(idRootElement);
+        this.mainWinButtons= [...metaAttrButtonsMainWindow()];
+        this.mainWininputs = [...metaAttrInputsMainWindow()];
+        this.chatItems = [...generateChatItemList(chats)];
+        this.chatMenuButtons = getChatMenuButtons();
+        this.chatAddMenuButtons = getAddMenuButtons();
+        this.addMenuChatMenu = new AddMenu(getChatMenu());
+        this.addMenuAddchat = new AddMenu(getAddFilesMenu());
+        this.mainWindowHTML = divMainWindow;
+        this.addControls = this.addControls.bind(this);
+    }
 
-    
-    //добавляем меню чата
-    appendChildElements("dialog-footer", [addMenuChatMenu.document()]);
-    appendChildElements("li_add-user", [chatMenuButtons[0].document()]);
-    appendChildElements("li_delete-user", [chatMenuButtons[1].document()]);
-    
-    
-    appendChildElements("root", [addMenuAddchat.document()]);
-    //доабавляем меню добавления объектов в чат
-    appendChildElements("li_add-foto-video", [chatAddMenuButtons[0].document()]);
-    appendChildElements("li_add-file", [chatAddMenuButtons[1].document()]);
-    appendChildElements("li_add-location", [chatAddMenuButtons[2].document()]);
+    addControls(): void {
+        //Добавляем кнопку профиль
+        appendChildElements("chat-sidebar-header", [this.mainWinButtons[0].document()]);
+        //добаляем инпут и кнопку поиска
+        appendChildElements("search", [this.mainWininputs[0].document(), this.mainWinButtons[1].document()]);
+        //Добаляем кнопки и инпут отправки сообщений
+        appendChildElements("chat-input-form", [this.mainWinButtons[3].document(), this.mainWininputs[1].document(), this.mainWinButtons[4].document()]);
+        //добавляем Кнопку меню чата
+        appendChildElements("chat-header-descr", [this.mainWinButtons[2].document()]);
+        //Добавляем список чатов
+        appendChildElements("chat-sidebar-items", generateChatItemList(chats).map(item => item.document()));
+        appendChildElements("root", [getModalWindow()]);
+        //добавляем меню чата
+        appendChildElements("dialog-footer", [this.addMenuChatMenu.document()]);
+        appendChildElements("li_add-user", [this.chatMenuButtons[0].document()]);
+        appendChildElements("li_delete-user", [chatMenuButtons[1].document()]);
+        appendChildElements("root", [this.addMenuAddchat.document()]);
+        //доабавляем меню добавления объектов в чат
+        appendChildElements("li_add-foto-video", [this.chatAddMenuButtons[0].document()]);
+        appendChildElements("li_add-file", [this.chatAddMenuButtons[1].document()]);
+        appendChildElements("li_add-location", [this.chatAddMenuButtons[2].document()]);
+        this.mainWinButtons[0].eventBus.on(Component.EVENTS.buttonClick, openProfilePage);
+        //добавляем событие для открытия меню чата
+        this.mainWinButtons[2].eventBus.on(Component.EVENTS.buttonClick, openChatMenu);
+        this.addMenuChatMenu.eventBus.on(Component.EVENTS.mouseleave,  closeMenu);
+        //добавляем открытие меню добавления объектов в чат
+        this.mainWinButtons[3].eventBus.on(Component.EVENTS.buttonClick, openAddMenu);
+        this.mainWinButtons[0].eventBus.on(Component.EVENTS.buttonClick, openProfilePage);
+        
+    }   
+    hide() {
 
+    }
+    show() {
+
+    }
     
-    const openChatMenu = (): void => {
-        addMenuChatMenu.show()    
-    };
-
-    const openAddMenu = (): void => {
-        addMenuAddchat.show()
-    };
-
-    const closeMenu = (): void => {
-        console.log(event.target)
-    };
-
-    mainWinButtons[0].eventBus.on(Component.EVENTS.buttonClick, openProfilePage);
-    //добавляем событие для открытия меню чата
-    mainWinButtons[2].eventBus.on(Component.EVENTS.buttonClick, openChatMenu);
-    //
-    addMenuChatMenu.eventBus.on(Component.EVENTS.mouseleave,  closeMenu);
-    //добавляем открытие меню добавления обхъектов в чат
-    mainWinButtons[3].eventBus.on(Component.EVENTS.buttonClick, openAddMenu);
     
-//hideElement, showElement
+    render() {
+        this.container.appendChild(divMainWindow)
+        this.addControls();
+    }
+
+
 };
+
+

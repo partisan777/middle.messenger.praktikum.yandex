@@ -3,83 +3,74 @@ import { appendChildElements } from "../../utils/appendChild";
 import { metaAttrInputsReg, metaAttrButtonsReg } from "./metaAttrsReg";
 import { metaAttrButtonsLog, metaAttrInputsLog } from "./metaAttrsLogin";
 import { loginForm, regForm } from "./regFormMetaAttrs";
-import { signIn } from "../../utils/functions";
-import { Input } from "../../components/inputObject/input";
-import { Button } from "../../components/button/button";
-import { checkInput, submitRegForm } from "../../utils/formValidate";
+import { checkInput } from "../../utils/formValidate";
+import { removeElement } from "../../utils/nodeObjectManipulation";
 
+export default class addRegFormView {
+    public idRootElement: string = "root";
+    public models: Component[] = [];
+    private container: HTMLElement;
+    protected isReg: boolean;
+    private regFormDoc: Component[];
+    private loginFormDoc: Component[];
+    private regbuttons: Component[];
+    private reginputs: Component[];
+    private logbuttons: Component[];
+    private loginputs: Component[];
+    // private checkInput: Any;
 
+    constructor(idRootElement = "root", models=[]) {
+        this.models = models;
+        this.container = document.getElementById(idRootElement)
+        this.isReg = false;
 
+        this.regbuttons = [...metaAttrButtonsReg()];
+        this.reginputs = [...metaAttrInputsReg()];
+        this.logbuttons = [...metaAttrButtonsLog()];
+        this.loginputs =  [...metaAttrInputsLog()];
+        this.loginFormDoc = loginForm;
+        this.regFormDoc = regForm;
+        this.checkInput = checkInput;
+        this.switchRegLogForm = this.switchRegLogForm.bind(this);
+        this.close = this.close.bind(this);
 
-export function addRegForm (idRootElement: string = "root"): void {
-
-    let isReg: boolean = false;
-
-    let regHTML: HTMLElement = regForm.document();
-    let logHTML: HTMLElement = loginForm.document();
-   
+    }
+    switchRegLogForm (): void {
     
-    let regbuttons: [Button] = [...metaAttrButtonsReg()];
-    let reginputs: [Input] = [...metaAttrInputsReg()];
-    let logbuttons: [Button] = [...metaAttrButtonsLog()];
-    let loginputs: [Input] = [...metaAttrInputsLog()];
-
-    appendChildElements(idRootElement, [regHTML]);
-    appendChildElements("reg-form-child", reginputs.map(item => item.document()));
-    appendChildElements("reg-form-child", regbuttons.map(item => item.document()));
-    appendChildElements(idRootElement, [logHTML]);
-    appendChildElements("log-form-child", loginputs.map(item => item.document()));
-    appendChildElements("log-form-child", logbuttons.map(item => item.document()));
-
-    regHTML.style.display='none';
-   
-    function switchRegLogForm(): void {
-        if (isReg === false) {
-            isReg = true;
-            logHTML.style.display='none';
-            regHTML.style.display='flex';
+        if (this.isReg === false) {
+            this.loginFormDoc.show();
+            this.regFormDoc.hide();
+            this.isReg = true;
         } else {
-            isReg = false;
-            logHTML.style.display='flex';
-            regHTML.style.display='none';
+            this.loginFormDoc.hide();
+            this.regFormDoc.show();
+            this.isReg = false;
         }
-    }
-   
-    
-    const registrationButtonReg = (): void => {
-        signIn();
-    }
-    regbuttons[0].eventBus.on(Component.EVENTS.buttonClick, submitRegForm);
+    };
 
-    // Действие при клике на Есть аккаунт 
-    const registrationButtonHasAcc = (): void => {
-        switchRegLogForm();
-    }
-    regbuttons[1].eventBus.on(Component.EVENTS.buttonClick, registrationButtonHasAcc);
-    
-   
-
-    //Действие при клике на Вход
-    const loginButton = (): void => {
-        signIn();
-        // console.log(document.getElementById('form-login'));
-    }
-    logbuttons[0].eventBus.on(Component.EVENTS.buttonClick, loginButton);
-
-    // Действие при клике на Нет аккаунтa
-    const logButtonHasAcc = (): void => {
-        switchRegLogForm();
+    addActions (): void {
+        // this.logbuttons[0].eventBus.on(Component.EVENTS.buttonClick, this.switchRegLogForm);
+        this.logbuttons[1].eventBus.on(Component.EVENTS.buttonClick, this.switchRegLogForm);
+        this.regbuttons[1].eventBus.on(Component.EVENTS.buttonClick, this.switchRegLogForm);
+        this.reginputs.map(item => {
+            item.eventBus.on(Component.EVENTS.blurInput, this.checkInput);
+            
+        });
+    };   
+    close(): void {
+        removeElement("reg-form");
+        removeElement("login-form");
+        console.log("удалено");
     }
 
 
-    regForm.eventBus.on(Component.EVENTS.submitForm, submitRegForm);
-    // console.log(regForm)
-    // regForm.eventBus.on(Component.EVENTS.submitRegForm, console.log(1111));
-    logbuttons[1].eventBus.on(Component.EVENTS.buttonClick, logButtonHasAcc); 
-    // loginputs[0].eventBus.on(Component.EVENTS.submitRegForm, console.log(loginputs[0]));
-    
-    // loginputs[0].eventBus.on(Component.EVENTS.blurInput, checkInput);
-    // loginputs[1].eventBus.on(Component.EVENTS.blurInput, checkInput);
-    reginputs.forEach(item => item.eventBus.on(Component.EVENTS.blurInput, checkInput));
+    render() {
+        this.switchRegLogForm ()
+        this.loginFormDoc.addSubelements([...this.loginputs, ...this.logbuttons])
+        this.regFormDoc.addSubelements([...this.reginputs, ...this.regbuttons])
+        this.addActions()
+        this.container.appendChild(this.regFormDoc.document());
+        this.container.appendChild(this.loginFormDoc.document());
+    };
 
-};
+};    

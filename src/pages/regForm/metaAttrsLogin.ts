@@ -1,6 +1,7 @@
 import { Button } from "../../components/button/button";
 import { Input } from "../../components/inputObject/input";
-
+import { Component } from "../../components/components/components";
+import { switchRegLogForm } from "../../utils/actions";
 
 export const metaAttrInputsLog = (): Input[] => {
       const login = new Input ({ 
@@ -56,6 +57,7 @@ export const metaAttrButtonsLog = (): Button[] => {
             'id="log-has-acc-button"'
         ]
       })
+      loghasaccbutton.eventBus.on(Component.EVENTS.buttonClick,  switchRegLogForm) 
     return [loginbutton, loghasaccbutton]
   };
 

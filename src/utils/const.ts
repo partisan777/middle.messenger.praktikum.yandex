@@ -1,3 +1,5 @@
+import { messageDataType } from "./createMessageDiv";
+
 export const chats: object[] = [
     {
       "id": 111,
@@ -86,4 +88,24 @@ export const profile: object = {
     "avatar": "/path/to/avatar.jpg"
   };
 
-  
+
+export const Messages: messageDataType[] = [
+   {
+    messageId: "222",
+    chatId: "1111",
+    senderId: "222", 
+    senderName: "Я",
+    sendMessageDate: "2020-01-02T14:22:23.000Z",
+    textContent: "Текст полученного afeefwefwefefwfwe aefwefwef сообщения11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+    directToMe: false
+  },
+  {
+    messageId: "111",
+    chatId: "1111",
+    senderId: "1111", 
+    senderName: "Отправитель",
+    sendMessageDate: "2020-01-02T14:22:22.000Z",
+    textContent: "Текст отрпавленного сообщения",
+    directToMe: true
+  }
+]

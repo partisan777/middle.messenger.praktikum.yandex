@@ -266,7 +266,7 @@ li {
     background-color: whitesmoke;
     padding: 5px;
     margin: 5px;
-    height: 88%; 
+    height: 87%; 
     border-radius: 10px;
     overflow-y: scroll;
 
@@ -448,7 +448,7 @@ li {
     background-color: $white;
     box-shadow: 0px 0px 6px $box-sh-color;
     border-radius: 10px;
-    display: flex;
+    display: none;
     animation: opacity 0.4s;
     > img {
         width: 15px;
@@ -472,6 +472,7 @@ li {
 }
 
 .chat-menu-list {
+
     position: absolute;
     top: 6%;
     right: 2%;
@@ -480,6 +481,6 @@ li {
     background-color: #fff;
     box-shadow: 0px 0px 6px $box-sh-color;
     border-radius: 10px;
-    display: flex;
+    display: none;
     animation: opacity 0.4s;
 }

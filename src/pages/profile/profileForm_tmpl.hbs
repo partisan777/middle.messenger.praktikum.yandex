@@ -1,0 +1,34 @@
+ <div class="profile-form" id="profile-form"> 
+    <div class="profile-sidebar" id="profile-sidebar">
+        {{#if profileexit }} {{{ profileexit}}} {{/if}}
+    </div>
+    <div class="profile-subform" id="profile-subform">
+        <div class="profile-avatar" id="profile-avatar">
+            <img src="#" alt="Avatar" />
+        </div>
+        <form class="form-input" id="profile-form-input">
+            <h2>Данные пользователя</h2>
+            {{#if prformemail }}  {{{ prformemail }}} {{/if}}
+            {{#if prformlogin }} {{{ prformlogin }}} {{/if}}
+            {{#if prformfirstname }} {{{ prformfirstname }}} {{/if}}
+            {{#if prformsecondname }} {{{  prformsecondname }}} {{/if}}
+            {{#if prformdisplayname }} {{{ prformdisplayname }}} {{/if}}
+            {{#if prformphone }} {{{ prformphone }}} {{/if}}
+            {{#if changeavatar }}  {{{ changeavatar }}} {{/if}}
+            {{#if profilechangedata }} {{{ profilechangedata }}} {{/if}}
+            {{#if profilechangepassword }} {{{ profilechangepassword }}} {{/if}}
+            {{#if profilelogout }} {{{ profilelogout }}} {{/if}}
+        </form>
+       
+    </div> 
+    {{#if changepasswordformpage }} {{{ changepasswordformpage }}} {{/if}}            
+    {{#if changeavatarformpage }} {{{ changeavatarformpage }}} {{/if}}
+</div>
+
+            
+            
+            
+            
+            
+            
+            

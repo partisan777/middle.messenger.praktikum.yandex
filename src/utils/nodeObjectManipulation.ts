@@ -1,3 +1,20 @@
+
+export const appendChildElements = (parentElemtId: string='', childComponents: [HTMLElement|ChildNode|Node]): void => {
+    
+    const elem = document.getElementById(parentElemtId);
+    if (!elem) {
+        console.log('Нет родительского элемента')
+    } else {
+        for (let comp of childComponents) {
+           elem.appendChild(comp);
+       }
+    }
+};
+
+
+
+
+
 export const removeElement = (elementId: string): void => {
     const elem = document.getElementById(elementId);
     if (elem) {

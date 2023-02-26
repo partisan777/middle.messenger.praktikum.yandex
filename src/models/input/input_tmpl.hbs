@@ -1,0 +1,26 @@
+<div class="div_input">
+    {{#if label}}
+        <label for="{{{label}}}">
+            {{#if labelVisible}}  {{{labelVisible}}} {{/if}}
+        </label>
+     {{/if}}
+        <input {{#if class}} class="{{{class}}}"{{/if}}
+               {{#if type}} type="{{{type}}}" {{/if}}
+               {{#if name}} name="{{{name}}}" {{/if}}
+               {{#if elem_id}} id="{{{elem_id}}}" {{/if}}
+               {{#if placeholder}} placeholder="{{{placeholder}}}" {{/if}}
+               {{#if autocomplete}} autocomplete="{{{autocomplete}}}" {{/if}}
+               {{#if checktype}} checktype="{{{checktype}}}" {{/if}}
+               {{#if value}} value="{{{value}}}" {{/if}}
+        >
+    {{#if divErrorId}}
+        <div {{#if divErrorClassName}} class="{{{divErrorClassName}}}" {{/if}}
+                id="{{{divErrorId}}}"
+            {{#if divErrorCheckType}} checktype="{{{divErrorCheckType}}}" {{/if}}
+            >
+        </div>
+    {{/if}}
+</div>
+
+
+  

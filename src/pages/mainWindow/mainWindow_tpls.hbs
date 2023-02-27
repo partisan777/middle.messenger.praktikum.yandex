@@ -40,6 +40,11 @@
         <ul> 
             <li><a href="./error.html">Ссылка на страницу с ошибками</a></li>
             <li><a href="./notfound.html">Ссылка на несуществующую страницу</a></li>
+            {{!-- {{#if chatList.messageList}} --}}
+                {{#each chatList.messageList }}
+                    {{{this.messageList}}}      
+                {{/each}}
+            {{!-- {{/if}} --}}
     </div>
     <div class="dialog-footer" id="dialog-footer">
         <form class="chat-input-form" id="chat-input-form" sendId="">
@@ -54,6 +59,12 @@
             {{/if}}
         </form>
     </div>
+    {{#if addFiles }}
+        {{{ addFiles }}}
+    {{/if}}
+    {{#if chatMenu }}
+        {{{ chatMenu }}}
+    {{/if}}
 </div>
 
 

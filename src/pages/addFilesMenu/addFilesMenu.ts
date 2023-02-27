@@ -1,17 +1,17 @@
 import { Component } from "../../models/components/components";
 import { Button } from "../../models/button/button";
-import AddFilesPageTemplate from "./addFilesPage_tmpl.hbs"
+import addFilesPageTemplate from "./addFilesPage_tmpl.hbs"
 
 
 
 
 
-interface addFilesWindowPageProps{
+interface addFilesPageProps{
 	pagetitle: string;
 }
 
-export class AddFilesWindowPage extends Component {
-	constructor(props: addFilesWindowPageProps) {
+export class AddFilesPage extends Component {
+	constructor(props: addFilesPageProps ) {
 		super('div', props, 'menu-add-files', 'menu-add-files')
 	}
 	init() {
@@ -39,7 +39,7 @@ export class AddFilesWindowPage extends Component {
 		
 	}
 	render() {
-        return this.compile(AddFilesPageTemplate, this.props);
+        return this.compile(addFilesPageTemplate, this.props);
     }
 }
 

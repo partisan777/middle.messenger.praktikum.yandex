@@ -89,7 +89,7 @@ export const profile: object = {
   };
 
 
-export const Messages: messageDataType[] = [
+export const messages: messageDataType[] = [
    {
     messageId: "222",
     chatId: "1111",
@@ -102,6 +102,25 @@ export const Messages: messageDataType[] = [
   {
     messageId: "111",
     chatId: "1111",
+    senderId: "1111", 
+    senderName: "Отправитель",
+    sendMessageDate: "2020-01-02T14:22:22.000Z",
+    textContent: "Текст отрпавленного сообщения",
+    directToMe: true
+  },
+
+  {
+    messageId: "222",
+    chatId: "2222",
+    senderId: "222", 
+    senderName: "Я",
+    sendMessageDate: "2020-01-02T14:22:23.000Z",
+    textContent: "Текст полученного afeefwefwefefwfwe aefwefwef сообщения22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222",
+    directToMe: false
+  },
+  {
+    messageId: "111",
+    chatId: "2222",
     senderId: "1111", 
     senderName: "Отправитель",
     sendMessageDate: "2020-01-02T14:22:22.000Z",

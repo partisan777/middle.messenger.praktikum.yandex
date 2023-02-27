@@ -5,6 +5,10 @@ import mainWindowTemplate from './mainWindow_tpls.hbs';
 import { ChatList } from "../../models/chatlist/chatList";
 import { ChatItem } from "../../models/chatItems/chatItem";
 import { chats } from "../../utils/const";
+import { AddFilesPage } from "../addFilesMenu/addFilesMenu";
+import { ChatMenuPage } from "../chatMenu/chatMenu";
+import { Message } from "../../models/message/message";
+import { messages } from "../../utils/const";
 
 
 export class MainWindow extends Component {
@@ -71,11 +75,19 @@ export class MainWindow extends Component {
 		for (const i in chats) {
             this.children.chatList.push(new ChatItem(chats[i]));
         }
+
+		// console.log(this.children.chatList[0].messageList)
+
+		for (const j in messages) {
+			console.log(messages[j].chatId)
+            // this.children[].push(new Message(messages[j]));
+        }
 		
-	}
+		this.children.addFiles = new AddFilesPage({pagetitle: 'добавить файлы'});
+		this.children.chatMenu = new ChatMenuPage({pagetitle: 'меню чата'});
+	}	
 	render() {
         return this.compile(mainWindowTemplate, {});
     }
-}
-
+};
 

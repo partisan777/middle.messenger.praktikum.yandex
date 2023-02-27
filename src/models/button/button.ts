@@ -6,8 +6,8 @@ interface buttonDataProps  {
 	actionFunction?: Function,
 	buttonClass?: string,
     type?: string,
-    elem_id?: string
-	
+    elem_id?: string,
+	events?: {}
 };    
 
 export class Button extends Component {

@@ -51,4 +51,5 @@ export function addRegFormFull(): void {
               
     container.append(loginForm.getContent())
     container.append(regForm.getContent())
-}
+};
+

@@ -39,7 +39,6 @@ export class MainWindow extends Component {
 			elem_id: "search"    
 		});
 
-		console.log(this)
 		this.children.profileButton = new Button ({
 			labelVisible: "Профиль>",
 			buttonClass: "link-button",
@@ -75,8 +74,6 @@ export class MainWindow extends Component {
 			events: this.props.eventsChatMenuButton.events
 		});
 
-		
-		
 
 		this.children.sendButton = new Button ({
 			labelVisible: 'Отправить',
@@ -102,4 +99,6 @@ export class MainWindow extends Component {
         return this.compile(mainWindowTemplate, {});
     }
 };
+
+
 

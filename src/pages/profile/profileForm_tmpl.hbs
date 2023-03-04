@@ -8,18 +8,18 @@
         </div>
         <form class="form-input" id="profile-form-input">
             <h2>Данные пользователя</h2>
-            {{#if prFormEmail }}  {{{ prFormEmail }}} {{/if}}
-            {{#if prFormLogin }} {{{ prFormLogin }}} {{/if}}
-            {{#if prFormFirstName }} {{{ prFormFirstName }}} {{/if}}
-            {{#if prFormSecondName }} {{{  prFormSecondName }}} {{/if}}
-            {{#if prFormDisplayName }} {{{ prFormDisplayName }}} {{/if}}
-            {{#if prFormPhone }} {{{ prFormPhone }}} {{/if}}
+            {{#if email }}  {{{ email }}} {{/if}}
+            {{#if login }} {{{ login }}} {{/if}}
+            {{#if first_name }} {{{ first_name }}} {{/if}}
+            {{#if second_name }} {{{  second_name }}} {{/if}}
+            {{#if display_name }} {{{ display_name }}} {{/if}}
+            {{#if phone }} {{{ phone }}} {{/if}}
             {{#if changeAvatar }}  {{{ changeAvatar }}} {{/if}}
             {{#if profileChangeData }} {{{ profileChangeData }}} {{/if}}
             {{#if profileChangePassword }} {{{ profileChangePassword }}} {{/if}}
             {{#if profileLogout }} {{{ profileLogout }}} {{/if}}
         </form>
-       
+       <div>{{#if errormessage  }} {{{ errormessage }}} {{/if}}</div>
     </div> 
     {{#if changePasswordFormPage }} {{{ changePasswordFormPage }}} {{/if}}            
     {{#if changeAvatarFormPage }} {{{ changeAvatarFormPage }}} {{/if}}

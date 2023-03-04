@@ -5,7 +5,7 @@ import { addRegFormFull } from "./mainFIles/addRegForm";
 
 
 const isAuthState: boolean = isAuth();
-console.log(isAuth());
+// console.log(isAuth());
 if (!isAuthState) {
     addRegFormFull();
 } else {

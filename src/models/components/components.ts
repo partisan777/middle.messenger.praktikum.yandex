@@ -26,7 +26,7 @@ export class Component<P extends Record<string, any> = any> {
 	public id = nanoid(6);
 	protected props: P;
 	public children: Record<string, Component>;
-	private eventBus: () => EventBus;
+	protected eventBus: () => EventBus;
 	protected _element: HTMLElement | null = null;
 	private _meta: { tagName: string; props: P; className: string, el_id: string};
   private _el: HTMLElement | null = null;
@@ -74,7 +74,6 @@ export class Component<P extends Record<string, any> = any> {
   }
 
   _addEvents(): void {
-    // console.trace()
     const {events = {}} = this.props as P & { events: Record<string, () => void> };
 
     Object.keys(events).forEach(eventName => {
@@ -248,6 +247,6 @@ export class Component<P extends Record<string, any> = any> {
       this.hide()
     }
   }
-  }
+}
 
 

@@ -126,7 +126,7 @@ export function addMainWindowFull(): void {
             }
         }}
     });
-
+    profileFormPage.hide();
     container.append(mainWindow.getContent());
     container.append(addFileFormPage.getContent());
     container.append(addFotoVideoFormPage.getContent());

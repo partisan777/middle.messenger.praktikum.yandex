@@ -23,14 +23,14 @@ export class ChangeAvatarFormPage extends Component {
       divErrorId: "reg-error-avatar-input"
     });
 
-    this.children.addavatar = new Button ({
+    this.children.addAvatar = new Button ({
       labelVisible: "Добавить",
       buttonClass:"button-button",
       type: "button",
       elem_id:"save-avatar-button"
     })
     
-    this.children.closeavatarform = new Button ({
+    this.children.closeAvatarForm = new Button ({
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",

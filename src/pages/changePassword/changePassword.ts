@@ -69,8 +69,7 @@ export class ChangePasswordFormPage extends Component {
       type: "button",
       elem_id: "close-change-password-form-button",
       events: { click: (e: Event) => { 
-          this.hide()
-          console.log(123);
+          this.hide();          
       }}
     })
   }

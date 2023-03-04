@@ -78,14 +78,12 @@ export function addMainWindowFull(): void {
         eventsChatMenuButton: {
             events: {click: (e: Event) => {
                 e.preventDefault();
-                // console.log(e)
                 chatMenuPage.changeVisible()
             }
         }},
         eventsProfileButton: {
             events: {click: (e: Event) => {
                 e.preventDefault();
-                // console.log(e)
                 mainWindow.changeVisible()
                 profileFormPage.changeVisible()
             }
@@ -120,8 +118,6 @@ export function addMainWindowFull(): void {
         profileChangePasswordEvents: {
             events: {click: (e: Event) => {
                 e.preventDefault();
-                // console.log(e)
-                
                 changePasswordFormPage.changeVisible()
             }
         }}
@@ -141,3 +137,4 @@ export function addMainWindowFull(): void {
     container.append(changeAvatarFormPage.getContent());
     container.append(profileFormPage.getContent());
 };
+

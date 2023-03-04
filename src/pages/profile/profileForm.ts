@@ -3,8 +3,7 @@ import { Button } from '../../models/button/button';
 import { Input } from '../../models/input/input';
 import { Component } from '../../models/components/components';
 import { profile } from "../../utils/const"
-import { ChangePasswordFormPage } from '../changePassword/changePassword';
-import { ChangeAvatarFormPage } from '../changeAvatar/changeAvatar';
+import { checkValueInput } from "../../utils/formValidate"
 
 interface ProfileFormPageProps {
   pageTitle?: string;
@@ -13,6 +12,7 @@ interface ProfileFormPageProps {
   changeAvatarEvents?: object;
   profileExitEvents?: object;
   profileChangePasswordEvents?: object;
+  events?: object;
 
 };
 
@@ -22,7 +22,7 @@ export class ProfileFormPage extends Component {
     super('div', props, 'profile-main', 'profile-main', false);
   };
   init() {
-    this.children.prFormEmail = new Input ({
+    this.children.email = new Input ({
         label: "pr-form-email",
         labelVisible: "Почта",
         type: "text",
@@ -31,10 +31,18 @@ export class ProfileFormPage extends Component {
         value: profile.email, 
         divErrorClassName: "reg-error",
         divErrorId: "pr-form-email-error",
-        divErrorCheckType: "email"
+        errormessage: '',
+        divErrorCheckType: "email",
+            events: {
+                    blur: (e: Event) => { 
+                        const {name, currentError, currentValue} = checkValueInput(e);
+                        console.log(name, currentError, currentValue)
+                        this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                    }
+                }   
     }); 
         
-    this.children.prFormLogin = new Input ({
+    this.children.login = new Input ({
         label: "pr-form-login",
         labelVisible:"Логин",
         type: "text",
@@ -43,10 +51,18 @@ export class ProfileFormPage extends Component {
         value: profile.login,
         divErrorClassName: "reg-error",
         divErrorId: "pr-form-login-error",
-        divErrorCheckType: "login"
+        errormessage: '',
+        divErrorCheckType: "login",
+        events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
       });
       
-    this.children.prFormFirstName = new Input ({
+    this.children.first_name = new Input ({
         label: "pr-form-first-name",
         labelVisible:"Имя",
         type: "text",
@@ -55,10 +71,18 @@ export class ProfileFormPage extends Component {
         value: profile.first_name,
         divErrorClassName: "reg-error",
         divErrorId: "pr-form-first_name-error",
-        divErrorCheckType: "first-name"
+        errormessage: '',
+        divErrorCheckType: "first_name",
+        events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
     });
   
-    this.children.prFormSecondName = new Input ({ 
+    this.children.second_name = new Input ({ 
         label: "pr-form-second_name",
         labelVisible:"Фамилия",
         type: "text",
@@ -67,11 +91,18 @@ export class ProfileFormPage extends Component {
         value: profile.second_name,
         divErrorClassName: "reg-error",
         divErrorId: "pr-form-second_name-error",
-        divErrorCheckType: "second-name"
-    });
-  
+        errormessage: '',
+        divErrorCheckType: "second_name",
+        events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
+    });     
 
-    this.children.prFormDisplayName = new Input ({ 
+    this.children.display_name = new Input ({ 
         label: "pr-form-display_name",
         labelVisible:"Имя в чате",
         type: "text",
@@ -80,11 +111,18 @@ export class ProfileFormPage extends Component {
         value: profile.display_name,
         divErrorClassName: "reg-error",
         divErrorId: "pr-form-display_name-error",
-        divErrorCheckType: "display_name"
+        errormessage: '',
+        divErrorCheckType: "display_name",
+        events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
     });
 
-
-    this.children.prFormPhone = new Input ({ 
+    this.children.phone = new Input ({ 
         label: "pr-form-phone",
         labelVisible:"Телефон",
         type: "text",
@@ -93,7 +131,15 @@ export class ProfileFormPage extends Component {
         value: profile.phone,
         divErrorClassName: "reg-error",
         divErrorId: "pr-form-phone-error",
-        divErrorCheckType: "phone"
+        errormessage: '',
+        divErrorCheckType: "phone",
+        events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
     });
     
     this.children.profileChangeData =  new Button ({

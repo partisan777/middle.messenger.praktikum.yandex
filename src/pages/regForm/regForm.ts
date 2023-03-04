@@ -17,7 +17,6 @@ const props = {
     events: {
     submit: (e: Event) => {
             e.preventDefault();
-            console.log(e);
         }
     }   
 }
@@ -71,18 +70,18 @@ export class RegFormPage extends Component {
             }   
         });
             
-        this.children.firstName = new Input ({ 
+        this.children.first_name = new Input ({ 
             label: "first_name",
             labelVisible: "Имя",
             type: "text",
-            name: "firstName",
-            elem_id: "firstName",
+            name: "first_name",
+            elem_id: "first_name",
             placeholder: "Введите имя",
             autocomplete: "on",
-            checkType: "firstName",
+            checkType: "first_name",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-name",
-            divErrorCheckType: "firstName",
+            divErrorCheckType: "first_name",
             events: {
                 blur: (e: Event) => { 
                     const {name, currentError, currentValue} = checkValueInput(e);
@@ -96,7 +95,7 @@ export class RegFormPage extends Component {
             label: "second_name",
             labelVisible: "Фамилия",
             type: "text",
-            name: "secondName",
+            name: "second_name",
             elem_id: "secondName",
             placeholder: "Введите фамилию",
             autocomplete: "on",
@@ -113,18 +112,18 @@ export class RegFormPage extends Component {
             }   
         });
 
-        this.children.displayName = new Input ({
+        this.children.display_name = new Input ({
             label: "display_name",
             labelVisible: "Отображаемое имя",
             type: "text",
-            name: "displayName",
-            elem_id: "displayName",
+            name: "display_name",
+            elem_id: "display_name",
             placeholder: "Отображаемое имя",
             autocomplete: "on",
-            checkType: "displayName",
+            checkType: "display_name",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-displayname",
-            divErrorCheckType: "displayName",
+            divErrorCheckType: "display_name",
             events: {
                 blur: (e: Event) => { 
                     const {name, currentError, currentValue} = checkValueInput(e);
@@ -176,26 +175,21 @@ export class RegFormPage extends Component {
             }   
         }); 
             
-        this.children.passwordConfirm = new Input ({ 
+        this.children.password_confirm = new Input ({ 
             label: "password_confirm",
             labelVisible: "Повторите пароль",
             type: "password",
-            name: "passwordConfirm",
+            name: "password_confirm",
             elem_id: "password-confirm",
             placeholder: "Введите повтор пароля",
             autocomplete: "on",
-            checkType: "passwordConfirm",
+            checkType: "password_confirm",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-password-confirm",
-            divErrorCheckType: "passwordConfirm",
+            divErrorCheckType: "password_confirm",
             events: {
                 blur: (e: Event) => { 
-                    // const {name, currentError, currentValue} = checkValueInput(e);
-                    // console.log(name, currentError, currentValue);
-                    // let value_password: string = 
                     console.log(this.children.password)
-                    // let value_confirm: string = e.target.value;
-                    // this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
                 }
             }   
         });

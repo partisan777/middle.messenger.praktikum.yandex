@@ -40,4 +40,6 @@ export class EventBus {
 	error(event: string) {
 		console.error(` нет события  : ${event}`);
 	}
-}
+};
+
+

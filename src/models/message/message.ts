@@ -1,6 +1,6 @@
 import { Component } from "../components/components";
-import { messageDataType } from "../../utils/createMessageDiv";
-import messageTemplate from "./message_tmpl.hbs"    
+import messageTemplate from "./message_tmpl.hbs";    
+import { dateFormat } from "../../utils/dateFormat";
 
 interface messageDataProps {
     messageId?: string;
@@ -14,15 +14,15 @@ interface messageDataProps {
     events?: {};
 }
 
-// new Date(data.sendMessageDate).toLocaleTimeString() + " " + new Date(data.sendMessageDate).toLocaleDateString()
 
 export class Message extends Component {
 	constructor(props: messageDataProps) {
 		super('div', props, "message-wrap");
+        this.props.sendMessageDate = dateFormat(new Date(this.props.sendMessageDate));
     }
-    
-	render() {
-		return this.compile(messageTemplate, this.props);
+
+    render() {
+        return this.compile(messageTemplate, this.props);
 	}
 };
 

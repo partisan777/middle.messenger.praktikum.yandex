@@ -7,35 +7,37 @@ import addFilesPageTemplate from "./addFilesPage_tmpl.hbs"
 
 
 interface addFilesPageProps{
-	pagetitle: string;
+	pageTitle: string,
+	addFotoVideoEvents?: object,
+	addFileEvents?: object,
+	addLocationEvents?: object
 }
 
 export class AddFilesPage extends Component {
 	constructor(props: addFilesPageProps ) {
-		super('div', props, 'menu-add-files', 'menu-add-files')
+		super('div', props, 'menu-add-files', 'menu-add-files', false)
 	}
 	init() {
-		
 		this.children.addfotovideo = new Button ({
 			labelVisible: 'Фото Видео',
 			buttonClass: "link-button",
-			elem_id: "add-foto-video"
+			elem_id: "add-foto-video",
+			events: this.props.addFotoVideoEvents.events
 		});
 
 		this.children.addfile = new Button ({
 			labelVisible: 'Файл',
 			buttonClass: "link-button",
-			elem_id: "add-file"
+			elem_id: "add-file",
+			events: this.props.addFileEvents.events
 		});
 		
 		this.children.addlocation = new Button ({
 			labelVisible: 'Локация',
 			buttonClass: "link-button",
-			elem_id: "add-location"
+			elem_id: "add-location",
+			events: this.props.addLocationEvents.events
 		});
-
-		
-
 		
 	}
 	render() {

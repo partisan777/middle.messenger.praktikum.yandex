@@ -18,27 +18,24 @@ enum EVENTS {
 	mouseleave = "mouseleave"
 };
 
-enum STATES {
-    visible = "visible",
-    hidden = "hidden",
-}
 
 
 export class Component<P extends Record<string, any> = any> {
 
 	public static readonly EVENTS = EVENTS;
-  public static readonly STATE = STATES;
 	public id = nanoid(6);
 	protected props: P;
 	public children: Record<string, Component>;
 	private eventBus: () => EventBus;
-	private _element: HTMLElement | null = null;
+	protected _element: HTMLElement | null = null;
 	private _meta: { tagName: string; props: P; className: string, el_id: string};
   private _el: HTMLElement | null = null;
+  protected isVisible: boolean; 
  
  
-  constructor(tagName = "div", propsWithChildren: P, className = '', el_id = '' ) {
+  constructor(tagName = "div", propsWithChildren: P, className = '', el_id = '', isVisible = true ) {
     const eventBus = new EventBus();
+    this.isVisible = isVisible;
 
     const { props, children } = this._getChildrenAndProps(propsWithChildren);
 
@@ -55,15 +52,17 @@ export class Component<P extends Record<string, any> = any> {
     this.eventBus = () => eventBus;
     
     this._registerEvents(eventBus);
-    eventBus.emit(Component.EVENTS.INIT);
+    this.eventBus().emit(Component.EVENTS.INIT);
     
   }
 
   _getChildrenAndProps(childrenAndProps: P): { props: P, children: Record<string, Component>} {
     const props: Record<string, unknown> = {};
     const children: Record<string, Component> = {};
-	
-    Object.entries(childrenAndProps).forEach(([key, value]) => {
+
+   Object.entries(childrenAndProps).forEach(([key, value]) => {
+     
+
       if (value instanceof Component) {
         children[key as string] = value;
       } else {
@@ -75,6 +74,7 @@ export class Component<P extends Record<string, any> = any> {
   }
 
   _addEvents(): void {
+    // console.trace()
     const {events = {}} = this.props as P & { events: Record<string, () => void> };
 
     Object.keys(events).forEach(eventName => {
@@ -87,14 +87,15 @@ export class Component<P extends Record<string, any> = any> {
 
     Object.keys(events).forEach(eventName => {
       this._element?.removeEventListener(eventName, events[eventName]);
+      this.eventBus().off(eventName, events[eventName]);
     });
   }
 
   _registerEvents(eventBus: EventBus): void {
-    eventBus.on(Component.EVENTS.INIT, this._init.bind(this));
-    eventBus.on(Component.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
-    eventBus.on(Component.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
-    eventBus.on(Component.EVENTS.FLOW_RENDER, this._render.bind(this));
+    this.eventBus().on(Component.EVENTS.INIT, this._init.bind(this));
+    this.eventBus().on(Component.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
+    this.eventBus().on(Component.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
+    this.eventBus().on(Component.EVENTS.FLOW_RENDER, this._render.bind(this));
   }
 
   _createResources(): void {
@@ -124,22 +125,12 @@ export class Component<P extends Record<string, any> = any> {
   protected componentDidUpdate(oldProps: P, newProps: P): boolean {
     return true;
   }
-  
+
   private _componentDidUpdate(oldProps: P, newProps: P): void {
     if (this.componentDidUpdate(oldProps, newProps)) {
       this.eventBus().emit(Component.EVENTS.FLOW_RENDER);
     }
   }
-
-  
-
-  setProps = (nextProps: P) => {
-    if (!nextProps) {
-      return;
-    }
-
-    Object.assign(this.props, nextProps);
-  };
 
   get element() {
     return this._element;
@@ -198,9 +189,18 @@ export class Component<P extends Record<string, any> = any> {
     return this.element;
   }
 
+  setProps = (nextProps: P) => {
+    if (!nextProps) {
+      return;
+    } 
+
+    Object.assign(this.props, nextProps);
+  };
+
   _makePropsProxy(props: P) {
-    
-	return new Proxy(props, {
+    const self = this;
+
+    return new Proxy(props, {
       get(target, prop: string) {
         const value = target[prop];
         return typeof value === "function" ? value.bind(target) : value;
@@ -210,8 +210,7 @@ export class Component<P extends Record<string, any> = any> {
 
         target[prop as keyof P] = value;
 
-        
-        this.eventBus().emit(Component.EVENTS.FLOW_CDU, oldTarget, target);
+        self.eventBus().emit(Component.EVENTS.FLOW_CDU, oldTarget, target);
         return true;
       },
       deleteProperty() {
@@ -232,30 +231,23 @@ export class Component<P extends Record<string, any> = any> {
     return this._el
   }
 
-  show() {
+  show(): void {
+    this.isVisible = true;
     this.getContent()!.style.display = "flex";
   }
 
-  hide() {
+  hide(): void {
+    this.isVisible = false;
     this.getContent()!.style.display = "none";
   }
 
-
-  protected regActionsForEventBusInput = (actions: string[]): void => {
-	actions.forEach(action => {
-		if (this._element.className === 'div_input') { 
-			this._element.getElementsByTagName('input')[0]?.addEventListener(action, (e) => {
-			e.preventDefault();
-			this.eventBus.emit(action);
-			})
-		}	
-   })
-	}
-	getDeepestLastElement = ( el: HTMLElement = this._element, selector: string = 'div' ): DocumentFragment => {
-		return Array.from(el.querySelectorAll(selector)).pop() || el;
-	};
-	
-	
-}
+  changeVisible(): void {
+    if (!this.isVisible) {
+      this.show()
+    } else {
+      this.hide()
+    }
+  }
+  }
 
 

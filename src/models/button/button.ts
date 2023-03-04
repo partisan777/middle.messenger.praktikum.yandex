@@ -11,7 +11,6 @@ interface buttonDataProps  {
 };    
 
 export class Button extends Component {
-		
 	constructor(props: buttonDataProps) {
 		super('div', props);
 	}

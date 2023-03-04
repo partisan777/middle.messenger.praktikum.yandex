@@ -10,7 +10,7 @@ interface DelUserFormPageProps {
 
 export class DelUserFormPage extends Component {
   constructor(props: DelUserFormPageProps) {
-    super('div', props, "modal", "del-user-page")
+    super('div', props, "modal", "del-user-page", false)
     
   };
   init() {
@@ -37,8 +37,7 @@ export class DelUserFormPage extends Component {
       type: "button",
       elem_id: "close-del-user-button",
       events: {click: () => {this.hide()} }
-    });
-    console.log(this);
+    });    
   } 
   
   render() {

@@ -10,7 +10,7 @@ interface ChangePasswordFormPageProps {
 
 export class ChangePasswordFormPage extends Component {
   constructor(props: ChangePasswordFormPageProps) {
-    super('div', props, "modal", "change-password-page")
+    super('div', props, "modal", "change-password-page", false)
   };
   init() {
 
@@ -67,13 +67,17 @@ export class ChangePasswordFormPage extends Component {
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",
-      elem_id: "close-change-password-form-button"
-    });
-  } 
-  
+      elem_id: "close-change-password-form-button",
+      events: { click: (e: Event) => { 
+          this.hide()
+          console.log(123);
+      }}
+    })
+  }
   render() {
       return this.compile(changePasswordTemplate, this.props);
   }
-    
 };
+
+
 

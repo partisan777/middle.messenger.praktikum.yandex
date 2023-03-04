@@ -16,7 +16,9 @@ interface inputDataProps {
 	divErrorCheckType?: string,
 	eventActions?: Function,
 	class?: string,
-	value?: string
+	value?: string,
+	errormessage?: string,
+	events?: object
 }    
 
 export class Input extends Component {
@@ -24,6 +26,15 @@ export class Input extends Component {
 		super('div', props);
 		
 	}
+	_addEvents(): void {
+		const {events = {}} = this.props;
+
+		Object.keys(events).forEach(eventName => {
+				this._element?.querySelector('input').addEventListener(eventName, events[eventName]);
+			});
+	}
+	
+
 	render() {
 		return this.compile(inputTemplate, this.props);
 	}

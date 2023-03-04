@@ -2,34 +2,50 @@ import { Component } from "../../models/components/components";
 import { Button } from "../../models/button/button";
 import { Input } from "../../models/input/input";
 import mainWindowTemplate from './mainWindow_tpls.hbs';
-import { ChatList } from "../../models/chatlist/chatList";
 import { ChatItem } from "../../models/chatItems/chatItem";
 import { chats } from "../../utils/const";
-import { AddFilesPage } from "../addFilesMenu/addFilesMenu";
-import { ChatMenuPage } from "../chatMenu/chatMenu";
 import { Message } from "../../models/message/message";
 import { messages } from "../../utils/const";
 
 
+
+interface MainWindowProps {
+	pageTitle?: string;
+	eventsAddFileButton?: object;
+	eventsChatMenuButton?: object;
+	eventsProfileButton?: object;
+  };
+  
+
 export class MainWindow extends Component {
 	protected chatList: ChatItem[];
-	constructor(props: {}) {
-		super('div', props, 'chat-window', 'chat-window')
+	constructor(props: MainWindowProps) {
+		super('div', props, 'chat-window', 'chat-window', true)
 		
 	}
 	init() {
-		
+
+		this.children.addButton = new Button ({
+			labelVisible: '+',
+			buttonClass: "circle",
+			// type: "button",
+			elem_id: "add-button",
+			events: this.props.eventsAddFileButton.events
+		});
+
 		this.children.searchInput = new Input ({ 
 			type: "search",
 			name: "search",
 			elem_id: "search"    
 		});
 
+		console.log(this)
 		this.children.profileButton = new Button ({
 			labelVisible: "Профиль>",
 			buttonClass: "link-button",
 			type: "button",
-			elem_id: "button-profile"
+			elem_id: "button-profile",
+			events: this.props.eventsProfileButton.events
 		});
 
 		this.children.searchButton = new Button ({
@@ -55,18 +71,17 @@ export class MainWindow extends Component {
 		this.children.chatMenuButton = new Button ({
 			labelVisible: '<div class="mini-circle"></div><div class="mini-circle"></div><div class="mini-circle"></div>',
 			buttonClass: "chat-menu",
-			elem_id: "chat-menu"
+			elem_id: "chat-menu",
+			events: this.props.eventsChatMenuButton.events
 		});
 
-		this.children.addButton = new Button ({
-			labelVisible: '+',
-			buttonClass: "circle",
-			elem_id: "add-button"
-		});
+		
+		
 
 		this.children.sendButton = new Button ({
 			labelVisible: 'Отправить',
 			buttonClass: "button-button",
+			type: "button",
 			elem_id: "send-button"
 		});
 
@@ -76,15 +91,12 @@ export class MainWindow extends Component {
             this.children.chatList.push(new ChatItem(chats[i]));
         }
 
-		// console.log(this.children.chatList[0].messageList)
+		this.children.messages = []
 
 		for (const j in messages) {
-			console.log(messages[j].chatId)
-            // this.children[].push(new Message(messages[j]));
+			
+            this.children.messages.push(new Message(messages[j]));
         }
-		
-		this.children.addFiles = new AddFilesPage({pagetitle: 'добавить файлы'});
-		this.children.chatMenu = new ChatMenuPage({pagetitle: 'меню чата'});
 	}	
 	render() {
         return this.compile(mainWindowTemplate, {});

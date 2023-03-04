@@ -104,7 +104,7 @@ li {
 
 
 // формы ввода
-.form-input {
+.form-input, .reg-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -294,7 +294,6 @@ li {
 
 .message-from {
     flex-direction: flex-end;
-    // float: right;
     background-color: $light-gray;
     border-radius: 0 25px 25px 25px;    
 }
@@ -472,7 +471,6 @@ li {
 }
 
 .chat-menu-list {
-
     position: absolute;
     top: 6%;
     right: 2%;
@@ -483,4 +481,7 @@ li {
     border-radius: 10px;
     display: none;
     animation: opacity 0.4s;
+    > ul {
+        display: flex;
+    }
 }

@@ -5,12 +5,12 @@ import { Input } from '../../models/input/input';
 
 
 interface ChangeAvatarFormPageProps {
-  pageTitle: string;
+  pageTitle?: string;
 };
 
 export class ChangeAvatarFormPage extends Component {
   constructor(props: ChangeAvatarFormPageProps) {
-    super('div', props, "modal", "change-avatar-page")
+    super('div', props, "modal", "change-avatar-page", false)
   };
   init() {
 
@@ -23,7 +23,7 @@ export class ChangeAvatarFormPage extends Component {
       divErrorId: "reg-error-avatar-input"
     });
 
-    this.children.addavatar =new Button ({
+    this.children.addavatar = new Button ({
       labelVisible: "Добавить",
       buttonClass:"button-button",
       type: "button",
@@ -34,7 +34,12 @@ export class ChangeAvatarFormPage extends Component {
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",
-      elem_id:"close-add-avatar-button"
+      elem_id: "close-add-avatar-button",
+      events: {
+          click: (e: Event) => { 
+            this.hide()
+            e.preventDefault()
+    }}
     });
   } 
   

@@ -7,30 +7,30 @@
     "dev": "parcel index.html",
     "build": "parcel build index.html",
     "start": "node server.js",
-    "copy-static": "copy -vR ./static ./dist"
+    "copy-static": "copy -vR ./static ./dist",
+    "lint": "eslint index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-babel": "^2.8.3",
-    "@parcel/transformer-inline-string": "^2.8.3",
-    "@parcel/transformer-js": "^2.8.3",
-    "@parcel/transformer-sass": "^2.8.3",
-    "eslint": "^8.33.0",
+    "@parcel/transformer-babel": "2.8.3",
+    "@parcel/transformer-inline-string": "2.8.3",
+    "@parcel/transformer-js": "2.8.3",
+    "@parcel/transformer-sass": "2.8.3",
+    "cssnano": "4.1.11",
+    "eslint": "8.33.0",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-config-google": "^0.14.0",
-    "parcel-transformer-hbs": "^1.0.4",
+    "eslint-config-google": "0.14.0",
+    "parcel-transformer-hbs": "1.0.4",
     "sass": "1.57.1",
-    "typescript": "^4.9.4"
+    "typescript": "4.9.4"
   },
   "dependencies": {
     "express": "4.18.2",
-    "handlebars": "^4.7.7",
-    "nanoid": "^4.0.1",
+    "handlebars": "4.7.7",
+    "nanoid": "4.0.1",
     "parcel": "^2.8.3"
-  },
-  "engines": {
-    "node": "^12.0.0"
   }
+  
 }

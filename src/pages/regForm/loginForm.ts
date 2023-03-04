@@ -3,8 +3,11 @@ import { Button } from '../../models/button/button';
 import { Input } from '../../models/input/input';
 import { Component } from '../../models/components/components';
 
+
 interface RegFormPageProps {
   pageTitle: string;
+  logHasAccButtonEvent: object;
+  loginButtonEvents: object;
 };
 
 export class LoginFormPage extends Component {
@@ -41,19 +44,21 @@ export class LoginFormPage extends Component {
             divErrorCheckType: "password"
         });
 
-        this.children.loginbutton = new Button ({
+        this.children.loginButton = new Button ({
             labelVisible: "Вход",
             buttonClass: "button-button",
             type: "submit",
-            elem_id:"login-button"
-        });
+            elem_id:"login-button",
+            events: this.props.loginButtonEvents.events
             
-        this.children.loghasaccbutton = new Button ({
+        });
+        
+        this.children.logHasAccButton = new Button ({
             labelVisible: "Нет аккаунта?",
             buttonClass: "link-button",
             type:"submit",
-            elem_id: "log-has-acc-button"
-            
+            elem_id: "log-has-acc-button",
+            events: this.props.logHasAccButtonEvent.events
         });
     }
 

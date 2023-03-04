@@ -2,14 +2,29 @@ import regPageTemplate from './regForm_tmpl.hbs';
 import { Button } from '../../models/button/button';
 import { Input } from '../../models/input/input';
 import { Component } from '../../models/components/components';
+// import submitRegForm from '../../utils/formValidate'
+import {checkValueInput} from "../../utils/formValidate"
+
 
 interface RegFormPageProps {
-  pageTitle: string;
+  pageTitle?: string,
+  regHasAccButtonEvents?: object,
+  registrationButtonEvents?: object
 };
+
+const props = { 
+    pageTitle: 'Регистрация',
+    events: {
+    submit: (e: Event) => {
+            e.preventDefault();
+            console.log(e);
+        }
+    }   
+}
 
 export class RegFormPage extends Component {
   constructor(props: RegFormPageProps) {
-    super('div', props, 'registration_form');
+    super('form', props, 'registration_form');
   };
 
   init() {
@@ -24,7 +39,15 @@ export class RegFormPage extends Component {
             checkType: "email",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-email",
-            divErrorCheckType: "email"
+            divErrorCheckType: "email",
+            errormessage: '',
+            events: {
+                    blur: (e: Event) => { 
+                        const {name, currentError, currentValue} = checkValueInput(e);
+                        console.log(name, currentError, currentValue);
+                        this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                    }
+                }   
         });
     
         this.children.login = new Input ({ 
@@ -38,49 +61,77 @@ export class RegFormPage extends Component {
             checkType: "login",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-login",
-            divErrorCheckType: "login"
+            divErrorCheckType: "login",
+            events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
         });
             
-        this.children.first_name = new Input ({ 
+        this.children.firstName = new Input ({ 
             label: "first_name",
             labelVisible: "Имя",
             type: "text",
-            name: "first_name",
-            elem_id: "first_name",
+            name: "firstName",
+            elem_id: "firstName",
             placeholder: "Введите имя",
             autocomplete: "on",
-            checkType: "first_name",
+            checkType: "firstName",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-name",
-            divErrorCheckType: "first_name"
+            divErrorCheckType: "firstName",
+            events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
         });
             
-        this.children.second_name = new Input ({ 
+        this.children.secondName = new Input ({ 
             label: "second_name",
             labelVisible: "Фамилия",
             type: "text",
-            name: "second_name",
-            elem_id: "second_name",
+            name: "secondName",
+            elem_id: "secondName",
             placeholder: "Введите фамилию",
             autocomplete: "on",
-            checkType: "second_name",
+            checkType: "secondName",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-lastname",
-            divErrorCheckType: "second_name"
+            divErrorCheckType: "secondName",
+            events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
         });
 
-        this.children.display_name = new Input ({
+        this.children.displayName = new Input ({
             label: "display_name",
             labelVisible: "Отображаемое имя",
             type: "text",
-            name: "display_name",
-            elem_id: "display_name",
+            name: "displayName",
+            elem_id: "displayName",
             placeholder: "Отображаемое имя",
             autocomplete: "on",
-            checkType: "display_name",
+            checkType: "displayName",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-displayname",
-            divErrorCheckType: "display_name"
+            divErrorCheckType: "displayName",
+            events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
         });
         
         this.children.phone = new Input ({ 
@@ -94,7 +145,14 @@ export class RegFormPage extends Component {
             checkType: "phone",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-phone",
-            divErrorCheckType: "phone"
+            divErrorCheckType: "phone",
+            events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
         });
             
         this.children.password = new Input ({ 
@@ -108,35 +166,53 @@ export class RegFormPage extends Component {
             checkType: "password",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-password",
-            divErrorCheckType: "password"
+            divErrorCheckType: "password",
+            events: {
+                blur: (e: Event) => { 
+                    const {name, currentError, currentValue} = checkValueInput(e);
+                    console.log(name, currentError, currentValue);
+                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
         }); 
             
-        this.children.password_confirm = new Input ({ 
+        this.children.passwordConfirm = new Input ({ 
             label: "password_confirm",
             labelVisible: "Повторите пароль",
             type: "password",
-            name: "password-confirm",
+            name: "passwordConfirm",
             elem_id: "password-confirm",
             placeholder: "Введите повтор пароля",
             autocomplete: "on",
-            checkType: "password_confirm",
+            checkType: "passwordConfirm",
             divErrorClassName: "reg-error",
             divErrorId: "reg-error-password-confirm",
-            divErrorCheckType: "password_confirm"
+            divErrorCheckType: "passwordConfirm",
+            events: {
+                blur: (e: Event) => { 
+                    // const {name, currentError, currentValue} = checkValueInput(e);
+                    // console.log(name, currentError, currentValue);
+                    // let value_password: string = 
+                    console.log(this.children.password)
+                    // let value_confirm: string = e.target.value;
+                    // this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+                }
+            }   
         });
 
         this.children.registrationButton = new Button ( {
             labelVisible: "Зарегистрироваться",
             buttonClass: "button-button",
             type: "submit",
-            elem_id: "registration-button"
+            elem_id: "registration-button",
+            events: this.props.registrationButtonEvents.events
         });
         
         this.children.regHasAccButton = new Button ({
             labelVisible: "Ecть аккаунт?",
             buttonClass: "link-button",
-            type: "submit",
-            elem_id: "reg-has-acc-button"
+            elem_id: "reg-has-acc-button",
+            events: this.props.regHasAccButtonEvents.events
         }); 
 
     }

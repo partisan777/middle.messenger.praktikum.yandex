@@ -1,7 +1,7 @@
 import { Component } from "../components/components";
 import { Message } from "../message/message";
 import chatItemTemplate from "./chatItem_tmpl.hbs";
-
+import { dateFormat } from "../../utils/dateFormat"
 
  interface chatItemProps {
     id: number;
@@ -44,13 +44,13 @@ export class ChatItem extends Component {
     constructor(props: chatItemProps) {
       
       super('div', props, "chat-item", `chat-item-${props.id}`);
-      this.props.last_message.time = String(this.props.last_message.time).slice(11, 16);
       this.messageList = [];
     }
     
+
   
   render() {
-    console.log(this.props.last_message.time)
+    this.props.last_message.time = dateFormat(new Date(this.props.last_message.time));
     return this.compile(chatItemTemplate, this.props);
 	}
 

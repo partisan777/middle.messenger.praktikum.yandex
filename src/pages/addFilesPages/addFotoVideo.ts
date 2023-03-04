@@ -10,7 +10,7 @@ interface AddFotoVideoFormPageProps {
 
 export class AddFotoVideoFormPage extends Component {
   constructor(props: AddFotoVideoFormPageProps) {
-    super('div', props, "modal", "add-fotovideo-page")
+    super('div', props, "modal", "add-fotovideo-page", false)
   };
   init() {
 
@@ -35,7 +35,7 @@ export class AddFotoVideoFormPage extends Component {
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",
-      elem_id:"close-add-avatar-button",
+      elem_id:"close-fotovideo-button",
       events: {click: () => {this.hide()}}
     });
   } 

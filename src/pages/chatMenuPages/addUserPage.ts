@@ -10,7 +10,7 @@ interface AddUserFormPageProps {
 
 export class AddUserFormPage extends Component {
   constructor(props: AddUserFormPageProps) {
-    super('div', props, "modal", "add-user-page")
+    super('div', props, "modal", "add-user-page", false)
   };
   init() {
 

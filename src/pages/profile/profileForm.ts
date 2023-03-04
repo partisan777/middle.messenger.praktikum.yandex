@@ -7,16 +7,22 @@ import { ChangePasswordFormPage } from '../changePassword/changePassword';
 import { ChangeAvatarFormPage } from '../changeAvatar/changeAvatar';
 
 interface ProfileFormPageProps {
-  pageTitle: string;
-  profile: object;
+  pageTitle?: string;
+  profile?: object;
+  profileLogoutEvents?: object;
+  changeAvatarEvents?: object;
+  profileExitEvents?: object;
+  profileChangePasswordEvents?: object;
+
 };
+
 
 export class ProfileFormPage extends Component {
   constructor(props: ProfileFormPageProps) {
-    super('div', props, 'profile-main', 'profile-main');
+    super('div', props, 'profile-main', 'profile-main', false);
   };
   init() {
-    this.children.prformemail = new Input ({
+    this.children.prFormEmail = new Input ({
         label: "pr-form-email",
         labelVisible: "Почта",
         type: "text",
@@ -28,7 +34,7 @@ export class ProfileFormPage extends Component {
         divErrorCheckType: "email"
     }); 
         
-    this.children.prformlogin = new Input ({
+    this.children.prFormLogin = new Input ({
         label: "pr-form-login",
         labelVisible:"Логин",
         type: "text",
@@ -40,7 +46,7 @@ export class ProfileFormPage extends Component {
         divErrorCheckType: "login"
       });
       
-    this.children.prformfirstname = new Input ({
+    this.children.prFormFirstName = new Input ({
         label: "pr-form-first-name",
         labelVisible:"Имя",
         type: "text",
@@ -52,7 +58,7 @@ export class ProfileFormPage extends Component {
         divErrorCheckType: "first-name"
     });
   
-    this.children.prformsecondname = new Input ({ 
+    this.children.prFormSecondName = new Input ({ 
         label: "pr-form-second_name",
         labelVisible:"Фамилия",
         type: "text",
@@ -65,7 +71,7 @@ export class ProfileFormPage extends Component {
     });
   
 
-    this.children.prformdisplayname = new Input ({ 
+    this.children.prFormDisplayName = new Input ({ 
         label: "pr-form-display_name",
         labelVisible:"Имя в чате",
         type: "text",
@@ -78,7 +84,7 @@ export class ProfileFormPage extends Component {
     });
 
 
-    this.children.prformphone = new Input ({ 
+    this.children.prFormPhone = new Input ({ 
         label: "pr-form-phone",
         labelVisible:"Телефон",
         type: "text",
@@ -90,44 +96,45 @@ export class ProfileFormPage extends Component {
         divErrorCheckType: "phone"
     });
     
-    this.children.profilechangedata =  new Button ({
+    this.children.profileChangeData =  new Button ({
         labelVisible: "Сохранить данные",
         buttonClass: "link-button",
         elem_id:"profile-change-data",
         type: "submit"
     });
   
-    this.children.profilechangepassword = new Button ({
+    this.children.profileChangePassword = new Button ({
         labelVisible: "Изменить пароль",
         buttonClass: "link-button",
         elem_id:"profile-change-password",
-        type: "button"
+        type: "button",
+        events: this.props.profileChangePasswordEvents.events
     });
   
-    this.children.profilelogout = new Button ({
+    this.children.profileLogout = new Button ({
         labelVisible: "Выйти",
         buttonClass: "button-button",
         elem_id:"profile-logout",
-        type: "button"
+        type: "button",
+        events: this.props.profileLogoutEvents.events
         
     });
 
-    this.children.changeavatar = new Button ({
+    this.children.changeAvatar = new Button ({
         labelVisible: "Изменить изображение",
         buttonClass: "link-button",
         elem_id:"change-avatar-button",
-        type: "button"
+        type: "button",
+        events: this.props.changeAvatarEvents.events
     });
   
-    this.children.profileexit = new Button ({
+    this.children.profileExit = new Button ({
         labelVisible: "Назад",
         buttonClass: "profile-exit",
         elem_id:"profile-exit",
-        type: "button"
+        type: "button",
+        events: this.props.profileExitEvents.events
     });
-
-    this.children.changepasswordformpage = new ChangePasswordFormPage ({pageTitle: "Смена пароля"});
-    this.children.changeavatarformpage = new ChangeAvatarFormPage ({pageTitle: "Смена аватар"});
     }
     render() {
         return this.compile(profilePageTemplate, this.props);

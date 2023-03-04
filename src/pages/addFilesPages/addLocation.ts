@@ -10,7 +10,7 @@ interface AddLocationFormPageProps {
 
 export class AddLocationFormPage extends Component {
   constructor(props: AddLocationFormPageProps) {
-    super('div', props, "modal", "change-avatar-page")
+    super('div', props, "modal", "change-avatar-page", false)
   };
   init() {
 

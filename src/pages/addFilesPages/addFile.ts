@@ -10,7 +10,7 @@ interface AddFileFormPageProps {
 
 export class AddFileFormPage extends Component {
   constructor(props: AddFileFormPageProps) {
-    super('div', props, "modal", "change-file-page")
+    super('div', props, "modal", "change-file-page", false)
   };
   init() {
 

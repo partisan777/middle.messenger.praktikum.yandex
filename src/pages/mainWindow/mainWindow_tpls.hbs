@@ -32,19 +32,17 @@
         {{#if chatMenuButton}}
             {{{chatMenuButton}}}
         {{/if}}
-        {{!-- <div class="manage-chat-user" id="chat-sidebar-items">
-            
-        </div> --}}
+       
     </div>
     <div class="dialog" id="dialog">
         <ul> 
             <li><a href="./error.html">Ссылка на страницу с ошибками</a></li>
             <li><a href="./notfound.html">Ссылка на несуществующую страницу</a></li>
-            {{!-- {{#if chatList.messageList}} --}}
-                {{#each chatList.messageList }}
-                    {{{this.messageList}}}      
+            {{#if messages}}
+                {{#each messages}}
+                    {{{this}}}      
                 {{/each}}
-            {{!-- {{/if}} --}}
+            {{/if}}
     </div>
     <div class="dialog-footer" id="dialog-footer">
         <form class="chat-input-form" id="chat-input-form" sendId="">

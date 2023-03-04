@@ -16,8 +16,8 @@
     {{#if divErrorId}}
         <div {{#if divErrorClassName}} class="{{{divErrorClassName}}}" {{/if}}
                 id="{{{divErrorId}}}"
-            {{#if divErrorCheckType}} checktype="{{{divErrorCheckType}}}" {{/if}}
-            >
+            {{#if divErrorCheckType}} checktype="{{{divErrorCheckType}}}" {{/if}}>
+            {{#if errormessage}} {{{errormessage}}} {{/if}}
         </div>
     {{/if}}
 </div>

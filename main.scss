@@ -4,9 +4,9 @@ $box-sh-color :  rgba(0, 0, 0, 0.14);
 $dark-grey: #999999;
 $red: #FF2F2F;
 $box-sh-color-dark: rgba(0,0,0,0.8); 
-$light-gray: #888;
-
-
+// $light-gray: #888;
+$light-purple: #E3EDFD;
+$light-gray: #C4C3C3;
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -33,14 +33,14 @@ $light-gray: #888;
 /* //форма регистрации */
 .registration_form {
     width: 340px;
-    height: 615px;
+    min-height: 300px;
     background: $white;
     box-shadow: 0px 0px 6px $box-sh-color;
     display: flex;
     border-radius: 15px;
     flex-direction: column;
     margin: 50px auto;
-    
+    height: fit-content; 
 };   
 
 // Общие
@@ -104,34 +104,47 @@ li {
 
 
 // формы ввода
-.form-input {
+.form-input, .reg-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    > input {
-        background-color: transparent;
-        border-top-style: hidden;
-        border-right-style: hidden;
-        border-left-style: hidden;
-        border-bottom-style: groove;
-        padding: 5px;
-        margin-top: 5px;
-    }
-    > label {
-        color: black;
-        margin-top: 10px;
-        font-size: 15px;
-        line-height: 9px;
-        margin-left: 0;
-    }
-    > button {
+    .div_input {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        margin-top: 10px;
-        padding-top: 3px;
+        justify-content: center;
+        margin-bottom: 5px;
+        
+        > input {
+            background-color: transparent;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            padding: 3px;
+            margin-top: 5px;
+        }
+        > label {
+            color: black;
+            margin-top: 8px;
+            font-size: 15px;
+            line-height: 9px;
+            margin-left: 0;
+        }
+        > button {
+            align-items: center;
+            margin-top: 10px;
+            padding-top: 3px;
+        }
+        .reg-error {
+            height: max-content;
+            height: min-content;
+            height: fit-content;
+            height: stretch;
+        }
     }
 }
-
 
 /* //главное окно */
 .chat-window {
@@ -248,13 +261,48 @@ li {
 }
 
 .dialog {
-    display: flex;
-    background-color: #E3EDFD;
+    // display: flex;
+    flex-direction: column; 
+    background-color: whitesmoke;
     padding: 5px;
     margin: 5px;
-    height: 88%; 
-    border-radius: 10px; 
+    height: 87%; 
+    border-radius: 10px;
+    overflow-y: scroll;
+
 }
+.message-wrap {
+    width: 100%;
+}
+    
+.message-item {
+    min-height: 70px;
+    min-width: 250px;
+    padding: 10px;
+    margin-top : 20px;
+    max-width: 500px;
+    height: max-content;
+    height: fit-content;
+    width: max-content;
+    width: fit-content;
+    overflow-wrap: auto;
+}
+.message-me {    
+    background-color: $light-purple;
+    border-radius: 25px 25px 0 25px;    
+}
+
+.message-from {
+    flex-direction: flex-end;
+    background-color: $light-gray;
+    border-radius: 0 25px 25px 25px;    
+}
+
+.message-text-content {
+    font-size: large;
+    word-wrap: break-word;
+}
+
 
 .dialog-header {
     position: relative;
@@ -283,12 +331,13 @@ li {
     }
 }
 
-.chat-input-area {
+.chat-input-form {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    > input {
-        width: 85%;
+    // > input {
+    #chat-text-input {   
+        width: 600px;
         height: 35px;
         border-style: none;
         border-radius: 10px;
@@ -319,7 +368,8 @@ li {
     width: 75px;
     min-height: 900px;
     border-radius: 15px;
-    box-shadow: 0px 0px 6px$box-sh-color;
+    box-shadow: 0px 0px 6px
+    $box-sh-color;
     background-color: $blue;
     justify-content: center;
     align-items: center;
@@ -380,6 +430,8 @@ li {
     border: 1px solid $light-gray;;
     width: 40%; 
     height: 30%;
+    min-width: 390px;
+    min-height: 665px;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
@@ -395,7 +447,7 @@ li {
     background-color: $white;
     box-shadow: 0px 0px 6px $box-sh-color;
     border-radius: 10px;
-    display: flex;
+    display: none;
     animation: opacity 0.4s;
     > img {
         width: 15px;
@@ -406,11 +458,12 @@ li {
 //добавление и удаление пользователей
 .chat-menu {
     position: absolute;
-    top: 25%;
-    right: 10px;
-    min-width: 15px;
+    top: 8%;
+    right: 8px;
+    min-width: 12px;
     min-height: 50px;
     list-style-type: none;
+    border-style: none;
     > img {
         width: 15px;
         height: 15px;
@@ -426,6 +479,9 @@ li {
     background-color: #fff;
     box-shadow: 0px 0px 6px $box-sh-color;
     border-radius: 10px;
-    display: flex;
+    display: none;
     animation: opacity 0.4s;
+    > ul {
+        display: flex;
+    }
 }

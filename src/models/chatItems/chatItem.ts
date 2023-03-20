@@ -21,7 +21,11 @@ import { dateFormat } from "../../utils/dateFormat"
     time: Date | string;
     content: string;
     };
-	  events?: {}
+	  events?: {};
+    com_className?: string;
+    com_el_id?: string;
+    com_tagName?: string;
+    com_isVisible?: boolean;
 };
 
   
@@ -42,8 +46,10 @@ export class ChatItem extends Component {
     
     
     constructor(props: chatItemProps) {
-      
-      super('div', props, "chat-item", `chat-item-${props.id}`);
+      if (!props.com_tagName) props.com_tagName = 'div';
+      if (!props.com_className) props.com_className = "chat-item";
+      if (!props.com_el_id) props.com_el_id = `chat-item-${props.id}`;
+      super(props);
       this.messageList = [];
     }
     

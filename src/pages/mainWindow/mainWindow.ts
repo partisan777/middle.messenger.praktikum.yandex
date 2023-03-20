@@ -14,13 +14,21 @@ interface MainWindowProps {
 	eventsAddFileButton?: object;
 	eventsChatMenuButton?: object;
 	eventsProfileButton?: object;
+	com_className?: string;
+    com_el_id?: string;
+    com_tagName?: string;
+    com_isVisible?: boolean;
   };
   
 
-export class MainWindow extends Component {
+export class MainWindowPage extends Component {
 	protected chatList: ChatItem[];
 	constructor(props: MainWindowProps) {
-		super('div', props, 'chat-window', 'chat-window', true)
+		if (!props.com_tagName) props.com_tagName = 'div';
+    	if (!props.com_className) props.com_className = 'chat-window';
+    	if (!props.com_el_id) props.com_el_id = 'chat-window';
+		if (!props.com_isVisible) props.com_isVisible = true;
+		super(props)
 		
 	}
 	init() {
@@ -31,6 +39,7 @@ export class MainWindow extends Component {
 			// type: "button",
 			elem_id: "add-button",
 			events: this.props.eventsAddFileButton.events
+			
 		});
 
 		this.children.searchInput = new Input ({ 

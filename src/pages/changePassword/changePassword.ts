@@ -6,11 +6,19 @@ import { Input } from '../../models/input/input';
 
 interface ChangePasswordFormPageProps {
   pageTitle: string;
+  com_className?: string;
+  com_el_id?: string;
+  com_tagName?: string;
+	com_isVisible?: boolean;
 };
 
 export class ChangePasswordFormPage extends Component {
   constructor(props: ChangePasswordFormPageProps) {
-    super('div', props, "modal", "change-password-page", false)
+    if (!props.com_tagName) props.com_tagName = 'div';
+    if (!props.com_className) props.com_className = "modal";
+    if (!props.com_el_id) props.com_el_id = "change-password-page";
+    if (!props.com_isVisible) props.com_isVisible = false;
+    super(props)
   };
   init() {
 

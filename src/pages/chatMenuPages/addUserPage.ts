@@ -6,11 +6,19 @@ import { Input } from '../../models/input/input';
 
 interface AddUserFormPageProps {
   pageTitle: string;
+  com_className?: string;
+  com_el_id?: string;
+  com_tagName?: string;
+	com_isVisible?: boolean;
 };
 
 export class AddUserFormPage extends Component {
   constructor(props: AddUserFormPageProps) {
-    super('div', props, "modal", "add-user-page", false)
+    if (!props.com_tagName) props.com_tagName = 'div';
+    if (!props.com_className) props.com_className =  "modal";
+    if (!props.com_el_id) props.com_el_id = "add-user-page";
+    if (!props.com_isVisible) props.com_isVisible = false;
+    super(props)
   };
   init() {
 

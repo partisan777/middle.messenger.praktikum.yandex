@@ -2,8 +2,9 @@ import profilePageTemplate from './profileForm_tmpl.hbs';
 import { Button } from '../../models/button/button';
 import { Input } from '../../models/input/input';
 import { Component } from '../../models/components/components';
-import { profile } from "../../utils/const"
 import { checkValueInput } from "../../utils/formValidate"
+import  AuthController from '../../controllers/authController';
+import { withStore } from '../../models/components/store';
 
 interface ProfileFormPageProps {
   pageTitle?: string;
@@ -13,15 +14,25 @@ interface ProfileFormPageProps {
   profileExitEvents?: object;
   profileChangePasswordEvents?: object;
   events?: object;
-
+  com_className?: string;
+  com_el_id?: string;
+  com_tagName?: string;
+  com_isVisible?: boolean;
 };
 
 
 export class ProfileFormPage extends Component {
   constructor(props: ProfileFormPageProps) {
-    super('div', props, 'profile-main', 'profile-main', false);
+    if (!props.com_tagName) props.com_tagName = 'div';
+    if (!props.com_className) props.com_className = 'profile-main';
+    if (!props.com_el_id) props.com_el_id = 'profile-main';
+    if (!props.com_isVisible) props.com_isVisible = false;
+    super(props);
   };
   init() {
+    let profile = withStore((state: state) => {
+        return state.user.data || {};
+    })
     this.children.email = new Input ({
         label: "pr-form-email",
         labelVisible: "Почта",
@@ -154,7 +165,7 @@ export class ProfileFormPage extends Component {
         buttonClass: "link-button",
         elem_id:"profile-change-password",
         type: "button",
-        events: this.props.profileChangePasswordEvents.events
+        //events: this.props.profileChangePasswordEvents.events
     });
   
     this.children.profileLogout = new Button ({
@@ -162,7 +173,9 @@ export class ProfileFormPage extends Component {
         buttonClass: "button-button",
         elem_id:"profile-logout",
         type: "button",
-        events: this.props.profileLogoutEvents.events
+        events: {
+            click: () => {AuthController.logout();}
+        }
         
     });
 
@@ -171,7 +184,7 @@ export class ProfileFormPage extends Component {
         buttonClass: "link-button",
         elem_id:"change-avatar-button",
         type: "button",
-        events: this.props.changeAvatarEvents.events
+        //events: this.props.changeAvatarEvents.events
     });
   
     this.children.profileExit = new Button ({
@@ -179,7 +192,7 @@ export class ProfileFormPage extends Component {
         buttonClass: "profile-exit",
         elem_id:"profile-exit",
         type: "button",
-        events: this.props.profileExitEvents.events
+        //events: this.props.profileExitEvents.events
     });
     }
     render() {

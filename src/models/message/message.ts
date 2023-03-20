@@ -12,12 +12,18 @@ interface messageDataProps {
     directToMe?: boolean;
     mediaContent?: string[];
     events?: {};
+    com_className?: string;
+    com_el_id?: string;
+    com_tagName?: string;
+    com_isVisible?: boolean;
 }
 
 
 export class Message extends Component {
 	constructor(props: messageDataProps) {
-		super('div', props, "message-wrap");
+        if (!props.com_tagName) props.com_tagName = 'div';
+        if (!props.com_className) props.com_className = "message-wrap";
+		super(props);
         this.props.sendMessageDate = dateFormat(new Date(this.props.sendMessageDate));
     }
 

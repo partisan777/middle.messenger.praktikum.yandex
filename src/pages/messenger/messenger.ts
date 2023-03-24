@@ -142,12 +142,12 @@ export class MessengerBase extends Component {
         }
       });
 
-      ChatsController.fetchChats().finally(() => {
+      /*ChatsController.fetchChats().finally(() => {
         (this.children.chatsList as Component).setProps({
           isLoaded: true          
         })
         
-      });
+      });*/
       
   }
   protected componentDidUpdate(oldProps: MessengerProps, newProps: MessengerProps): boolean {

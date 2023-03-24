@@ -7,7 +7,7 @@ import addFilesPageTemplate from "./addFilesPage_tmpl.hbs"
 
 
 interface addFilesPageProps{
-	pageTitle: string,
+	pageTitle?: string,
 	addFotoVideoEvents?: object,
 	addFileEvents?: object,
 	addLocationEvents?: object,

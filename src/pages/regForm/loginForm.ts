@@ -5,7 +5,7 @@ import { Component } from '../../models/components/components';
 import AuthController from '../../controllers/authController';
 import { Link } from '../../models/link/link';
 import { SignupData } from '../../api/AuthAPI';
-import router from '../../models/components/router';
+
 
 
 interface LogFormPageProps {

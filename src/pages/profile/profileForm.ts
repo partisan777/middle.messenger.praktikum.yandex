@@ -4,7 +4,12 @@ import { Input } from '../../models/input/input';
 import { Component } from '../../models/components/components';
 import { checkValueInput } from "../../utils/formValidate"
 import  AuthController from '../../controllers/authController';
-import { withStore } from '../../models/components/store';
+import store, { withStore }  from '../../models/components/store';
+import { User } from '../../api/AuthAPI'
+import { Link } from '../../models/link/link';
+import { ChangePasswordFormPage } from "../changePassword/changePassword";
+import { ChangeAvatarFormPage } from "../changeAvatar/changeAvatar";
+// import { profile } from '../../utils/const';
 
 interface ProfileFormPageProps {
   pageTitle?: string;
@@ -22,6 +27,7 @@ interface ProfileFormPageProps {
 
 
 export class ProfileFormPage extends Component {
+  protected avatarLink: string;
   constructor(props: ProfileFormPageProps) {
     if (!props.com_tagName) props.com_tagName = 'div';
     if (!props.com_className) props.com_className = 'profile-main';
@@ -30,9 +36,14 @@ export class ProfileFormPage extends Component {
     super(props);
   };
   init() {
-    let profile = withStore((state: state) => {
-        return state.user.data || {};
-    })
+    let profile = store.getState().user;
+    // profile
+    this.props.avatarLink = "https://ya-praktikum.tech/api/v2/resources" + profile.avatar;
+    
+    
+    this.children.changePasswordFormPage = new ChangePasswordFormPage({pageTitle: 'Изменение пароля'});
+    this.children.changeAvatarFormPage = new ChangeAvatarFormPage({pageTitle: 'Изменение аватара'});
+    
     this.children.email = new Input ({
         label: "pr-form-email",
         labelVisible: "Почта",
@@ -44,13 +55,13 @@ export class ProfileFormPage extends Component {
         divErrorId: "pr-form-email-error",
         errormessage: '',
         divErrorCheckType: "email",
-            events: {
-                    blur: (e: Event) => { 
-                        const {name, currentError, currentValue} = checkValueInput(e);
-                        console.log(name, currentError, currentValue)
-                        this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
-                    }
-                }   
+        events: {
+            blur: (e: Event) => { 
+                const {name, currentError, currentValue} = checkValueInput(e);
+                console.log(name, currentError, currentValue)
+                this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+            }
+        }   
     }); 
         
     this.children.login = new Input ({
@@ -65,12 +76,12 @@ export class ProfileFormPage extends Component {
         errormessage: '',
         divErrorCheckType: "login",
         events: {
-                blur: (e: Event) => { 
-                    const {name, currentError, currentValue} = checkValueInput(e);
-                    console.log(name, currentError, currentValue);
-                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
-                }
-            }   
+            blur: (e: Event) => { 
+                const {name, currentError, currentValue} = checkValueInput(e);
+                console.log(name, currentError, currentValue);
+                this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+            }
+        }   
       });
       
     this.children.first_name = new Input ({
@@ -85,12 +96,12 @@ export class ProfileFormPage extends Component {
         errormessage: '',
         divErrorCheckType: "first_name",
         events: {
-                blur: (e: Event) => { 
-                    const {name, currentError, currentValue} = checkValueInput(e);
-                    console.log(name, currentError, currentValue);
-                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
-                }
-            }   
+            blur: (e: Event) => { 
+                const {name, currentError, currentValue} = checkValueInput(e);
+                console.log(name, currentError, currentValue);
+                this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+            }
+        }   
     });
   
     this.children.second_name = new Input ({ 
@@ -105,12 +116,12 @@ export class ProfileFormPage extends Component {
         errormessage: '',
         divErrorCheckType: "second_name",
         events: {
-                blur: (e: Event) => { 
-                    const {name, currentError, currentValue} = checkValueInput(e);
-                    console.log(name, currentError, currentValue);
-                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
-                }
-            }   
+            blur: (e: Event) => { 
+                const {name, currentError, currentValue} = checkValueInput(e);
+                console.log(name, currentError, currentValue);
+                this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+            }
+        }   
     });     
 
     this.children.display_name = new Input ({ 
@@ -125,12 +136,12 @@ export class ProfileFormPage extends Component {
         errormessage: '',
         divErrorCheckType: "display_name",
         events: {
-                blur: (e: Event) => { 
-                    const {name, currentError, currentValue} = checkValueInput(e);
-                    console.log(name, currentError, currentValue);
-                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
-                }
-            }   
+            blur: (e: Event) => { 
+                const {name, currentError, currentValue} = checkValueInput(e);
+                console.log(name, currentError, currentValue);
+                this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+            }
+        }   
     });
 
     this.children.phone = new Input ({ 
@@ -145,12 +156,12 @@ export class ProfileFormPage extends Component {
         errormessage: '',
         divErrorCheckType: "phone",
         events: {
-                blur: (e: Event) => { 
-                    const {name, currentError, currentValue} = checkValueInput(e);
-                    console.log(name, currentError, currentValue);
-                    this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
-                }
-            }   
+            blur: (e: Event) => { 
+                const {name, currentError, currentValue} = checkValueInput(e);
+                console.log(name, currentError, currentValue);
+                this.children[name].setProps({'errormessage': currentError, 'value': currentValue})
+            }
+        }   
     });
     
     this.children.profileChangeData =  new Button ({
@@ -165,7 +176,12 @@ export class ProfileFormPage extends Component {
         buttonClass: "link-button",
         elem_id:"profile-change-password",
         type: "button",
-        //events: this.props.profileChangePasswordEvents.events
+        events: {
+            click: (e: Event) => { 
+                e.preventDefault();
+                this.children.changePasswordFormPage.changeVisible();
+            }
+        }   
     });
   
     this.children.profileLogout = new Button ({
@@ -184,16 +200,27 @@ export class ProfileFormPage extends Component {
         buttonClass: "link-button",
         elem_id:"change-avatar-button",
         type: "button",
-        //events: this.props.changeAvatarEvents.events
+        events: {
+            click: (e: Event) => { 
+                e.preventDefault();
+                this.children.changeAvatarFormPage.changeVisible();
+            }
+        }   
     });
   
-    this.children.profileExit = new Button ({
-        labelVisible: "Назад",
-        buttonClass: "profile-exit",
-        elem_id:"profile-exit",
-        type: "button",
-        //events: this.props.profileExitEvents.events
-    });
+    this.children.linkToMessenger = new Link({
+        label: 'Назад',
+        to: '/messenger'
+      });
+    }
+    onSubmit() {
+        const values = Object
+          .values(this.children)
+          .filter(child => child instanceof Input)
+          .map((child) => ([(child as Input).getName(), (child as Input).getValue()]))
+        const data = Object.fromEntries(values);
+        console.log(data);
+        store.set('user', data);
     }
     render() {
         return this.compile(profilePageTemplate, this.props);

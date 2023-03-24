@@ -1,26 +1,11 @@
 import { Component } from "../components/components";
-import messageTemplate from "./message_tmpl.hbs";    
+import messageTemplate_tmpl from "./message_tmpl.hbs";    
 import { dateFormat } from "../../utils/dateFormat";
-
-interface messageDataProps {
-    messageId?: string;
-    chatId?: string;
-    senderId?: string;
-    senderName?: string;
-    sendMessageDate?: Date;
-    textContent?: string;
-    directToMe?: boolean;
-    mediaContent?: string[];
-    events?: {};
-    com_className?: string;
-    com_el_id?: string;
-    com_tagName?: string;
-    com_isVisible?: boolean;
-}
+import { Message as MessageInfo } from "../../controllers/MessagesController";
 
 
 export class Message extends Component {
-	constructor(props: messageDataProps) {
+	constructor(props: MessageInfo) {
         if (!props.com_tagName) props.com_tagName = 'div';
         if (!props.com_className) props.com_className = "message-wrap";
 		super(props);
@@ -28,7 +13,7 @@ export class Message extends Component {
     }
 
     render() {
-        return this.compile(messageTemplate, this.props);
+        return this.compile(messageTemplate_tmpl, this.props);
 	}
 };
 

@@ -45,6 +45,9 @@ export class Input extends Component {
 		  this._element?.querySelector('input')?.removeEventListener(eventName, events[eventName]);
 		});
 	}
+	setValue(value: string) {
+		return (this.element as HTMLInputElement).value = value;
+	}
 
 	getName() {
 		return (this.element?.querySelector('input') as HTMLInputElement).name;

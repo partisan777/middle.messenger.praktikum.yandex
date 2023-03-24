@@ -1,4 +1,4 @@
-import Router from "./models/components/Router";
+import Router from "./models/components/router";
 import store from "./models/components/store";
 import AuthController from "./controllers/authController";
 import { LoginFormPage } from "./pages/regForm/loginForm";
@@ -18,9 +18,9 @@ enum Routes {
     // console.log(Router)
     Router.use(Routes.Index, LoginFormPage)
     Router.use(Routes.Register, RegFormPage)
-    Router.use(Routes.Profile, ProfileFormPage)
     Router.use(Routes.Messenger, MainWindowPage)
-    console.log(Router.routes)
+    Router.use(Routes.Profile, ProfileFormPage)
+    
     let isProtectedRoute = true;
     switch (window.location.pathname) {
       case Routes.Index:
@@ -35,7 +35,9 @@ enum Routes {
       Router.start();
   
       if (!isProtectedRoute) {
+        // Router.go(Routes.Messenger)
         Router.go(Routes.Profile)
+        
       }
     } catch (e) {
       Router.start();

@@ -1,5 +1,4 @@
 import { Component } from "./components";
-import { nanoid } from "nanoid";
 
 
 function isEqual(lhs: string, rhs: string): boolean {
@@ -37,10 +36,8 @@ class Route {
   }
 
   render() {
-    console.log(this.component)
     if (!this.component) {
       this.component = new this.componentClass({});
-
       render(this.query, this.component);
       return;
     }
@@ -52,7 +49,7 @@ class Router {
   private routes: Route[] = [];
   private currentRoute: Route | null = null;
   private history = window.history;
-  public id = nanoid(6);
+  
 
   constructor(private readonly rootQuery: string) {
     if (Router.__instance) {
@@ -82,7 +79,6 @@ class Router {
 
   private _onRoute(pathname: string) {
     const route = this.getRoute(pathname);
-    console.log(this.routes);
     if (!route) {
       return;
     }

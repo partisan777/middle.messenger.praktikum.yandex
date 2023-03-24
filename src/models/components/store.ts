@@ -1,9 +1,18 @@
 import { set } from '../../utils/helpers';
 import { EventBus } from './eventBus';
 import { Component } from './components';
+import { ChatInfo, User } from '../../api/interfaces';
+import { Message } from '../../controllers/messagesController';
 
 export enum StoreEvents {
   Updated = 'updated'
+}
+
+interface State {
+  user: User;
+  chats: ChatInfo[];
+  messages: Record<number, Message[]>;
+  selectedChat?: number;
 }
 
 export class Store extends EventBus {
@@ -22,18 +31,17 @@ export class Store extends EventBus {
 
 const store = new Store();
 
-export function withStore(mapStateToProps: (state: any) => any) {
+window.store = store;
 
-  return function wrap(component: typeof Component){
-    let previousState: any;
-
+export function withStore<SP>(mapStateToProps: (state: State) => SP) {
+  return function wrap<P>(Component: typeof Component<SP & P>){
 
     return class WithStore extends Component {
 
-      constructor(props: any) {
-        previousState = mapStateToProps(store.getState());
+      constructor(props: Omit<P, keyof SP>) {
+        let previousState = mapStateToProps(store.getState());
 
-        super({ ...props, ...previousState });
+        super({ ...(props as P), ...previousState });
 
         store.on(StoreEvents.Updated, () => {
           const stateProps = mapStateToProps(store.getState());
@@ -42,11 +50,14 @@ export function withStore(mapStateToProps: (state: any) => any) {
 
           this.setProps({ ...stateProps });
         });
+
       }
+
     }
 
   }
-
 }
 
 export default store;
+
+

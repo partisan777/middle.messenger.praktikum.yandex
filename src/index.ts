@@ -31,12 +31,10 @@ enum Routes {
   
     try {
       await AuthController.fetchUser();
-      // console.log(AuthController.fetchUser())
       Router.start();
   
       if (!isProtectedRoute) {
-        // Router.go(Routes.Messenger)
-        Router.go(Routes.Profile)
+        Router.go(Routes.Messenger)
         
       }
     } catch (e) {

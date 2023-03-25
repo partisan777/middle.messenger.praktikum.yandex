@@ -5,7 +5,7 @@ import { Component } from '../../models/components/components';
 import { checkValueInput } from "../../utils/formValidate"
 import  AuthController from '../../controllers/authController';
 import store, { withStore }  from '../../models/components/store';
-import { User } from '../../api/AuthAPI'
+import UserController from '../../controllers/userController';
 import { Link } from '../../models/link/link';
 import { ChangePasswordFormPage } from "../changePassword/changePassword";
 import { ChangeAvatarFormPage } from "../changeAvatar/changeAvatar";
@@ -103,7 +103,7 @@ export class ProfileFormPage extends Component {
             }
         }   
     });
-  
+    
     this.children.second_name = new Input ({ 
         label: "pr-form-second_name",
         labelVisible:"Фамилия",
@@ -168,7 +168,13 @@ export class ProfileFormPage extends Component {
         labelVisible: "Сохранить данные",
         buttonClass: "link-button",
         elem_id:"profile-change-data",
-        type: "submit"
+        type: "submit",
+        events: {
+            click: (e: Event) => { 
+                this.onSubmit()
+                e.preventDefault();
+            }
+        }   
     });
   
     this.children.profileChangePassword = new Button ({
@@ -209,7 +215,7 @@ export class ProfileFormPage extends Component {
     });
   
     this.children.linkToMessenger = new Link({
-        label: 'Назад',
+        label: '<Назад',
         to: '/messenger'
       });
     }
@@ -218,9 +224,13 @@ export class ProfileFormPage extends Component {
           .values(this.children)
           .filter(child => child instanceof Input)
           .map((child) => ([(child as Input).getName(), (child as Input).getValue()]))
-        const data = Object.fromEntries(values);
-        console.log(data);
-        store.set('user', data);
+        // const data = Object.fromEntries(values);
+        let data = {};
+        for (let i: number = 0; i < values.length; i++) {
+            data[values[i][0]] = values[i][1];
+        }
+        UserController.updateProfile(data);
+        
     }
     render() {
         return this.compile(profilePageTemplate, this.props);

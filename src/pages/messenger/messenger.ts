@@ -1,9 +1,9 @@
 import { Component } from '../../models/components/components';
 import messenger_tmpl from './messenger_tmpl.hbs';
 import { Message } from '../../models/message/message';
-import { Input } from '../../models/Input/input';
+import { Input } from '../../models/input/input';
 import { Button } from '../../models/button/button';
-import MessagesController, { Message as MessageInfo } from '../../controllers/MessagesController';
+import MessagesController, { Message as MessageInfo } from '../../controllers/messagesController';
 import { withStore } from '../../models/components/store';
 import { AddFileFormPage } from '../addFilesPages/addFile';
 import { AddFotoVideoFormPage } from '../addFilesPages/addFotoVideo';
@@ -12,9 +12,7 @@ import { AddFilesPage } from '../addFilesMenu/addFilesMenu';
 import { AddUserFormPage } from '../chatMenuPages/addUserPage';
 import { DelUserFormPage } from '../chatMenuPages/delUserPage';
 import { ChatMenuPage } from '../chatMenu/chatMenu';
-// import { ChatsList } from '../../models/chatList/chatList';
-import  ChatsController  from "../../controllers/chatController"
-import store from '../../models/components/store';
+
 
 
 interface MessengerProps {
@@ -25,7 +23,7 @@ interface MessengerProps {
   com_el_id?: string;
   com_tagName?: string;
   com_isVisible?: boolean;
-  directToMe?: boolean;
+  selectedChatId?: number;
 }
 
 export class MessengerBase extends Component {
@@ -37,11 +35,6 @@ export class MessengerBase extends Component {
     super(props);
   }
   protected init() {
-    console.log(store);
-    // this.children.messages = this.createMessages(this.props);
-    // this.children.chatsList = new ChatsList({isLoaded: false });
-    // console.log(this.children.chatsList);
-
     this.children.addFileFormPage = new AddFileFormPage({pageTitle: 'Добавить файл'})
     this.children.addFotoVideoFormPage = new AddFotoVideoFormPage({pageTitle: 'Добавить медиа'})
     this.children.addLocationFormPage = new AddLocationFormPage({pageTitle: 'Добавить местоположение'})
@@ -135,30 +128,21 @@ export class MessengerBase extends Component {
             const input = this.children.messageInput as Input;
             const message = input.getValue();
             input.setValue('');
-            console.log(MessagesController);
-            console.log(ChatsController);
-            console.log(this.children.chatsList);
+            MessagesController.sendMessage(this.props.selectedChat!, message);
           }
         }
       });
-
-      /*ChatsController.fetchChats().finally(() => {
-        (this.children.chatsList as Component).setProps({
-          isLoaded: true          
-        })
-        
-      });*/
-      
   }
+
   protected componentDidUpdate(oldProps: MessengerProps, newProps: MessengerProps): boolean {
     this.children.messages = this.createMessages(newProps);
-
+    // store.set('selectedChatId', this.props.selectedChat)
     return true;
   }
 
   private createMessages(props: MessengerProps) {
     return props.messages.map(data => {
-      return new Message({...data, directToMe: props.userId === data.user_id });
+      return new Message({...data, isMine: props.userId === data.user_id });
     })
   }
   
@@ -169,7 +153,6 @@ export class MessengerBase extends Component {
 
 const withSelectedChatMessages = withStore(state => {
   const selectedChatId = state.selectedChat;
-
   if (!selectedChatId) {
     return {
       messages: [],
@@ -177,11 +160,11 @@ const withSelectedChatMessages = withStore(state => {
       userId: state.user.id
     };
   }
-
   return {
     messages: (state.messages || {})[selectedChatId] || [],
     selectedChat: state.selectedChat,
-    userId: state.user.id
+    userId: state.user.id,
+    chatTile: state.chats.filter((item => item.id === state.selectedChat))[0].title
   };
 });
 

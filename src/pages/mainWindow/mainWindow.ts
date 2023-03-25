@@ -4,7 +4,7 @@ import { ChatItem } from "../../models/chatItems/chatItem";
 import { MessengerHeaderPage} from "../messengerHeader/messengerHeader";
 import { Messenger, MessengerBase }  from "../messenger/messenger";
 import { ChatsList } from "../../models/chatList/chatList";
-
+import ChatsController from "../../controllers/chatController"
 
 interface MainWindowProps {
 	pageTitle?: string;
@@ -30,11 +30,18 @@ export class MainWindowPage extends Component {
 	init() {
         this.children.messengerHeader = new MessengerHeaderPage({})
 		this.children.messenger = new Messenger({});
-		// this.children.chatsList = new ChatsList({ isLoaded: false });
+		this.children.chatsList = new ChatsList({ isLoaded: false });
+		
+
+		ChatsController.fetchChats().finally(() => {
+			(this.children.chatsList as Component).setProps({
+			  isLoaded: true          
+			})
+			
+		  });
 	}	
 	render() {
-		console.log(this.children.chatsList)
-        return this.compile(mainWindowTemplate, this.props);
+		return this.compile(mainWindowTemplate, this.props);
     }
 };
 

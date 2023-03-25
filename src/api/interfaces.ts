@@ -29,12 +29,13 @@ export interface userSearch {
 };
 
 export interface userUpdateProfile {
-    firstName?: string;
-    secondName?: string;
-    displayName?: string;
-    login?: string;
-    email?: string;
-    phone?: string;
+    first_name: string;
+    second_name: string;
+    display_name: string;
+    login: string;
+    email: string;
+    phone: string;
+    avatar: FormData;
 };
 
 export interface ChatInfo {
@@ -48,5 +49,11 @@ export interface ChatInfo {
       content?: string;
     }
 };
+
+export interface updatePassword  {
+    oldPassword: string;
+    newPassword: string;
+};
+
 
 

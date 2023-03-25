@@ -1,6 +1,5 @@
-import API, { UserAPI } from '../api/UserApi';
-import store from '../models/components/store';
-
+import API, { UserAPI } from '../api/UserAPI';
+import { userUpdateProfile, updatePassword, userSearch } from '../api/interfaces';
 
 class UserController {
   private readonly api: UserAPI;
@@ -8,7 +7,7 @@ class UserController {
     this.api = API;
   }
 
-  async updateProfile(data: Any) {
+  async updateProfile(data: userUpdateProfile) {
     try {
       await this.api.updateProfile(data);
     } catch (e: any) {
@@ -20,6 +19,24 @@ class UserController {
     try {
       // console.log(data);
       await this.api.updateAvatar(data);
+    } catch (e: any) {
+      console.error(e);
+    }
+    
+  }
+  
+  async updatePassword(data: updatePassword) {
+    try {
+      // console.log(data);
+      await this.api.updatePassword(data);
+    } catch (e: any) {
+      console.error(e);
+    }
+    
+  }
+  async search(data: userSearch) {
+    try {
+      await this.api.search(data);
     } catch (e: any) {
       console.error(e);
     }

@@ -40,18 +40,29 @@ interface chatItemProps {
   com_tagName?: string;
   com_className?: string;
   com_el_id?: string;
-}
-
+  last_message?: 
+    {
+      user?: {
+        first_name?: string;
+        second_name?: string;
+        avatar?: string;
+        email?: string;
+        login?: string;
+        phone?: string;
+      }
+      time?: Date;
+      time_str?: string;
+      content?: string;
+ }}
 export class ChatItem extends Component {
     constructor(props: chatItemProps) {
       if (!props.com_tagName) props.com_tagName = 'div';
       if (!props.com_className) props.com_className = "chat-item";
-      if (!props.com_el_id) props.com_el_id = `chat-item-${props.id}`;
       super(props);
     }
     
   render() {
-    this.props.last_message.time = dateFormat(new Date(this.props.last_message.time));
+    if (this.props.last_message?.time) { this.props.last_message.time_str = dateFormat(new Date(this.props.last_message.time))  }; 
     return this.compile(chatItemTemplate, this.props);
 	}
 

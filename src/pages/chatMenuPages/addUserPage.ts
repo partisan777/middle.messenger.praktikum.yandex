@@ -2,7 +2,9 @@ import { Component } from '../../models/components/components';
 import addUserPageTemplate from './addUserPage_tmpl.hbs';
 import { Button } from '../../models/button/button';
 import { Input } from '../../models/input/input';
-
+import ChatsController from '../../controllers/chatController';
+import store from '../../models/components/store';
+import UserController from '../../controllers/userController'
 
 interface AddUserFormPageProps {
   pageTitle: string;
@@ -24,8 +26,8 @@ export class AddUserFormPage extends Component {
 
     this.children.adduser = new Input ({
       label: "user",
-      type: "image",
-      name: "user",
+      type: "text",
+      name: "login",
       elem_id: "add-user-input",
       divErrorClassName: "reg-error",
       divErrorId: "reg-error-add-user-input"
@@ -35,7 +37,9 @@ export class AddUserFormPage extends Component {
       labelVisible: "Добавить",
       buttonClass:"button-button",
       type: "button",
-      elem_id:"add-user-button"
+      elem_id:"add-user-button",
+      events: {click: () => {
+        this.onSubmit()} }
     })
     
     this.children.closeadduser = new Button ({
@@ -45,7 +49,21 @@ export class AddUserFormPage extends Component {
       elem_id: "close-add-user-button",
       events: {click: () => {this.hide()} }
     });
-  } 
+  }
+  async onSubmit() {
+    const values = Object
+      .values(this.children)
+      .filter(child => child instanceof Input)
+      .map((child) => ([(child as Input).getName(), (child as Input).getValue()]))
+      console.log(values)
+    let data = {};
+    for (let i: number = 0; i < values.length; i++) {
+        data[values[i][0]] = values[i][1];
+    }
+    const userId = await UserController.search(data)
+    ChatsController.addUserToChat(store.getState().selectedChat, userId)
+    
+  }
   
   render() {
       return this.compile(addUserPageTemplate, this.props);

@@ -100,7 +100,7 @@ export class RegFormPage extends Component {
             }   
         });
             
-        this.children.secondName = new Input ({ 
+        this.children.second_name = new Input ({ 
             label: "second_name",
             labelVisible: "Фамилия",
             type: "text",
@@ -231,9 +231,8 @@ export class RegFormPage extends Component {
           .map((child) => ([(child as Input).getName(), (child as Input).getValue()]))
         const data = Object.fromEntries(values);
         AuthController.signup(data as SignupData);
-      }
-
-
+    }
+    
     render() {
         return this.compile(regPageTemplate, this.props);
     }

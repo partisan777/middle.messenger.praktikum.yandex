@@ -22,8 +22,9 @@ export class MessengerHeaderPage extends Component {
 	constructor(props: MessengerHeaderProps) {
 		if (!props.com_tagName) props.com_tagName = 'div';
 		if (!props.com_isVisible) props.com_isVisible = true;
+		if (!props.com_className) props.com_className = "chat-sidebar-header";
+		if (!props.com_el_id) props.com_el_id ="chat-sidebar-header";
 		super(props)
-		
 	}
 	init() {
 		this.children.changePasswordFormPage = new CreateChatFormPage({pageTitle: 'Создать чат'})
@@ -31,7 +32,8 @@ export class MessengerHeaderPage extends Component {
 		
 		this.children.linkToProfile = new Link({
             label: 'Профиль>',
-            to: '/profile'
+            to: '/profile',
+			com_el_id: "profile-link-div"
           });
 
         this.children.searchInput = new Input ({ 
@@ -44,11 +46,13 @@ export class MessengerHeaderPage extends Component {
 			labelVisible: "Поиск",
 			buttonClass: "button-button",
 			type: "button",
-			elem_id: "profile-search-button"
+			elem_id: "profile-search-button",
+			com_el_id: "profile-search-button-div"
+			
 		});
 
 		this.children.createChatButton = new Button ({
-			labelVisible: 'Создать',
+			labelVisible: 'Создать чат',
 			buttonClass: "button-button",
 			// type: "button",
 			elem_id: "create-chat-button",
@@ -56,7 +60,8 @@ export class MessengerHeaderPage extends Component {
 			  click: (e: Event) => {
 				e.preventDefault();
 				this.children.changePasswordFormPage.changeVisible();
-			  }}
+			  }},
+			com_el_id: "create-chat-button-div"  
 		  });
 		
 	}	

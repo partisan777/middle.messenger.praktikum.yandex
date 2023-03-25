@@ -24,6 +24,7 @@ class MessagesController {
   private sockets: Map<number, WSTransport> = new Map();
 
   async connect(id: number, token: string) {
+    // console.log(id, token)
     if (this.sockets.has(id)) {
       return;
     }
@@ -54,7 +55,6 @@ class MessagesController {
     if (!socket) {
       throw new Error(`Chat ${id} is not connected`);
     }
-
     socket.send({type: 'get old', content: '0'});
   }
 
@@ -88,10 +88,9 @@ class MessagesController {
   }
 }
 
-
 const controller = new MessagesController();
-
 // @ts-ignore
 window.messagesController = controller;
 
 export default controller;
+

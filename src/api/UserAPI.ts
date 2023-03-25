@@ -1,5 +1,5 @@
 import BaseAPI from './BaseAPI';
-import { User, userSearch, userUpdateProfile } from "./interfaces"
+import { userSearch, userUpdateProfile, updatePassword } from "./interfaces"
 
 export class UserAPI extends BaseAPI {
   constructor() {
@@ -7,25 +7,26 @@ export class UserAPI extends BaseAPI {
   }
 
   public search(data: userSearch) {
-    return this.http.post('/search', {
-    });
+    return this.http.post('/search', data);
   }
 
   public updateProfile(data: userUpdateProfile) {
-    return this.http.put('/profile', {
-      data: JSON.stringify(data),
-    });
+    return this.http.put('/profile', data);
   }
 
   public updateAvatar(data: FormData) {
-    // console.log(data)
     return this.http.put('/profile/avatar', data);
   }
+
+  public updatePassword(data: updatePassword) {
+    return this.http.put('/password', data);
+  }
+
   read = undefined;
   create = undefined;
   update = undefined;
   delete = undefined;
-}
+};
 
 
 export default new UserAPI();

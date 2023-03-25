@@ -11,7 +11,6 @@ export class AuthController {
   async signin(data: SigninData) {
     try {
       await this.api.signin(data);
-      console.log(store);
       Router.go('/profile');
     } catch (e: any) {
       console.error(e);

@@ -44,6 +44,6 @@ export class ChatMenuPage extends Component {
 	render() {
         return this.compile(ChatMenuPageTemplate, this.props);
     }
-}
+};
 
 

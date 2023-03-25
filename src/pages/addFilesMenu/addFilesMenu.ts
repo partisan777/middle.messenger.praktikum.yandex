@@ -3,9 +3,6 @@ import { Button } from "../../models/button/button";
 import addFilesPageTemplate from "./addFilesPage_tmpl.hbs"
 
 
-
-
-
 interface addFilesPageProps{
 	pageTitle?: string,
 	addFotoVideoEvents?: object,
@@ -56,6 +53,6 @@ export class AddFilesPage extends Component {
 	render() {
         return this.compile(addFilesPageTemplate, this.props);
     }
-}
+};
 
 

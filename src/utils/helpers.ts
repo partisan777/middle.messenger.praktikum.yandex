@@ -37,3 +37,5 @@ export type Indexed<T = any> = {
   
     return merge(object as Indexed, result);
   }
+
+  

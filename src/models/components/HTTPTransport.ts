@@ -52,7 +52,7 @@ export default class HTTPTransport {
 
   private request<Response>(url: string, options: Options = {method: Method.Get}): Promise<Response> {
     const {method, data} = options;
-
+    // console.log(data)
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
       xhr.open(method, url);
@@ -81,9 +81,8 @@ export default class HTTPTransport {
       if (method === Method.Get || !data) {
         xhr.send();
       } else {
-        console.log(data)
+        
         if (data instanceof FormData) {
-          console.log(data);
           xhr.send(data);
         } else {
           xhr.send(JSON.stringify(data));

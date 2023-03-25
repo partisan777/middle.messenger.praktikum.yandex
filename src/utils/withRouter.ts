@@ -14,3 +14,4 @@ export function withRouter(Block: typeof Component<any>) {
 export interface PropsWithRouter {
   router: typeof Router;
 }
+

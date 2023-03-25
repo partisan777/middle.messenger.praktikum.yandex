@@ -1,21 +1,14 @@
- <div class="chat-sidebar-header" id="chat-sidebar-header">
-        
-        {{#if createChatButton }}
-                {{{createChatButton}}}
-        {{/if}}
-        {{#if linkToProfile}} 
-            {{{linkToProfile}}}
-        {{/if}}
-       
-        {{{changePasswordFormPage}}}
-  </div>
-  <div class="search" id="search">
-         {{#if searchInput}}
-            {{{searchInput}}} 
-        {{/if}}
-        {{#if searchButton}}
-            {{{searchButton}}}
-        {{/if}}
-  </div>
-
+{{#if createChatButton }}
+        {{{createChatButton}}}
+{{/if}}
+{{#if linkToProfile}} 
+    {{{linkToProfile}}}
+{{/if}}
+{{{changePasswordFormPage}}}
+    {{#if searchInput}}
+    {{{searchInput}}} 
+{{/if}}
+{{#if searchButton}}
+    {{{searchButton}}}
+{{/if}}
 

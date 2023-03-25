@@ -1,6 +1,6 @@
-import API, { ChatsAPI } from "../api/ChatApi";
+import API, { ChatsAPI } from "../api/ChatAPI";
 import store from "../models/components/store";
-import MessagesController from './MessagesController';
+import MessagesController from './messagesController';
 
 class ChatsController {
   private readonly api: ChatsAPI;
@@ -26,6 +26,8 @@ class ChatsController {
   addUserToChat(id: number, userId: number) {
     this.api.addUsers(id, [userId]);
   }
+
+  
 
   async delete(id: number) {
     await this.api.delete(id);

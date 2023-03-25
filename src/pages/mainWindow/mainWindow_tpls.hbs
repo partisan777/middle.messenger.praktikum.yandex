@@ -1,33 +1,11 @@
 <div class="chat-sidebar" id="chat-sidebar">
-    
     {{#if messengerHeader}}
         {{{messengerHeader}}}      
     {{/if}}
+    {{{chatsList}}}
 </div>
+{{{messenger}}}
 
-{{!-- <div class="dialog-window" id ="dialog-window">
-    <div class="dialog-header" id="dialog-header">
-        <div class="chat-header-descr" id="chat-header-descr">
-            <p>{{{chatName}}}</p>
-        </div>
-        {{#if chatMenuButton}}
-            {{{chatMenuButton}}}
-        {{/if}}
-       
-    </div>
-    <div class="dialog" id="dialog">
-        <ul> 
-            <li><a href="./error.html">Ссылка на страницу с ошибками</a></li>
-            <li><a href="./notfound.html">Ссылка на несуществующую страницу</a></li>
-            {{#if messages}}
-                {{#each messages}}
-                    {{{this}}}      
-                {{/each}}
-            {{/if}}
-    </div>
-</div> --}}
-{{!-- {{{messenger}}} --}}
-{{{ChatsList}}}
 
 
 

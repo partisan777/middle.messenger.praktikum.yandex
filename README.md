@@ -1,3 +1,11 @@
+по итогу второго код-ревью
+- Скрин https://disk.yandex.ru/i/aAQt3BRXgmWTeg нужно картинку в чате ограничивать по ширине, а то вот такое получается
+= исправлено, подкорректировал CCS-стили
+
+ссылка на Netlify
+https://deploy--eloquent-malasada-d64c47.netlify.app/
+
+
 по итогу код-ревью;
 - Скрин https://disk.yandex.ru/i/NyJH7WTQNynuVA В моих чатах есть аватар, но он не отображается сейчас у Вас. Нужно правильно подключать картинки
 = добавил в src ссылку на автар чата
@@ -25,5 +33,3 @@
 
 
 
-ссылка на Netlify
-https://deploy--glittering-cactus-c5a7da.netlify.app/messenger

@@ -26,5 +26,4 @@
 
 
 ссылка на Netlify
-https://641f0676c25e9f00081de186--glittering-cactus-c5a7da.netlify.app/
-
+https://deploy--glittering-cactus-c5a7da.netlify.app/messenger

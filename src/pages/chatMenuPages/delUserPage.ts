@@ -41,7 +41,8 @@ export class DelUserFormPage extends Component {
       type: "button",
       elem_id:"del-user-button",
       events: {click: () => {
-        this.onSubmit()
+        this.onSubmit();
+        this.hide();
       }}
 
     })
@@ -65,10 +66,17 @@ export class DelUserFormPage extends Component {
     }
     //тут по идее надо массив пользователей поддержать, но пока оставлю для одного
     const chatId = store.getState().selectedChat;
-    const login: string = values[0][1];
-    const chatUsers = await ChatController.getUsers(chatId);
-    const userId = chatUsers.filter(item => item.login = login)[0]?.id
-    ChatController.deleteUsersFromChat(chatId, userId)
+    if (!chatId) {
+      alert("Выберите чат");
+    } else {
+      const login: string = values[0][1];
+      const chatUsers = await ChatController.getUsers(chatId);
+      const userId = chatUsers.filter(item => item.login === login)[0]?.id
+      console.log(chatId, userId);
+      await ChatController.deleteUsersFromChat(chatId, userId)
+      store.set('selectedChat',  undefined);
+			ChatController.fetchChats()
+    }
   }
   
   render() {

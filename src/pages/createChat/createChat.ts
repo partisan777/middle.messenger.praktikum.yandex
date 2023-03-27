@@ -41,11 +41,9 @@ export class CreateChatFormPage extends Component {
           const input = this.children.chatName as Input;
           const chatname = input.getValue();
           input.setValue('');
-          console.log(ChatController);
           ChatController.create(chatname)
           ChatController.fetchChats()
           this.hide();
-          // MessagesController.sendMessage(this.props.selectedChat!, message);
         }
       }
     })

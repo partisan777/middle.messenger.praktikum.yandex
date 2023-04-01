@@ -4,9 +4,9 @@ $box-sh-color :  rgba(0, 0, 0, 0.14);
 $dark-grey: #999999;
 $red: #FF2F2F;
 $box-sh-color-dark: rgba(0,0,0,0.8); 
-// $light-gray: #888;
 $light-purple: #E3EDFD;
 $light-gray: #C4C3C3;
+
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -155,41 +155,55 @@ li {
 }
 
 .chat-sidebar {
-    max-width: 450px;
-    width: 350px;
+    max-width: 550px;
+    min-width: 350px;
     height: auto;
     float: left;
     min-height: 550px;
+    .chat-sidebar-header{
+        height: 130px;
+        display: flex;
+        // position: absolute;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 15px;
+        
+        > button {
+            height: 20px;
+            width: 80px;
+         }
+        // #button-profile {
+        //     justify-content: center;
+        //     align-items: center;
+        //     flex-direction: row;
+        // }
+        //create-chat-button
+    }
+    .search {
+        width: 350px;
+        height: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        > button {
+            height: 20px;
+            width: 60px;
+        }
+}
+
    
 }
 
-.chat-sidebar-header{
-    height: 30px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    > button {
-        height: 20px;
-        width: 80px;
-    }
-    #button-profile {
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-    }
+
+#create-chat-button, #profile-search-button,
+#profile-link-div, #search, #delete-chat-button {
+    width: 300px;
+    height: 22px;
+    margin: 3px;
 }
 
-.search {
-    width: 350px;
-    height: 30px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    > button {
-        height: 20px;
-        width: 60px;
-    }
-}
+
 
 .chat-sidebar-items {
     height: 100%;
@@ -213,9 +227,9 @@ li {
         margin-left: 3;
         background: #EFEFEF;
         > img {
-            position: absolute;
-            top: 24px;
-            left: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
         }
     }
     .chat-name {
@@ -247,6 +261,10 @@ li {
     }
     
 }
+.chat--selected {
+    background: $light-gray;
+}
+
 
 .dialog-window {
     box-shadow: 0px 0px 6px$box-sh-color;
@@ -261,7 +279,6 @@ li {
 }
 
 .dialog {
-    // display: flex;
     flex-direction: column; 
     background-color: whitesmoke;
     padding: 5px;
@@ -294,7 +311,7 @@ li {
 
 .message-from {
     flex-direction: flex-end;
-    background-color: $light-gray;
+    background-color: $dark-grey;
     border-radius: 0 25px 25px 25px;    
 }
 
@@ -370,7 +387,7 @@ li {
     border-radius: 15px;
     box-shadow: 0px 0px 6px
     $box-sh-color;
-    background-color: $blue;
+    background-color: white;
     justify-content: center;
     align-items: center;
     .profile-exit {
@@ -485,3 +502,10 @@ li {
         display: flex;
     }
 }
+
+.link {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+

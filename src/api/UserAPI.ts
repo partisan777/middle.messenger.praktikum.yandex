@@ -7,7 +7,6 @@ export class UserAPI extends BaseAPI {
   }
 
   public search(login: string) {
-    console.log('/search', {login});
     return this.http.post('/search', {login});
   }
 

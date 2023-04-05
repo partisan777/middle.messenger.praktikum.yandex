@@ -1,5 +1,9 @@
 import { Component } from "./components";
 
+export interface ComponentConstructable<P = any> {
+  new(props: P): Component<P>;
+}
+
 
 function isEqual(lhs: string, rhs: string): boolean {
   return lhs === rhs;
@@ -111,3 +115,5 @@ class Router {
 }
 
 export default new Router('#root');
+
+

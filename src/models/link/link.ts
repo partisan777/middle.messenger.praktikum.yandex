@@ -5,7 +5,7 @@ import link_tmpl from './link_tmpl.hbs';
 
 interface LinkProps extends PropsWithRouter {
   to: string;
-  label: string;
+  label?: string;
   com_className?: string;
   com_el_id?: string;
   com_tagName?: string;
@@ -22,10 +22,11 @@ class BaseLink extends Component<LinkProps> {
     super({
       ...props,
       events: {
-        click: () => this.navigate()
-      },
-    });
-    
+        click: () => {this.navigate()
+        //console.log(this.props.router.go)
+        }
+      }
+    });    
   }
 
   navigate() {

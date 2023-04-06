@@ -18,15 +18,6 @@ interface RegFormPageProps {
   com_isVisible?: boolean
 };
 
-// const props = { 
-//     pageTitle: 'Регистрация',
-//     events: {
-//     submit: (e: Event) => {
-//             e.preventDefault();
-//         }
-//     }   
-// }
-
 export class RegFormPage extends Component {
   constructor(props: RegFormPageProps) {
     if (!props.com_tagName) props.com_tagName = 'form';

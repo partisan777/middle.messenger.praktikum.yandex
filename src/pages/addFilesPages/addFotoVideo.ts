@@ -22,7 +22,7 @@ export class AddFotoVideoFormPage extends Component {
   };
   init() {
 
-    this.children.fotovideo = new Input ({
+    this.children.fotovideo_attr = new Input ({
       label: "fotovideo",
       type: "image",
       name: "fotovideor",
@@ -31,7 +31,7 @@ export class AddFotoVideoFormPage extends Component {
       divErrorId: "reg-error-fotovideo-input"
     });
 
-    this.children.addfotovideo =new Button ({
+    this.children.addfotovideo_attr =new Button ({
       labelVisible: "Добавить",
       buttonClass:"button-button",
       type: "button",
@@ -39,7 +39,7 @@ export class AddFotoVideoFormPage extends Component {
       events: {}
     })
     
-    this.children.closefotovideo = new Button ({
+    this.children.closefotovideo_attr = new Button ({
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",

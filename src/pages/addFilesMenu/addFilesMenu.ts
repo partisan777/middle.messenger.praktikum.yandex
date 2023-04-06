@@ -24,7 +24,7 @@ export class AddFilesPage extends Component {
 		super(props)
 	}
 	init() {
-		this.children.addfotovideo = new Button ({
+		this.children.addfotovideo_attr = new Button ({
 			labelVisible: 'Фото Видео',
 			buttonClass: "link-button",
 			elem_id: "add-foto-video",
@@ -33,7 +33,7 @@ export class AddFilesPage extends Component {
 			
 		});
 
-		this.children.addfile = new Button ({
+		this.children.addfile_attr = new Button ({
 			labelVisible: 'Файл',
 			buttonClass: "link-button",
 			elem_id: "add-file",
@@ -41,7 +41,7 @@ export class AddFilesPage extends Component {
 			com_className: 'div', 
 		});
 		
-		this.children.addlocation = new Button ({
+		this.children.addlocation_attr = new Button ({
 			labelVisible: 'Локация',
 			buttonClass: "link-button",
 			elem_id: "add-location",

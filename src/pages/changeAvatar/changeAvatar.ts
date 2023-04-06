@@ -39,7 +39,7 @@ export class ChangeAvatarFormPage extends Component {
     }}
     });
    
-    this.children.addAvatar = new Button ({
+    this.children.addAvatar_attr = new Button ({
       labelVisible: "Добавить",
       buttonClass:"button-button",
       type: "button",
@@ -62,7 +62,7 @@ export class ChangeAvatarFormPage extends Component {
       
     })
     
-    this.children.closeAvatarForm = new Button ({
+    this.children.closeAvatarForm_attr = new Button ({
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",
@@ -70,7 +70,6 @@ export class ChangeAvatarFormPage extends Component {
       events: {
           click: (e: Event) => { 
             this.hide()
-            window.
             e.preventDefault()
       }}
     });

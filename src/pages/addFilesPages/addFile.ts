@@ -22,7 +22,7 @@ export class AddFileFormPage extends Component {
   };
   init() {
 
-    this.children.file = new Input ({
+    this.children.file_attr = new Input ({
       label: "file",
       type: "image",
       name: "file",
@@ -31,14 +31,14 @@ export class AddFileFormPage extends Component {
       divErrorId: "reg-error-file-input"
     });
 
-    this.children.addfile = new Button ({
+    this.children.addfile_attr = new Button ({
       labelVisible: "Добавить",
       buttonClass:"button-button",
       type: "button",
       elem_id:"save-file-button"
     })
     
-    this.children.closefile = new Button ({
+    this.children.closefile_attr = new Button ({
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",

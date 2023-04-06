@@ -40,8 +40,8 @@ export class ProfileFormPage extends Component {
     this.props.avatarLink = "https://ya-praktikum.tech/api/v2/resources" + profile.avatar;
     
     
-    this.children.changePasswordFormPage = new ChangePasswordFormPage({pageTitle: 'Изменение пароля'});
-    this.children.changeAvatarFormPage = new ChangeAvatarFormPage({pageTitle: 'Изменение аватара'});
+    this.children.changePasswordFormPage_attr = new ChangePasswordFormPage({pageTitle: 'Изменение пароля'});
+    this.children.changeAvatarFormPage_attr = new ChangeAvatarFormPage({pageTitle: 'Изменение аватара'});
     
     this.children.email = new Input ({
         label: "pr-form-email",
@@ -184,7 +184,7 @@ export class ProfileFormPage extends Component {
         events: {
             click: (e: Event) => { 
                 e.preventDefault();
-                this.children.changePasswordFormPage.changeVisible();
+                this.children.changePasswordFormPage_attr.changeVisible();
             }
         }   
     });
@@ -208,7 +208,7 @@ export class ProfileFormPage extends Component {
         events: {
             click: (e: Event) => { 
                 e.preventDefault();
-                this.children.changeAvatarFormPage.changeVisible();
+                this.children.changeAvatarFormPage_attr.changeVisible();
             }
         }   
     });

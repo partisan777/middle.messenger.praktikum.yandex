@@ -8,7 +8,7 @@ const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
     entry: [
-		'./index.ts',
+		'./src/index.ts',
 		'./main.scss'
 	],
     output: {
@@ -30,9 +30,11 @@ const config = {
     module: {
         rules: [
             {
+                
                 test: /\.(ts|tsx)$/i,
                 loader: 'ts-loader',
                 exclude: ['/node_modules/','/**/*test.ts'],
+                options: {transpileOnly: true }
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -40,7 +42,7 @@ const config = {
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-                type: 'asset',
+                type: 'asset/inline',
             },
 			{	test: /\.hbs$/,
 				loader: "handlebars-loader"
@@ -57,11 +59,9 @@ const config = {
 
 module.exports = () => {
     if (isProduction) {
-        config.mode = 'prod';
-        
-        
+        config.mode = 'production';
     } else {
-        config.mode = 'dev';
+        config.mode = 'development';
     }
     return config;
 };

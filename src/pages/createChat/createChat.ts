@@ -22,7 +22,7 @@ export class CreateChatFormPage extends Component {
   };
   init() {
 
-    this.children.chatName = new Input ({
+    this.children.chatName_attr = new Input ({
       label: "new-chat-name",
       type: "text",
       name: "new-chat-name",
@@ -31,14 +31,14 @@ export class CreateChatFormPage extends Component {
       divErrorId: "reg-error-new-chat-name-input"
     });
 
-    this.children.createChat = new Button ({
+    this.children.createChat_attr = new Button ({
       labelVisible: "Создать",
       buttonClass:"button-button",
       type: "button",
       elem_id:"save-chat-name-button",
       events: {
         click: () => {
-          const input = this.children.chatName as Input;
+          const input = this.children.chatName_attr as Input;
           const chatname = input.getValue();
           input.setValue('');
           ChatController.create(chatname)
@@ -48,7 +48,7 @@ export class CreateChatFormPage extends Component {
       }
     })
     
-    this.children.closeCreateChatForm = new Button ({
+    this.children.closeCreateChatForm_attr = new Button ({
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",

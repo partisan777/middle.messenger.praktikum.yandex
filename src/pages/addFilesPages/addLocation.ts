@@ -22,7 +22,7 @@ export class AddLocationFormPage extends Component {
   };
   init() {
 
-    this.children.location = new Input ({
+    this.children.location_attr = new Input ({
       label: "location",
       type: "image",
       name: "location",
@@ -31,7 +31,7 @@ export class AddLocationFormPage extends Component {
       divErrorId: "reg-error-location-input"
     });
 
-    this.children.addlocation = new Button ({
+    this.children.addlocation_attr = new Button ({
       labelVisible: "Добавить",
       buttonClass:"button-button",
       type: "button",
@@ -39,7 +39,7 @@ export class AddLocationFormPage extends Component {
       events: {}
     })
     
-    this.children.closelocation = new Button ({
+    this.children.closelocation_attr = new Button ({
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",

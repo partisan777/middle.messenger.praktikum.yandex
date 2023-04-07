@@ -72,7 +72,7 @@ export class DelUserFormPage extends Component {
       const login: string = values[0][1];
       const chatUsers = await ChatController.getUsers(chatId);
       const userId = chatUsers.filter(item => item.login === login)[0]?.id
-      console.log(chatId, userId);
+      //console.log(chatId, userId);
       await ChatController.deleteUsersFromChat(chatId, userId)
       store.set('selectedChat',  undefined);
 			ChatController.fetchChats()

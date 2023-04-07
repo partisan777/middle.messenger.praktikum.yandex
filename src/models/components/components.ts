@@ -18,7 +18,13 @@ enum EVENTS {
 	mouseleave = "mouseleave"
 };
 
-
+export type propsWithChildren = {
+  com_isVisible?: boolean; 
+  com_className?: string;
+  com_el_id?: string;
+  com_tagName?: string;
+  
+}
 
 export class Component<P extends Record<string, any> = any> {
 
@@ -29,7 +35,7 @@ export class Component<P extends Record<string, any> = any> {
 	protected eventBus: () => EventBus;
 	protected _element: HTMLElement | null = null;
 	private _meta: { props: P};
-  private _el: HTMLElement | null = null;
+  protected _el: HTMLElement;
   protected com_isVisible: boolean = true; 
   private com_className: string = '';
   private com_el_id: string = '';
@@ -218,13 +224,14 @@ export class Component<P extends Record<string, any> = any> {
 
   _createDocumentElement(tagName: string, className: string, el_id: string) {
     this._el = document.createElement(tagName); 
+    
     if (className != '') {
       this._el.className = className
     }
     if (el_id != '') {
       this._el.setAttribute('id', el_id);
     }
-    
+    // console.log(this._el.className)
     return this._el
   }
 

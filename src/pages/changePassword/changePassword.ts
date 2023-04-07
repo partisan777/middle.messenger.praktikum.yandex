@@ -64,7 +64,7 @@ export class ChangePasswordFormPage extends Component {
       divErrorCheckType:  "newconfirmpassword"
     });
 
-    this.children.changePassword =  new Button ({
+    this.children.changePassword_attr =  new Button ({
       labelVisible: "Сменить пароль",
       buttonClass: "button-button",
       type: "submit",
@@ -75,7 +75,7 @@ export class ChangePasswordFormPage extends Component {
       }}
     }); 
 
-    this.children.closeChangePassword  =  new Button ({
+    this.children.closeChangePassword_attr  =  new Button ({
       labelVisible: "Закрыть",
       buttonClass: "link-button",
       type: "button",

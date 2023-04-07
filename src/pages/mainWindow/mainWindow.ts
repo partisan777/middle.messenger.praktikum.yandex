@@ -32,25 +32,26 @@ export class MainWindowPage extends Component {
 		super(props)
 	}
 	init() {
-        this.children.messenger = new Messenger({});
-		this.children.chatsList = new ChatsList({ isLoaded: false });
+        this.children.chatsList_attr = new ChatsList({ isLoaded: false });
+		this.children.messenger_attr = new Messenger({});
 		
-		this.children.createChatFormPage = new CreateChatFormPage({pageTitle: 'Создать чат'})
+		
+		this.children.createChatForm_attr = new CreateChatFormPage({pageTitle: 'Создать чат'})
 
 		
-		this.children.linkToProfile = new Link({
+		this.children.linkToProfile_attr = new Link({
             label: 'Профиль>',
             to: '/profile',
 			com_el_id: "profile-link-div"
           });
 
-        this.children.searchInput = new Input ({ 
+        this.children.searchInput_attr = new Input ({ 
 			type: "search",
 			name: "search",
 			elem_id: "search"    
 		});
 
-		this.children.searchButton = new Button ({
+		this.children.searchButton_attr = new Button ({
 			labelVisible: "Поиск",
 			buttonClass: "button-button",
 			type: "button",
@@ -58,7 +59,7 @@ export class MainWindowPage extends Component {
 			com_el_id: "profile-search-button-div"
 			
 		});
-		this.children.deleteChatButton = new Button ({
+		this.children.deleteChatButton_attr = new Button ({
 			labelVisible: "Удалить чат",
 			buttonClass: "button-button",
 			type: "button",
@@ -81,21 +82,21 @@ export class MainWindowPage extends Component {
 			  }}
 		});
 
-		this.children.createChatButton = new Button ({
+		this.children.createChatButton_attr = new Button ({
 			labelVisible: 'Создать чат',
 			buttonClass: "button-button",
 			// type: "button",
 			elem_id: "create-chat-button",
 			events: {
 			  click: (e: Event) => {
+				this.children.createChatForm_attr.changeVisible();
 				e.preventDefault();
-				this.children.createChatFormPage.changeVisible();
 			  }},
 			com_el_id: "create-chat-button-div"  
 		  });
 
 		ChatsController.fetchChats().finally(() => {
-			(this.children.chatsList as Component).setProps({
+			(this.children.chatsList_attr as Component).setProps({
 			isLoaded: true          
 			})
 			

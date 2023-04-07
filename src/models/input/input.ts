@@ -23,6 +23,7 @@ interface inputDataProps {
     com_el_id?: string,
     com_tagName?: string,
 	com_isVisible?: boolean,
+	value?: string;
 }    
 
 export class Input extends Component {

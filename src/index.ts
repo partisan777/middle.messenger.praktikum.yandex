@@ -1,11 +1,10 @@
 import Router from "./models/components/router";
-import store from "./models/components/store";
 import AuthController from "./controllers/authController";
 import { LoginFormPage } from "./pages/regForm/loginForm";
 import { RegFormPage } from "./pages/regForm/regForm";
 import { MainWindowPage } from "./pages/mainWindow/mainWindow";
 import { ProfileFormPage } from "./pages/profile/profileForm";
-
+import '../main.scss'
 
 enum Routes {
     Index = '/',

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "lib": [
+        // other libs...
+        "ES6",
+        "DOM"
+      ],
+      "esModuleInterop": true,
+      // other settings...
+    },
+    "ts-node": {
+      "files": true
+    },
+}
+
